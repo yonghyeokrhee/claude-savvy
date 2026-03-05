@@ -32,34 +32,53 @@ mkdir -p .claude/skills
 
 ## Step 2. Skill 파일 작성
 
-`.claude/skills/review.md` 파일을 생성합니다.
+`practice/.claude/skills/support-explorer.md` 파일을 생성합니다.
 
 Skill 파일은 **일반 마크다운 파일**입니다. Claude가 이 파일의 내용을 그대로 프롬프트로 실행합니다.
 
+이번 실습에서 만들 Skill은 **`support-explorer`** — MOP 서비스를 처음 시작하는 사람이 빠르게 온보딩할 수 있도록 안내해주는 Skill입니다.
+
 ```markdown
-# 코드 리뷰
+# MOP 빠른 시작 가이드
 
-현재 변경된 파일들을 리뷰해줘. 다음 기준으로 평가해:
+https://support.mop.co.kr/introduce 페이지를 읽고, 사용자가 MOP를 처음 시작하는 데 필요한 내용을 단계별로 안내해줘.
 
-1. **버그 가능성** — 예외 처리 누락, 엣지 케이스
-2. **가독성** — 변수명, 함수 길이, 주석 필요 여부
-3. **보안** — 입력값 검증, 민감 정보 노출
-4. **개선 제안** — 더 나은 구현 방법이 있다면 제안
+다음 순서로 진행해:
 
-각 항목별로 문제가 없으면 "이상 없음"으로 표시해줘.
+1. **MOP가 무엇인지 한 줄로 설명** — 핵심 가치 중심으로
+
+2. **내 상황에 맞는 플랜 추천**
+   - "광고주인가요, 대행사인가요?" 질문 후 답변에 따라 Basic / Pro / API Center 중 추천
+
+3. **지금 바로 시작하는 법 안내**
+   - Basic이면: 회원가입 → 비즈니스 유형 입력 → 즉시 사용
+   - Pro/API Center면: 도입 사전 설문 → 컨설턴트 매칭 → 온보딩
+
+4. **첫 번째로 해야 할 3가지 액션** — 구체적인 행동 단계로 제시
+
+5. **알아두면 좋은 핵심 용어** — 애드써클, Spend Pacing, 목표입찰 등 간단 설명
+
+안내는 간결하고 친근하게, 전문 용어는 처음 나올 때 바로 설명해줘.
 ```
+
+이 파일은 `practice/.claude/skills/support-explorer.md`에 실제로 저장되어 있습니다.
 
 ---
 
 ## Step 3. Skill 실행
 
-Claude Code 세션에서 슬래시 명령어로 호출합니다:
+`practice/` 디렉토리에서 Claude Code를 시작한 뒤 호출합니다:
+
+```bash
+cd practice
+claude
+```
 
 ```
-/review
+/support-explorer
 ```
 
-Claude가 `.claude/skills/review.md`를 읽고 프롬프트를 실행합니다.
+Claude가 MOP 지원 페이지를 직접 읽고, 사용자의 상황에 맞는 시작 가이드를 단계별로 안내합니다.
 
 ---
 
