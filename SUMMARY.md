@@ -17,5 +17,4 @@
 
 ## 실습
 
-* [실습 환경 설정](practice/CLAUDE.md)
-* [2월 성과 데이터](practice/data/feb-2026.csv)
+* [CLAUDE.md 만들기](practice/claude-md.md)
