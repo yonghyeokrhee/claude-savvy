@@ -1,68 +1,68 @@
-# Core Concepts
+# 핵심 개념
 
-## How Claude Code Works
+## Claude Code의 작동 방식
 
-Claude Code runs in your terminal with access to your local filesystem. It can:
+Claude Code는 터미널에서 실행되며 로컬 파일 시스템에 직접 접근한다. 다음과 같은 작업이 가능하다:
 
-- Read and write files in your project
-- Execute shell commands (with your permission)
-- Search code with grep and glob patterns
-- Browse the web and fetch URLs
-- Remember context across a session
+- 프로젝트 내 파일 읽기/쓰기
+- 셸 명령 실행 (승인 후)
+- glob·grep 패턴으로 코드 검색
+- 웹 브라우징 및 URL 내용 가져오기
+- 세션 내 대화 컨텍스트 유지
 
-## Permission Modes
+## 권한 모드
 
-Claude Code asks before taking potentially risky actions. You control what it can do:
+Claude Code는 잠재적으로 위험한 작업을 실행하기 전에 승인을 요청한다. 세 가지 모드로 제어할 수 있다:
 
-- **Auto-approve** — Claude executes actions without prompting (use with caution)
-- **Manual approval** — You confirm each file write or command run
-- **Read-only** — Claude can read but not modify anything
+- **자동 승인** — 묻지 않고 실행 (주의해서 사용)
+- **수동 승인** — 파일 쓰기 또는 명령 실행 시 직접 확인
+- **읽기 전용** — 읽기만 허용, 수정 불가
 
-## CLAUDE.md — Project Instructions
+## CLAUDE.md — 프로젝트 지침서
 
-Place a `CLAUDE.md` file at the root of your project to give Claude persistent instructions:
+프로젝트 루트에 `CLAUDE.md` 파일을 두면 Claude가 매 세션 시작 시 자동으로 읽는다:
 
 ```markdown
-# My Project
+# 내 프로젝트
 
-## Stack
+## 기술 스택
 - Python 3.12, FastAPI, PostgreSQL
 
-## Conventions
-- Use snake_case for variables
-- All functions must have type hints
-- Run `pytest` before committing
+## 컨벤션
+- 변수명: snake_case
+- 모든 함수에 타입 힌트 필수
+- 커밋 전 `pytest` 실행
 
-## Important Files
-- `src/main.py` — entry point
-- `src/config.py` — environment config
+## 중요 파일
+- `src/main.py` — 진입점
+- `src/config.py` — 환경 설정
 ```
 
-Claude reads this file at the start of every session. Use it to:
-- Describe your tech stack and architecture
-- Set coding conventions and style rules
-- Point to important files
-- Define how to run tests and builds
+`CLAUDE.md`를 활용하면 좋은 경우:
+- 기술 스택과 아키텍처 설명
+- 코딩 컨벤션 및 스타일 규칙 정의
+- 중요 파일 위치 안내
+- 테스트·빌드 실행 방법 명시
 
-## Context Window
+## 컨텍스트 창
 
-Claude Code maintains conversation context within a session. For long sessions:
+Claude Code는 세션 내 대화 내용을 컨텍스트로 유지한다. 세션이 길어질 때:
 
-- Use `/clear` to reset context if Claude seems confused
-- Be specific — the more focused your request, the better the result
-- Break large tasks into smaller steps
+- `/clear` — 컨텍스트 초기화 (파일은 그대로 유지)
+- 요청을 구체적으로 — 집중된 요청일수록 결과가 좋다
+- 큰 작업은 작은 단계로 나눠서 진행
 
-## Tools Claude Uses Internally
+## Claude가 내부적으로 사용하는 도구
 
-Claude Code has built-in tools it selects automatically:
+Claude Code는 상황에 따라 아래 도구를 자동으로 선택해 사용한다:
 
-| Tool | Purpose |
+| 도구 | 역할 |
 |---|---|
-| Read | Read file contents |
-| Write | Create or overwrite files |
-| Edit | Make targeted edits to existing files |
-| Bash | Run shell commands |
-| Glob | Find files by pattern |
-| Grep | Search file contents |
-| WebSearch | Search the web |
-| WebFetch | Fetch a URL |
+| Read | 파일 내용 읽기 |
+| Write | 파일 생성 또는 덮어쓰기 |
+| Edit | 기존 파일 부분 수정 |
+| Bash | 셸 명령 실행 |
+| Glob | 패턴으로 파일 검색 |
+| Grep | 파일 내용 검색 |
+| WebSearch | 웹 검색 |
+| WebFetch | URL 내용 가져오기 |
