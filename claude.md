@@ -1,7 +1,7 @@
 # GitBook 프로젝트 — Claude 컨텍스트
 
 > 이 파일은 SUMMARY.md 또는 .md 파일 변경 시 자동으로 갱신됩니다.
-> 마지막 갱신: 2026-03-05 22:59:09
+> 마지막 갱신: 2026-03-05 23:01:53
 
 ## 프로젝트 개요
 
@@ -36,6 +36,7 @@ GitHub 연동 GitBook 기반 **Claude Code 한글 강의 교재** 프로젝트.
   * [Sub-Agent + Skill 활용](practice/sub-agent-skill.md)
   * [Sub-Agent 직접 만들기](practice/sub-agent-create.md)
 * [Workflow](workflow.md)
+  * [Human-in-the-Loop Workflow](workflow-human-in-loop.md)
   * [Workflow 실습](practice/workflow.md)
 * [MCP](mcp.md)
   * [MCP 실습 — Notion 연결](practice/mcp.md)
