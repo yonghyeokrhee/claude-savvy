@@ -8,6 +8,7 @@
 ## 강의
 
 * [Skills](skills.md)
+  * [대화로 Skill 만들기](skills-vibe.md)
   * [Skill 직접 만들기](skills-practice.md)
 * [Sub-Agent](sub-agent.md)
   * [Sub-Agent 실습](practice/sub-agent.md)
