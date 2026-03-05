@@ -13,3 +13,7 @@
 * [Sub-Agent](sub-agent.md)
 * [Workflow](workflow.md)
 * [MCP](mcp.md)
+
+## 실습
+
+* [실습 환경 설정](practice/CLAUDE.md)
