@@ -1,6 +1,5 @@
 # Summary
 
-* [소개](README.md)
 * [Claude Code 소개](introduction.md)
 * [시작하기](getting-started.md)
 * [핵심 개념](core-concepts.md)
