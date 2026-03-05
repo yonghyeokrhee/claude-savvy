@@ -36,6 +36,16 @@ mkdir -p .claude/skills
 
 Skill 파일은 **일반 마크다운 파일**입니다. Claude가 이 파일의 내용을 그대로 프롬프트로 실행합니다.
 
+> **frontmatter는 필수가 아닙니다.**
+> 파일 맨 위에 `---`로 감싼 메타데이터(frontmatter)를 추가할 수 있지만 없어도 Skill은 정상 작동합니다.
+> 단, `description`을 넣으면 `/help` 목록에 설명이 표시되어 팀과 공유할 때 편리합니다.
+>
+> ```markdown
+> ---
+> description: "MOP 신규 사용자 온보딩 안내"
+> ---
+> ```
+
 이번 실습에서 만들 Skill은 **`support-explorer`** — MOP 서비스를 처음 시작하는 사람이 빠르게 온보딩할 수 있도록 안내해주는 Skill입니다.
 
 ```markdown
