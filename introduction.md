@@ -18,14 +18,6 @@ Anthropic이 공식 제공하는 터미널 기반 AI 코딩 에이전트. 채팅
 사용자 요청 → 계획 수립 → 도구 실행 → 결과 확인 → 완료 or 재시도
 ```
 
-## 설치 및 시작
-
-```bash
-npm install -g @anthropic-ai/claude-code
-cd my-project
-claude
-```
-
 ## 핵심 도구
 
 | 도구 | 역할 |
