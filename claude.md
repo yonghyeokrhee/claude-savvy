@@ -1,7 +1,7 @@
 # GitBook 프로젝트 — Claude 컨텍스트
 
 > 이 파일은 SUMMARY.md 또는 .md 파일 변경 시 자동으로 갱신됩니다.
-> 마지막 갱신: 2026-03-05 22:17:38
+> 마지막 갱신: 2026-03-05 22:24:10
 
 ## 프로젝트 개요
 
@@ -49,7 +49,7 @@ agents.md best-practices.md core-concepts.md getting-started.md introduction.md 
 
 ## practice/ 실습 파일
 
-practice/.claude/agents/campaign-analyzer.md practice/.claude/skills/mop-report/SKILL.md practice/.claude/skills/support-explorer/SKILL.md practice/claude-md.md practice/CLAUDE.md practice/data/budget-usage.md practice/data/campaign-search.md practice/data/campaign-shopping.md practice/data/report-feb-2026.md practice/sub-agent-create.md practice/sub-agent-skill.md practice/sub-agent.md 
+practice/.claude/agents/campaign-analyzer.md practice/.claude/skills/mop-report/SKILL.md practice/.claude/skills/parse-chat-history/SKILL.md practice/.claude/skills/support-explorer/SKILL.md practice/claude-md.md practice/CLAUDE.md practice/data/budget-usage.md practice/data/campaign-search.md practice/data/campaign-shopping.md practice/data/report-feb-2026.md practice/sub-agent-create.md practice/sub-agent-skill.md practice/sub-agent.md 
 
 ## 주요 명령
 

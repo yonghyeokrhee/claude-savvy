@@ -158,6 +158,80 @@ git commit -m "팀 공용 Skills 추가"
 
 ---
 
+## Step 5. 프로그램 기반 Skill 만들기
+
+Skill 본문은 단순 텍스트 프롬프트뿐만 아니라 **Python 스크립트 실행을 지시하는 프롬프트**도 가능합니다. Skill 디렉토리 안에 스크립트 파일을 함께 두면, Claude가 해당 스크립트를 실행하는 방식으로 동작합니다.
+
+### 구조
+
+```
+.claude/skills/parse-chat-history/
+├── SKILL.md            ← "export_template.py를 실행해줘" 지시
+└── export_template.py  ← 실제 실행될 Python 스크립트
+```
+
+### 실습 예제 — `parse-chat-history`
+
+MOP 서비스의 채팅 히스토리 CSV를 파싱하여 분석 가능한 템플릿 형식으로 변환하는 Skill입니다.
+
+**입력 파일:** `data/chat_history_message_202602040905.csv`
+- `message` 컬럼에 JSON이 중첩된 복잡한 구조
+- `human` / `ai` / `tool` 타입 메시지 혼재
+
+**SKILL.md 핵심 내용:**
+
+```markdown
+---
+name: parse-chat-history
+description: LLM 채팅 히스토리 CSV를 구조화된 템플릿 형식으로 파싱합니다
+allowed-tools: Bash
+---
+
+다음 명령을 실행해줘:
+
+python export_template.py --input <input.csv> --output <output.csv>
+
+스크립트 위치: .claude/skills/parse-chat-history/export_template.py
+```
+
+**실행:**
+
+```bash
+cd practice
+claude
+```
+
+```
+/parse-chat-history
+```
+
+Claude가 `export_template.py`를 실행하고 결과를 반환합니다.
+
+**출력 결과:** `data/chat_history_template_output.csv` (153개 rows)
+
+```
+id, session_id, Subject, message.type, message.data.content,
+message.data.usage_metadata.total_tokens, analysis, ...
+```
+
+- `tool` 타입 메시지 제거, `[Tool: xxx]` 패턴 클리닝
+- 세션 첫 번째 row에 분석 요약 자동 추가
+
+```
+"3 turns, 8 AI responses, 25.0K tokens, high engagement, moderate efficiency, task addressed"
+```
+
+### 프롬프트 전용 Skill vs 프로그램 기반 Skill
+
+| 구분 | 프롬프트 전용 | 프로그램 기반 |
+|---|---|---|
+| 구성 | `SKILL.md` 하나 | `SKILL.md` + 스크립트 파일 |
+| `allowed-tools` | `WebFetch`, `Read` 등 | `Bash` 필수 |
+| 적합한 작업 | 분석, 안내, 요약 | 데이터 변환, 파일 처리, 반복 작업 |
+| 재현성 | Claude 응답마다 다를 수 있음 | 스크립트가 동일 결과 보장 |
+
+---
+
 ## 정리
 
 | 단계 | 내용 |
