@@ -1,2 +1,5 @@
 # MCP 설정 (API 키 포함)
 .mcp.json
+
+# RDS 연결 정보 (실제 자격증명)
+practice/config/rds.env
