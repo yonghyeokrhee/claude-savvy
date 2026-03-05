@@ -1,7 +1,14 @@
 # Summary
 
+* [소개](README.md)
+* [Claude Code 소개](introduction.md)
+* [시작하기](getting-started.md)
+* [핵심 개념](core-concepts.md)
+* [팁 & 모범 사례](best-practices.md)
+
 ## 강의
 
+* [Agent 도구](agents.md)
 * [Skills](skills.md)
 * [Sub-Agent](sub-agent.md)
 * [Workflow](workflow.md)
@@ -9,5 +16,5 @@
 
 ## 실습
 
-* [CLAUDE.md 실습](practice/CLAUDE.md)
+* [실습 환경 설정](practice/CLAUDE.md)
 * [2월 성과 데이터](practice/data/feb-2026.csv)
