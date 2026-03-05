@@ -1,75 +1,75 @@
-# Tips & Best Practices
+# 팁 & 모범 사례
 
-## Be Specific with Requests
+## 구체적으로 요청하기
 
-Vague requests get vague results. Give Claude context:
+모호한 요청은 모호한 결과를 낳습니다. 컨텍스트를 함께 주세요.
 
-**Less effective:**
-> Fix the bug
+**덜 효과적:**
+> 버그 고쳐줘
 
-**More effective:**
-> The login function in `src/auth.py` throws a KeyError when the user has no email. Fix it without changing the function signature.
+**더 효과적:**
+> `src/auth.py`의 login 함수가 이메일이 없는 사용자에게 KeyError를 던집니다. 함수 시그니처는 바꾸지 말고 수정해줘.
 
-## Use CLAUDE.md for Repeated Context
+## CLAUDE.md로 반복 설명 없애기
 
-If you find yourself explaining the same thing every session (your stack, naming conventions, how to run tests), put it in `CLAUDE.md`. Claude reads it automatically.
+매 세션마다 같은 내용(기술 스택, 네이밍 컨벤션, 테스트 실행 방법)을 설명하고 있다면 `CLAUDE.md`에 넣으세요. Claude가 자동으로 읽습니다.
 
-## Review Before Approving
+## 승인 전 반드시 확인하기
 
-When Claude wants to run a command or write a file, read it before approving. Claude is capable but not infallible — a quick review catches mistakes early.
+Claude가 명령을 실행하거나 파일을 쓰려 할 때, 승인 전에 내용을 읽어보세요. Claude는 유능하지만 실수를 합니다 — 빠른 검토가 실수를 조기에 잡아냅니다.
 
-## Break Down Large Tasks
+## 큰 작업은 단계별로 나누기
 
-Instead of "build me a full REST API", try:
+"REST API 전체 만들어줘" 대신:
 
-1. "Design the database schema for a blog app"
-2. "Create the FastAPI models based on this schema"
-3. "Add CRUD endpoints for posts"
-4. "Write tests for the posts endpoints"
+1. "블로그 앱의 DB 스키마 설계해줘"
+2. "이 스키마 기반으로 FastAPI 모델 만들어줘"
+3. "게시글 CRUD 엔드포인트 추가해줘"
+4. "게시글 엔드포인트 테스트 작성해줘"
 
-Smaller steps give you checkpoints to verify correctness.
+단계별로 나누면 중간에 검증할 체크포인트가 생깁니다.
 
-## Use `/clear` When Context Gets Stale
+## 컨텍스트가 오염되면 `/clear`
 
-If Claude starts giving inconsistent answers or seems confused mid-session, run `/clear` to reset the conversation while keeping your files intact.
+세션이 길어지면서 Claude가 일관성 없는 답변을 하거나 혼란스러워 보이면 `/clear`로 대화를 초기화하세요. 파일은 그대로 유지됩니다.
 
-## Leverage Git as a Safety Net
+## Git을 안전망으로 활용하기
 
-Before letting Claude make large changes, commit your current state:
+Claude에게 대규모 변경을 맡기기 전에 현재 상태를 커밋하세요:
 
 ```bash
-git add -A && git commit -m "checkpoint before refactor"
+git add -A && git commit -m "refactor 전 체크포인트"
 ```
 
-This lets you `git diff` to review all changes and `git reset` if something goes wrong.
+이후 `git diff`로 전체 변경사항을 검토하고, 문제가 생기면 `git reset`으로 되돌릴 수 있습니다.
 
-## Useful Slash Commands
+## 유용한 슬래시 명령어
 
-| Command | Description |
+| 명령어 | 설명 |
 |---|---|
-| `/help` | Show available commands |
-| `/clear` | Clear conversation context |
-| `/exit` | End the session |
-| `/cost` | Show token usage for this session |
+| `/help` | 사용 가능한 명령어 보기 |
+| `/clear` | 대화 컨텍스트 초기화 |
+| `/cost` | 현재 세션 토큰 사용량 확인 |
+| `/exit` | 세션 종료 |
 
-## Common Patterns
+## 자주 쓰는 프롬프트 패턴
 
-### Explain an unfamiliar codebase
+### 낯선 코드베이스 파악하기
 ```
-Read the project structure and explain what this codebase does and how it's organized.
-```
-
-### Debug a failing test
-```
-The test `test_user_signup` in `tests/test_auth.py` is failing. Read the test and the implementation and fix the bug.
+프로젝트 구조를 읽고 이 코드베이스가 무엇을 하는지, 어떻게 구성되어 있는지 설명해줘.
 ```
 
-### Add a feature
+### 실패하는 테스트 디버깅
 ```
-Add input validation to the `/api/users` POST endpoint in `src/routes/users.py`. Return a 422 with a clear error message if email is missing or invalid.
+`tests/test_auth.py`의 `test_user_signup` 테스트가 실패하고 있어. 테스트와 구현 코드를 읽고 버그를 수정해줘.
 ```
 
-### Code review
+### 기능 추가
 ```
-Review `src/payments.py` for security issues, edge cases, and code quality. List problems in order of severity.
+`src/routes/users.py`의 `/api/users` POST 엔드포인트에 입력값 검증을 추가해줘. 이메일이 없거나 유효하지 않으면 422와 명확한 에러 메시지를 반환해야 해.
+```
+
+### 코드 리뷰
+```
+`src/payments.py`를 보안 문제, 엣지 케이스, 코드 품질 관점에서 리뷰해줘. 문제를 심각도 순으로 나열해줘.
 ```
