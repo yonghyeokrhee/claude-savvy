@@ -1,44 +1,38 @@
-# Getting Started
+# 시작하기
 
-## Installation
-
-Install Claude Code globally via npm:
+## 설치
 
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
-## Authentication
+## 인증
 
-Run Claude Code for the first time and follow the login prompt:
+처음 실행하면 Anthropic 계정 로그인 화면으로 이동합니다:
 
 ```bash
 claude
 ```
 
-You will be redirected to authenticate with your Anthropic account. Once done, you are ready to go.
-
-## Starting a Session
-
-Navigate to your project directory and launch Claude Code:
+## 세션 시작
 
 ```bash
-cd your-project
+cd my-project
 claude
 ```
 
-You can also pass a task directly:
+한 줄 작업도 가능합니다:
 
 ```bash
-claude "explain what this project does"
+claude "이 프로젝트가 뭐 하는 건지 설명해줘"
 ```
 
-## First Commands to Try
+## 주요 명령어
 
-| Command | What it does |
+| 명령어 | 설명 |
 |---|---|
-| `claude` | Start an interactive session |
-| `claude "fix the bug in auth.py"` | One-shot task |
-| `claude --help` | Show all options |
-| `/help` | In-session help |
-| `/exit` | End the session |
+| `claude` | 대화형 세션 시작 |
+| `/help` | 세션 내 도움말 |
+| `/clear` | 컨텍스트 초기화 |
+| `/cost` | 토큰 사용량 확인 |
+| `/exit` | 세션 종료 |
