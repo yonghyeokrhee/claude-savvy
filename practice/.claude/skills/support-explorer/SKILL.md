@@ -1,3 +1,9 @@
+---
+name: support-explorer
+description: MOP 서비스를 처음 시작하는 사용자에게 맞춤 퀵스타트 가이드를 제공합니다
+allowed-tools: WebFetch
+---
+
 # MOP 빠른 시작 가이드
 
 https://support.mop.co.kr/introduce 페이지를 읽고, 사용자가 MOP를 처음 시작하는 데 필요한 내용을 단계별로 안내해줘.
