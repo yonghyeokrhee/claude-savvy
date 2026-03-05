@@ -7,7 +7,6 @@
 
 ## 강의
 
-* [Agent 도구](agents.md)
 * [Skills](skills.md)
   * [Skill 직접 만들기](skills-practice.md)
 * [Sub-Agent](sub-agent.md)

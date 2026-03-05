@@ -1,7 +1,7 @@
 # GitBook 프로젝트 — Claude 컨텍스트
 
 > 이 파일은 SUMMARY.md 또는 .md 파일 변경 시 자동으로 갱신됩니다.
-> 마지막 갱신: 2026-03-05 21:41:41
+> 마지막 갱신: 2026-03-05 22:17:38
 
 ## 프로젝트 개요
 
@@ -22,26 +22,34 @@ GitHub 연동 GitBook 기반 **Claude Code 한글 강의 교재** 프로젝트.
 ```
 # Summary
 
+* [Claude Code 소개](introduction.md)
+* [시작하기](getting-started.md)
+* [핵심 개념](core-concepts.md)
+* [팁 & 모범 사례](best-practices.md)
+
 ## 강의
 
 * [Skills](skills.md)
+  * [Skill 직접 만들기](skills-practice.md)
 * [Sub-Agent](sub-agent.md)
+  * [Sub-Agent 실습](practice/sub-agent.md)
+  * [Sub-Agent + Skill 활용](practice/sub-agent-skill.md)
+  * [Sub-Agent 직접 만들기](practice/sub-agent-create.md)
 * [Workflow](workflow.md)
 * [MCP](mcp.md)
 
 ## 실습
 
-* [CLAUDE.md 실습](practice/CLAUDE.md)
-* [2월 성과 데이터](practice/data/feb-2026.csv)
+* [CLAUDE.md 만들기](practice/claude-md.md)
 ```
 
 ## 루트 페이지 파일
 
-agent.md agents.md best-practices.md core-concepts.md getting-started.md introduction.md mcp.md README.md skills.md sub-agent.md SUMMARY.md workflow.md 
+agents.md best-practices.md core-concepts.md getting-started.md introduction.md mcp.md README.md skills-practice.md skills.md sub-agent.md SUMMARY.md workflow.md 
 
 ## practice/ 실습 파일
 
-practice/CLAUDE.md 
+practice/.claude/agents/campaign-analyzer.md practice/.claude/skills/mop-report/SKILL.md practice/.claude/skills/support-explorer/SKILL.md practice/claude-md.md practice/CLAUDE.md practice/data/budget-usage.md practice/data/campaign-search.md practice/data/campaign-shopping.md practice/data/report-feb-2026.md practice/sub-agent-create.md practice/sub-agent-skill.md practice/sub-agent.md 
 
 ## 주요 명령
 

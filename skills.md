@@ -6,6 +6,25 @@
 
 사용자가 `/support-explorer`라고 입력하면, Claude Code는 해당 Skill 파일을 읽고 프롬프트로 실행합니다. 복잡한 지시를 매번 타이핑하지 않아도 되는 **단축키** 같은 개념입니다.
 
+## Skill이 실행되는 시점
+
+Skill은 두 가지 방식으로 실행됩니다:
+
+| 방식 | 설명 |
+|---|---|
+| **명시적 호출** | 사용자가 `/skill-name`을 직접 입력 |
+| **자동 트리거** | Claude가 대화 맥락을 보고 적합한 Skill을 스스로 선택 |
+
+자동 트리거는 SKILL.md의 `description` 필드를 기준으로 작동합니다. Claude가 현재 요청이 description과 일치한다고 판단하면 사용자 입력 없이 Skill을 실행합니다.
+
+```yaml
+---
+description: MOP 서비스를 처음 시작하는 사용자에게 맞춤 퀵스타트 가이드를 제공합니다
+---
+```
+
+> "MOP 어떻게 시작해요?" 라고 물으면 Claude가 자동으로 `support-explorer` Skill을 실행할 수 있습니다.
+
 ## 폴더 구조
 
 Skill은 `.md` 파일이 아니라 **디렉토리 안의 `SKILL.md`** 파일로 정의됩니다.
