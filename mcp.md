@@ -35,25 +35,47 @@ Claude Code
 
 MCP 서버는 보통 로컬에서 실행되는 작은 프로세스입니다. Claude는 이 서버를 통해 외부 서비스와 안전하게 통신합니다.
 
-## MCP 서버 설정하기
+## MCP Scope — 어디에 설정하느냐가 중요
 
-`~/.claude/settings.json` 또는 프로젝트의 `.claude/settings.json`에 추가합니다:
+MCP 서버를 추가할 때 **범위(Scope)**를 먼저 결정해야 합니다:
+
+| Scope | 저장 위치 | 적용 범위 | 팀 공유 |
+|---|---|---|---|
+| **Local** (기본) | 로컬 설정 | 나만, 이 프로젝트에서만 | ❌ |
+| **Project** | `.mcp.json` (Git 관리) | 팀원 모두, 이 프로젝트에서 | ✅ |
+| **User** | `~/.claude/` | 나만, 모든 프로젝트에서 | ❌ |
+
+팀과 함께 쓰는 MCP는 **Project Scope**로 설정하고 Git에 커밋하면 됩니다.
+
+## MCP 서버 추가하기
+
+### 방법 1 — 명령어 한 줄 (권장)
+
+```bash
+claude mcp add --transport http notion https://mcp.notion.com/mcp -s project
+```
+
+- `--transport http` : 원격 서버 연결 방식
+- `notion` : 서버 식별 이름
+- `-s project` : Project Scope (`.mcp.json`에 저장)
+
+### 방법 2 — 파일 직접 편집
+
+프로젝트 루트에 `.mcp.json` 파일을 만들어 추가합니다:
 
 ```json
 {
   "mcpServers": {
     "notion": {
-      "command": "npx",
-      "args": ["-y", "@anthropic-ai/mcp-server-notion"],
-      "env": {
-        "NOTION_API_KEY": "secret_..."
-      }
+      "type": "http",
+      "url": "https://mcp.notion.com/mcp"
     },
-    "github": {
+    "slack": {
       "command": "npx",
-      "args": ["-y", "@anthropic-ai/mcp-server-github"],
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
       "env": {
-        "GITHUB_TOKEN": "ghp_..."
+        "SLACK_BOT_TOKEN": "xoxb-...",
+        "SLACK_TEAM_ID": "T01234ABCDE"
       }
     }
   }

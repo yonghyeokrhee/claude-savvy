@@ -14,7 +14,11 @@
   * [Sub-Agent + Skill 활용](practice/sub-agent-skill.md)
   * [Sub-Agent 직접 만들기](practice/sub-agent-create.md)
 * [Workflow](workflow.md)
+  * [Workflow 실습](practice/workflow.md)
 * [MCP](mcp.md)
+  * [MCP 실습 — Notion 연결](practice/mcp.md)
+  * [MCP 실습 — Obsidian 연결](practice/mcp-obsidian.md)
+* [Persona & Output Style](persona.md)
 
 ## 실습
 
