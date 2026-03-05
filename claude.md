@@ -1,7 +1,7 @@
 # GitBook 프로젝트 — Claude 컨텍스트
 
 > 이 파일은 SUMMARY.md 또는 .md 파일 변경 시 자동으로 갱신됩니다.
-> 마지막 갱신: 2026-03-05 22:33:50
+> 마지막 갱신: 2026-03-05 22:38:29
 
 ## 프로젝트 개요
 
@@ -50,6 +50,41 @@ agents.md best-practices.md core-concepts.md getting-started.md introduction.md 
 ## practice/ 실습 파일
 
 practice/.claude/agents/campaign-analyzer.md practice/.claude/skills/mop-report/SKILL.md practice/.claude/skills/parse-chat-history/SKILL.md practice/.claude/skills/support-explorer/SKILL.md practice/claude-md.md practice/CLAUDE.md practice/data/budget-usage.md practice/data/campaign-search.md practice/data/campaign-shopping.md practice/data/report-feb-2026.md practice/sub-agent-create.md practice/sub-agent-skill.md practice/sub-agent.md 
+
+## 핵심 참조 레포
+
+이 GitBook의 강의 내용은 아래 레포를 주요 소스로 활용한다.
+
+**FastCampus AI Agent 바이브코딩 강의**
+- GitHub: https://github.com/Koomook/fastcampus-ai-agent-vibecoding
+- GitBook: https://goobong.gitbook.io/fastcampus
+
+### 콘텐츠 탐색 방법
+
+```bash
+# 레포 클론 (읽기 전용 참조용)
+git clone --depth 1 https://github.com/Koomook/fastcampus-ai-agent-vibecoding.git /tmp/fastcampus
+
+# 파일 목록 확인
+find /tmp/fastcampus -name "*.md" | sort
+```
+
+### 주요 디렉토리
+
+```
+fastcampus-ai-agent-vibecoding/
+├── Part1_.../Chapter3_커스터마이징_기초/   ← Slash Command, Sub Agent, Hooks
+├── Part2_.../Chapter1_Agent_개념_이해하기/ ← Agent vs Workflow 핵심 개념
+├── Part4_MCP_server_구현/
+├── Part6_.../Chapter5_Agent_Skill/         ← Skill 개념과 실습
+└── .claude/commands/                        ← Slash Command 예시
+```
+
+### 페이지 작성 시 참조 규칙
+
+1. 관련 챕터 파일을 `/tmp/fastcampus`에서 읽고 내용을 파악한다
+2. GitBook 링크는 `https://goobong.gitbook.io/fastcampus/` 기반으로 추가한다
+3. 출처 링크는 항목 하단에 `> 참조:` 형식으로 표기한다
 
 ## 주요 명령
 
