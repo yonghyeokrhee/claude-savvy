@@ -11,6 +11,7 @@
 * [Skills](skills.md)
   * [Skill 직접 만들기](skills-practice.md)
 * [Sub-Agent](sub-agent.md)
+  * [Sub-Agent 실습](practice/sub-agent.md)
 * [Workflow](workflow.md)
 * [MCP](mcp.md)
 
