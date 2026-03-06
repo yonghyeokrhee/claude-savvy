@@ -22,7 +22,4 @@
   * [MCP 실습 — Notion 연결](practice/mcp.md)
   * [MCP 실습 — Obsidian 연결](practice/mcp-obsidian.md)
 * [Persona & Output Style](persona.md)
-
-## 실습
-
-* [CLAUDE.md 만들기](practice/claude-md.md)
+* [Claude.md](practice/claude-md.md)

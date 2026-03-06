@@ -5,10 +5,25 @@
     ]
   },
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/yong/.claude/hooks/squash-before-push.sh"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
-        "matcher": "Write|Edit",
+        "matcher": "Write|Edit|NotebookEdit",
         "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/yong/.claude/hooks/auto-commit.sh"
+          },
           {
             "type": "command",
             "command": "cd /Users/yong/claude-savvy && bash .claude/update-claude-md.sh"
