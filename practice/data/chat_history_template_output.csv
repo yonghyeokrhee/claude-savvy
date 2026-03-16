@@ -208,18 +208,18 @@ Week 2026-W05 (partial):
 - MANUAL_PRODUCT SP: $3.23 cost, $0 sales
 I'm noticing some data inconsistencies that need clarification. The opening week appears to have duplicate entries with conflicting date labels. The average selling price stays constant at $23.99 across all periods, suggesting a single product SKU. Week 2026-W05 shows minimal spend with no revenue, which likely means the data collection is incomplete for that period. The SPONSORED_DISPLAY campaigns are underperforming significantly compared to other channel types.
 Looking at the broader patterns across the full period, the third week stands out with approximately $200K in ad spend generating roughly $840K in sales. AUTO campaigns consistently deliver strong returns ranging from 250-638% ROAS, while MANUAL_KEYWORD campaigns only became active in week three and showed immediate effectiveness. In contrast, SPONSORED_DISPLAY campaigns are struggling with either minimal returns or complete failure to generate sales. Since the most recent week lacks sales data across all campaign types, I should treat it as incomplete rather than indicative of a performance decline.
-# Campaign Performance Analysis (Entire Account, 2025-12-28 \\~ 2026-01-28)
-## Executive Summary (Entire Account, 2025-12-28 \\~ 2026-01-28)
+# Campaign Performance Analysis (Entire Account, 2025-12-28 \~ 2026-01-28)
+## Executive Summary (Entire Account, 2025-12-28 \~ 2026-01-28)
 **Analysis Target**: Entire Account  
-**Analysis Period**: 2025-12-28 \\~ 2026-01-28 (5 weeks)  
-**Event Period**: End of Year Holiday (2025-12-20 \\~ 2025-12-27) overlaps with Week 2025-W52
+**Analysis Period**: 2025-12-28 \~ 2026-01-28 (5 weeks)  
+**Event Period**: End of Year Holiday (2025-12-20 \~ 2025-12-27) overlaps with Week 2025-W52
 1. **Strong overall ad efficiency with SP campaigns**: Total ad cost $784.57 generated $1,872.05 sales (ROAS 238.6%), with 52 units sold across 4 weeks of complete data
 2. **Week 2026-W03 peak performance**: Ad cost $278.68 achieved $839.65 sales (ROAS 301.3%) driven by AUTO campaigns' 638% efficiency spike and Manual Keyword activation
 3. **Campaign diversification in Week W03-W04**: Manual campaigns (Keyword + Product) contributed 53-58% of total ad cost with consistent 230-400% ROAS performance
 4. **SD campaigns require attention**: T00030 campaigns consumed $125.60 with minimal return ($23.99 sales, ROAS 19.1%), significantly underperforming SP campaigns by 90%+
 ---
-## Overall Campaign Performance (Entire Account, 2025-12-28 \\~ 2026-01-28)
-**Total Campaign Summary (Entire Account, 2025-12-28 \\~ 2026-01-28)**
+## Overall Campaign Performance (Entire Account, 2025-12-28 \~ 2026-01-28)
+**Total Campaign Summary (Entire Account, 2025-12-28 \~ 2026-01-28)**
 | Campaign Type | Target Type | Total Ad Cost | Cost Share % | Total Sales | Total Units | ROAS % | Avg CPC | Avg CTR % | Ad CVR % |
 |--------------|-------------|---------------|--------------|-------------|-------------|--------|---------|-----------|----------|
 | SPONSORED_PRODUCTS | AUTO | $411.51 | 52.4% | $1,271.43 | 53 | 308.9% | $0.42 | 0.52% | 5.56% |
@@ -229,8 +229,8 @@ Looking at the broader patterns across the full period, the third week stands ou
 | **Total** | - | **$910.17** | **100%** | **$2,471.83** | **103** | **271.6%** | **$0.47** | **0.49%** | **5.43%** |
 *Note: Week 2026-W05 excluded from totals (incomplete data with zero sales)*
 ---
-## Weekly Performance Trend (Entire Account, Week 2025-W52 \\~ 2026-W04)
-**Weekly Campaign Performance Comparison (Entire Account, Week 2025-W52 \\~ 2026-W04)**
+## Weekly Performance Trend (Entire Account, Week 2025-W52 \~ 2026-W04)
+**Weekly Campaign Performance Comparison (Entire Account, Week 2025-W52 \~ 2026-W04)**
 | Week | Total Ad Cost | Total Sales | Total Units | ROAS % | Active Campaigns | WoW Change |
 |------|---------------|-------------|-------------|--------|------------------|------------|
 | 2025-W52 | $18.37 | $23.99 | 1 | 130.6% | 1 (AUTO SP) | - |
@@ -239,9 +239,9 @@ Looking at the broader patterns across the full period, the third week stands ou
 | 2026-W03 | $278.68 | $839.65 | 35 | 301.3% | 4 campaigns | Sales +169%, ROAS +54% |
 | 2026-W04 | $291.12 | $719.70 | 30 | 247.2% | 4 campaigns | Sales -14%, ROAS -18% |
 ---
-## Campaign Type Analysis (Entire Account, 2025-12-28 \\~ 2026-01-28)
-### AUTO SP Campaigns: Consistent High Efficiency (Entire Account, Week 2025-W52 \\~ 2026-W04)
-**AUTO Campaign Weekly Performance (Entire Account, Week 2025-W52 \\~ 2026-W04)**
+## Campaign Type Analysis (Entire Account, 2025-12-28 \~ 2026-01-28)
+### AUTO SP Campaigns: Consistent High Efficiency (Entire Account, Week 2025-W52 \~ 2026-W04)
+**AUTO Campaign Weekly Performance (Entire Account, Week 2025-W52 \~ 2026-W04)**
 | Week | Ad Cost | Ad Sales | Units | ROAS % | CPC | CTR % | Impressions | Clicks |
 |------|---------|----------|-------|--------|-----|-------|-------------|--------|
 | 2025-W52 | $18.37 | $23.99 | 1 | 130.6% | $0.46 | 0.38% | 10,535 | 40 |
@@ -252,7 +252,7 @@ Looking at the broader patterns across the full period, the third week stands ou
 | 2026-W05* | $10.55 | $0.00 | 0 | 0.0% | $0.50 | 0.68% | 3,094 | 21 |
 *Week 2026-W05: Incomplete data
 **What Happened**:
-- AUTO campaigns delivered strongest and most consistent ROAS (250\\~638%) with lowest average CPC ($0.42)
+- AUTO campaigns delivered strongest and most consistent ROAS (250\~638%) with lowest average CPC ($0.42)
 - Week 2026-W03 efficiency spike: ROAS jumped 127% (281% → 638%) with CPC dropping 35% ($0.45 → $0.29)
 - Post-W03 pattern: CPC increased but maintained elevated ROAS (437%) above pre-W03 levels
 **Why It Happened**:
@@ -263,8 +263,8 @@ Looking at the broader patterns across the full period, the third week stands ou
 - Combination of doubled CTR + increased CVR created multiplicative efficiency gain
 - Lower impression volume concentrated on high-converting audiences, reducing wasted spend
 - Even when CPC normalized in W04, the improved targeting maintained 436% ROAS
-### Manual Campaign Emergence: Week W03-W04 Activation (Entire Account, Week 2026-W02 \\~ 2026-W04)
-**Manual Campaign Performance (Entire Account, Week 2026-W02 \\~ 2026-W04)**
+### Manual Campaign Emergence: Week W03-W04 Activation (Entire Account, Week 2026-W02 \~ 2026-W04)
+**Manual Campaign Performance (Entire Account, Week 2026-W02 \~ 2026-W04)**
 | Week | Campaign | Ad Cost | Ad Sales | Units | ROAS % | CPC | CTR % | Ad CVR % |
 |------|----------|---------|----------|-------|--------|-----|-------|----------|
 | W02 | Manual Keyword | $9.22 | $0.00 | 0 | 0.0% | $0.77 | 0.43% | 0.00% |
@@ -288,8 +288,8 @@ Looking at the broader patterns across the full period, the third week stands ou
 - Keyword campaigns' high CVR (6-11%) sustained efficiency even as CPC increased 44% during scale-up ($0.45 → $0.65)
 - Diversification reduced AUTO dependency: Manual campaigns contributed 40% of total sales ($984) while maintaining 285% average ROAS
 - Concurrent AUTO efficiency improvements (W03-W04) created portfolio-level synergy, driving total weekly sales to $840 and $720
-### SPONSORED_DISPLAY Performance: Efficiency Gap (Entire Account, Week 2026-W02 \\~ 2026-W03)
-**SD Campaign Performance (T00030, Week 2026-W02 \\~ 2026-W03)**
+### SPONSORED_DISPLAY Performance: Efficiency Gap (Entire Account, Week 2026-W02 \~ 2026-W03)
+**SD Campaign Performance (T00030, Week 2026-W02 \~ 2026-W03)**
 | Week | Ad Cost | Ad Sales | Units | ROAS % | CPC | CTR % | Impressions | Clicks |
 |------|---------|----------|-------|--------|-----|-------|-------------|--------|
 | 2026-W02 | $47.99 | $23.99 | 1 | 50.0% | $0.30 | 0.68% | 23,660 | 162 |
@@ -308,8 +308,8 @@ Looking at the broader patterns across the full period, the third week stands ou
 - T00030 campaign paused/ended in W04 (zero spend), indicating recognition of inefficiency
 - Resource reallocation: Discontinuing SD freed up budget for Manual campaign scaling in W03-W04, contributing to overall portfolio efficiency improvement
 ---
-## Week-by-Week Campaign Mix Evolution (Entire Account, Week 2025-W52 \\~ 2026-W04)
-**Campaign Mix by Week (Entire Account, Week 2025-W52 \\~ 2026-W04)**
+## Week-by-Week Campaign Mix Evolution (Entire Account, Week 2025-W52 \~ 2026-W04)
+**Campaign Mix by Week (Entire Account, Week 2025-W52 \~ 2026-W04)**
 | Week | AUTO SP | Manual KW | Manual Prod | SD | Total Cost | Sales | ROAS % |
 |------|---------|-----------|-------------|----|-----------:|------:|-------:|
 | W52 | 100% ($18.37) | - | - | - | $18.37 | $23.99 | 130.6% |
@@ -424,7 +424,7 @@ I need to validate the Week 5 anomaly where ad sales dropped to zero, and flag t
 **Why It Happened**:
 - Sustained ad investment increase (Week 52 $18.37 → Week 4 $239.35) drove volume expansion while maintaining efficiency
 - Ad CVR improvement from 2.5% to 6.49% (159% increase) overcame CPC increases from $0.46 to $0.52 (13% increase), resulting in ROAS growth
-- CTR fluctuation (0.31%\\~0.50%) with peak in Week 3 (0.50%) indicates successful targeting optimization during scale phase
+- CTR fluctuation (0.31%\~0.50%) with peak in Week 3 (0.50%) indicates successful targeting optimization during scale phase
 - Impression volume stabilized at 100K+ level from Week 2 onward, providing consistent visibility base
 **Why It Worked**:
 - CVR gains (+159%) significantly outpaced CPC increases (+13%), creating positive efficiency leverage
@@ -443,12 +443,12 @@ I need to validate the Week 5 anomaly where ad sales dropped to zero, and flag t
 | W05 | $215.91 | $215.91 | 100.00% | $0.00 | 0.00% |
 **What Happened**:
 - Organic contribution showed high volatility, ranging from 0% (Week 01b) to 100% (Week 5)
-- During growth phase (Week 2-4), organic maintained 42%\\~54% range despite absolute organic sales increasing from $311.87 to $863.64
+- During growth phase (Week 2-4), organic maintained 42%\~54% range despite absolute organic sales increasing from $311.87 to $863.64
 - Organic sales volume grew 177% from $311.87 (Week 2) to $863.64 (Week 4), indicating healthy baseline demand
 **Why It Happened**:
 - Week 01a/01b data inconsistency (16.67% vs 0% organic) suggests potential data quality issue requiring validation
 - Week 5's 100% organic composition with zero ad sales despite $16.91 ad spend indicates probable data sync error
-- Weeks 2-4 stability (42%\\~54% organic) represents normal pattern during scaling phase, where both organic and ad sales grew proportionally
+- Weeks 2-4 stability (42%\~54% organic) represents normal pattern during scaling phase, where both organic and ad sales grew proportionally
 ### Week 5 Anomaly Analysis (Entire Account, 2026-W05)
 **What Happened**:
 - Sales dropped 86% from $1,583.34 (Week 4) to $215.91 (Week 5)
@@ -526,10 +526,10 @@ Most campaigns launched in early January are underperforming with zero returns, 
 **Analysis Period**: 2025-12-28 ~ 2026-01-21 (4 weeks: W52, W01, W02, W03, partial W04)  
 **Event Context**: End of Year Holiday concluded 2025-12-27 (day before analysis period)
 1. **Mass Campaign Launch with Poor Initial Performance**: 13+ new campaigns launched Week 2 (2026-01-09), with 11 campaigns showing 0% ROAS despite $70+ combined ad spend and 240+ clicks during learning period
-2. **Sponsored Display Campaigns Consistently Ineffective**: All 4 SD campaigns ranked in bottom 5 across W02-W03 with 0% ROAS, spending $90+ with zero conversions despite CTR 0.30\\~0.77%
+2. **Sponsored Display Campaigns Consistently Ineffective**: All 4 SD campaigns ranked in bottom 5 across W02-W03 with 0% ROAS, spending $90+ with zero conversions despite CTR 0.30\~0.77%
 3. **Campaign-251217 Decline and Cessation**: Primary campaign showed ROAS deterioration from 253% (W01) → 213% (W02) → 0% activity (W03-W04), representing loss of established revenue stream
-4. **Learning Period Progression**: Some AUTO campaigns transitioned from 0% ROAS (W02) to 493\\~840% ROAS (W03), demonstrating typical learning curve for new campaigns
-5. **Manual Campaigns Struggling**: MANUAL_KEYWORD and MANUAL_PRODUCT campaigns showing 0% ROAS despite higher CPC ($0.42\\~$0.87), indicating targeting or listing quality issues
+4. **Learning Period Progression**: Some AUTO campaigns transitioned from 0% ROAS (W02) to 493\~840% ROAS (W03), demonstrating typical learning curve for new campaigns
+5. **Manual Campaigns Struggling**: MANUAL_KEYWORD and MANUAL_PRODUCT campaigns showing 0% ROAS despite higher CPC ($0.42\~$0.87), indicating targeting or listing quality issues
 ---
 ## Weekly Bottom ROAS Campaign Performance (Entire Account, 2025-12-28 ~ 2026-01-21)
 **Performance Overview by Week**
@@ -571,7 +571,7 @@ Most campaigns launched in early January are underperforming with zero returns, 
 - Complete activity stoppage in W03 indicates manual pause or budget depletion rather than gradual decline
 - Campaign cessation occurred as 13 new replacement campaigns launched simultaneously (2026-01-09)
 **Why It Worked Initially Then Failed**:
-- W01 performance (ROAS 250\\~253%) demonstrated proven product-market fit with 17 total units sold
+- W01 performance (ROAS 250\~253%) demonstrated proven product-market fit with 17 total units sold
 - Decline pattern suggests campaign replacement strategy rather than performance-driven pause
 - Timing of shutdown (coinciding with new campaign launches) indicates strategic restructuring, but created performance gap as new campaigns entered learning period
 ### Sponsored Display Campaign Ineffectiveness (4 SD Campaigns, W02-W03)
@@ -586,7 +586,7 @@ Most campaigns launched in early January are underperforming with zero returns, 
 | All 4 Campaigns | W04 | $0.00 | 0 | 0.00% | - | 0 | Stopped |
 **What Happened**:
 - All 4 SD campaigns consistently delivered 0% ROAS across W02-W03 despite $90 total spend and 271 clicks
-- W02 showed reasonable CTR (0.56\\~0.77%) with low CPC ($0.25\\~$0.36), generating 162 clicks with zero conversions
+- W02 showed reasonable CTR (0.56\~0.77%) with low CPC ($0.25\~$0.36), generating 162 clicks with zero conversions
 - W03 CPC increased 315% (avg $0.34 → $1.08) while CTR dropped 48% (0.69% → 0.33%), compounding inefficiency
 - All campaigns ceased activity in W04, indicating strategic decision to abandon SD channel
 **Why It Happened**:
@@ -594,16 +594,16 @@ Most campaigns launched in early January are underperforming with zero returns, 
 - W03 CPC spike occurred simultaneously across all 4 campaigns, suggesting platform-wide auction dynamics rather than individual campaign issues
 - Product targeting (T00030) approach may be reaching audiences without purchase intent despite generating clicks
 **Why It Failed**:
-- CTR 0.56\\~0.77% (W02) demonstrates ad creative attracted attention, but 0% CVR across 162 clicks reveals disconnect between ad engagement and purchase consideration
+- CTR 0.56\~0.77% (W02) demonstrates ad creative attracted attention, but 0% CVR across 162 clicks reveals disconnect between ad engagement and purchase consideration
 - SD campaigns' inability to convert any of 271 total clicks across 2 weeks indicates either wrong audience targeting or products lacking competitive appeal for display format
 - Channel was correctly discontinued as efficiency did not improve with additional data collection
 ### New Campaign Learning Period Performance (13 New Campaigns, W02-W03)
 **Learning Period Transition Analysis**
 | Campaign Type | W02 Performance | W03 Performance | Transition Pattern |
 |--------------|-----------------|-----------------|-------------------|
-| SP_AUTO (5 campaigns) | 0% ROAS: 4 campaigns<br>8178% ROAS: 1 campaign ($0.88 cost) | 493\\~840% ROAS: 2 campaigns<br>0% ROAS: 3 campaigns | Some emerging from learning period |
-| SP_MANUAL_KEYWORD (4) | 0% ROAS: 2 campaigns<br>No data: 2 campaigns | 377\\~1874% ROAS: 2 campaigns<br>0% ROAS: 2 campaigns | Keyword targeting showing potential |
-| SP_MANUAL_PRODUCT (4) | 439% ROAS: 1 campaign<br>0% ROAS: 3 campaigns | 268\\~395% ROAS: 2 campaigns<br>0% ROAS: 2 campaigns | Product targeting more effective |
+| SP_AUTO (5 campaigns) | 0% ROAS: 4 campaigns<br>8178% ROAS: 1 campaign ($0.88 cost) | 493\~840% ROAS: 2 campaigns<br>0% ROAS: 3 campaigns | Some emerging from learning period |
+| SP_MANUAL_KEYWORD (4) | 0% ROAS: 2 campaigns<br>No data: 2 campaigns | 377\~1874% ROAS: 2 campaigns<br>0% ROAS: 2 campaigns | Keyword targeting showing potential |
+| SP_MANUAL_PRODUCT (4) | 439% ROAS: 1 campaign<br>0% ROAS: 3 campaigns | 268\~395% ROAS: 2 campaigns<br>0% ROAS: 2 campaigns | Product targeting more effective |
 **Notable Successes Emerging from Learning Period:**
 **mop_B0DJNH9TX1_CO-14BF-1Q4C_AUTO**:
 - W02: 0% ROAS ($0.86 cost, 4 clicks, 0 conversions)
@@ -615,8 +615,8 @@ Most campaigns launched in early January are underperforming with zero returns, 
 - 105 clicks in W03 generated 6 sales, validating product-market fit after initial learning
 **What Happened**:
 - 11 of 13 newly launched campaigns showed 0% ROAS in W02 (first week), typical for learning period
-- By W03, 6 campaigns transitioned to positive ROAS (268\\~1874%), while 5 remained at 0%
-- Successful campaigns showed CVR 5.7\\~11.1% by W03, indicating Amazon's algorithm identified relevant audiences
+- By W03, 6 campaigns transitioned to positive ROAS (268\~1874%), while 5 remained at 0%
+- Successful campaigns showed CVR 5.7\~11.1% by W03, indicating Amazon's algorithm identified relevant audiences
 **Why Some Succeeded While Others Failed**:
 - Successful transitions (AUTO campaigns for CO-14BF-1Q4C and ANCH6 products) achieved sufficient click volume (72-105 clicks) to complete learning
 - Campaigns remaining at 0% ROAS in W03 had inadequate click volume (1-12 clicks) to train algorithms effectively
@@ -630,13 +630,13 @@ Most campaigns launched in early January are underperforming with zero returns, 
 **What Happened**:
 - MANUAL_KEYWORD campaigns showing 0% conversion spent $14.61 across 24 clicks in W02-W03
 - MANUAL_PRODUCT campaigns with 0% conversion spent $33.39 across 58 clicks, nearly double the click volume
-- Campaigns targeting product CO-14BF-1Q4C showed conversions (377\\~439% ROAS), while DM-6C0P-HK1F and others failed
+- Campaigns targeting product CO-14BF-1Q4C showed conversions (377\~439% ROAS), while DM-6C0P-HK1F and others failed
 **Why Manual Campaigns Struggled**:
-- Higher CPC ($0.58\\~$0.61) compared to AUTO campaigns ($0.21\\~$0.48) without corresponding conversion improvement indicates bid optimization issues
+- Higher CPC ($0.58\~$0.61) compared to AUTO campaigns ($0.21\~$0.48) without corresponding conversion improvement indicates bid optimization issues
 - 82 combined clicks with zero conversions suggests manual targeting selections misaligned with actual customer search behavior
 - Product-specific performance gap (CO-14BF-1Q4C converting, others not) indicates listing quality or competitive positioning varies significantly across SKUs
 **Why Manual Targeting Failed Where AUTO Succeeded**:
-- AUTO campaigns achieved CVR 5.7\\~11.1% while manual campaigns with similar CPC showed 0% CVR
+- AUTO campaigns achieved CVR 5.7\~11.1% while manual campaigns with similar CPC showed 0% CVR
 - Manual keyword/product selection appears too restrictive or inaccurate compared to Amazon's algorithmic targeting
 - Successful manual campaigns (CO-14BF-1Q4C product) suggest those targets aligned with actual customer search patterns, while failed campaigns may have relied on seller assumptions rather than data-driven selection
 ---
@@ -647,7 +647,7 @@ Most campaigns launched in early January are underperforming with zero returns, 
 | Zero Activity | 6 campaigns | $0.00 | All SD + Campaign-251217 |
 | Active with Sales | 2 campaigns | $94.22 | CO-14BF-1Q4C AUTO + MANUAL_KEYWORD |
 | Active without Sales | 1 campaign | $28.14 | CO-14BF-1Q4C MANUAL_PRODUCT (50 clicks) |
-**Note**: W04 data covers only 2026-01-22 ~ 2026-01-21 (incomplete week based on date range), limiting comparative analysis. Active campaigns show 178\\~623% ROAS where sales generated, indicating core campaigns maintaining efficiency while non-performing campaigns discontinued.","Analysis For Research","32709","2026-01-28 10:14:02.868 +0900","2026-01-28 10:14:02.868 +0900","SYSTEM","2026-01-28 10:14:02.868 +0900","SYSTEM","aa89dccf-1446-429a-93c5-540421364059","A3LA0PS7FJZCWD","ATVPDKIKX0DER",""
+**Note**: W04 data covers only 2026-01-22 ~ 2026-01-21 (incomplete week based on date range), limiting comparative analysis. Active campaigns show 178\~623% ROAS where sales generated, indicating core campaigns maintaining efficiency while non-performing campaigns discontinued.","Analysis For Research","32709","2026-01-28 10:14:02.868 +0900","2026-01-28 10:14:02.868 +0900","SYSTEM","2026-01-28 10:14:02.868 +0900","SYSTEM","aa89dccf-1446-429a-93c5-540421364059","A3LA0PS7FJZCWD","ATVPDKIKX0DER",""
 "f58c9381-2231-40af-adc9-9fc4a3856fe9","94087478-0031-7042-5588-309ef4348ace","3fcbd5b4-7c55-4d91-a0de-e8ed64cc3f2c","6e81133d-3666-49a4-ba8a-5e5b9b8d675a","Analysis Evaluate","ai","Let me evaluate these research results comprehensively.
 ## Step 1: Result Quality Assessment
 ### Data Completeness
@@ -777,11 +777,11 @@ Let me organize the key findings:
 # Search Term Performance Analysis (Entire Account, 2025-12-28 ~ 2026-01-28)
 ## Executive Summary (Entire Account, 2025-12-28 ~ 2026-01-28)
 **Analysis Target**: Entire Account  
-**Analysis Period**: 2025-12-28 ~ 2026-01-28 (5 weeks: Week 52, Week 1\\~Week 5)  
+**Analysis Period**: 2025-12-28 ~ 2026-01-28 (5 weeks: Week 52, Week 1\~Week 5)  
 **Event Period**: End of Year Holiday (2025-12-20 ~ 2025-12-27, 1.5x traffic)
-1. **Critical Efficiency Issue**: Out of hundreds of search terms analyzed, only 10\\~15% generated any sales, resulting in widespread wasted ad spend across AUTO and MANUAL campaigns.
-2. **MANUAL Keywords Outperformed AUTO**: Week 3\\~4 showed MANUAL keyword campaigns (""gluten free ramen"", ""korean ramen"", ""ramen"") achieved 8\\~100% Ad CVR, while AUTO targeting maintained near-zero conversion rates.
-3. **High-Cost Zero-Return Pattern**: Multiple search terms accumulated $0.50\\~$2.72 in costs with zero sales, particularly in AUTO substitutes and loose-match targeting types.
+1. **Critical Efficiency Issue**: Out of hundreds of search terms analyzed, only 10\~15% generated any sales, resulting in widespread wasted ad spend across AUTO and MANUAL campaigns.
+2. **MANUAL Keywords Outperformed AUTO**: Week 3\~4 showed MANUAL keyword campaigns (""gluten free ramen"", ""korean ramen"", ""ramen"") achieved 8\~100% Ad CVR, while AUTO targeting maintained near-zero conversion rates.
+3. **High-Cost Zero-Return Pattern**: Multiple search terms accumulated $0.50\~$2.72 in costs with zero sales, particularly in AUTO substitutes and loose-match targeting types.
 4. **Weekly Performance Volatility**: Sales-generating terms changed significantly week-over-week, with no consistent top performers across the 5-week period.
 ---
 ## Weekly Performance Overview (Entire Account, 2025-12-28 ~ 2026-01-28)
@@ -789,21 +789,21 @@ Let me organize the key findings:
 | Week | Period | Top Performing Terms (Sales > $0) | Total Ad Cost (Sample) | Converting Terms |
 |------|--------|-----------------------------------|----------------------|------------------|
 | Week 52 | 2025-W52 | b0bvfyfb3f (AUTO substitutes): $23.99 sales | Low volume | 1/40+ terms |
-| Week 1 | 2026-W01 | authentic ramen noodle cups, b00og8nztu, rawmyun ramen cup, rice noodle made in korea, b0cs66k7wl | $4.00\\~$10.00 range | 10/300+ terms |
-| Week 2 | 2026-W02 | rice ramen, cup noodles, korean ramen (AUTO): $47.98, b0dr3tb76t (MANUAL): $23.99 | $15.00\\~$20.00 range | 5/200+ terms |
+| Week 1 | 2026-W01 | authentic ramen noodle cups, b00og8nztu, rawmyun ramen cup, rice noodle made in korea, b0cs66k7wl | $4.00\~$10.00 range | 10/300+ terms |
+| Week 2 | 2026-W02 | rice ramen, cup noodles, korean ramen (AUTO): $47.98, b0dr3tb76t (MANUAL): $23.99 | $15.00\~$20.00 range | 5/200+ terms |
 | Week 3 | 2026-W03 | MANUAL keywords dominated: rice noodle soup, gluten free ramen, kimchi rice noodles | $25.00+ | 15/150+ terms |
 | Week 4 | 2026-W04 | MANUAL keywords: mama cup noodles, kimchi rice ramen, korean ramen | $30.00+ | 12/200+ terms |
-| Week 5 | 2026-W05 | Zero sales across all tracked terms | $3.00\\~$5.00 | 0/20+ terms |
+| Week 5 | 2026-W05 | Zero sales across all tracked terms | $3.00\~$5.00 | 0/20+ terms |
 ---
 ## Campaign Type Performance Comparison (Entire Account, 2025-12-28 ~ 2026-01-28)
 **AUTO vs MANUAL Targeting Efficiency (Entire Account, Week 52 ~ Week 5)**
 | Targeting Type | Ad Cost Range | Sales Success Rate | Avg Ad CVR % | Key Observation |
 |----------------|---------------|-------------------|--------------|-----------------|
-| AUTO - loose-match | $0.04\\~$0.60 per term | <5% | 0\\~100% (extremes) | High waste, inconsistent CTR |
-| AUTO - close-match | $0.06\\~$1.26 per term | 5\\~10% | 0\\~200% | Slightly better than loose-match |
-| AUTO - substitutes | $0.50\\~$10.22 per term | 10\\~15% | 0\\~100% | Highest volume, mixed results |
-| MANUAL - KEYWORD | $0.24\\~$10.22 per term | 20\\~30% | 8\\~100% | Best performance in Week 3\\~4 |
-| MANUAL - PRODUCT | $0.15\\~$9.92 per term | 15\\~25% | 5\\~100% | Moderate success with ASIN targeting |
+| AUTO - loose-match | $0.04\~$0.60 per term | <5% | 0\~100% (extremes) | High waste, inconsistent CTR |
+| AUTO - close-match | $0.06\~$1.26 per term | 5\~10% | 0\~200% | Slightly better than loose-match |
+| AUTO - substitutes | $0.50\~$10.22 per term | 10\~15% | 0\~100% | Highest volume, mixed results |
+| MANUAL - KEYWORD | $0.24\~$10.22 per term | 20\~30% | 8\~100% | Best performance in Week 3\~4 |
+| MANUAL - PRODUCT | $0.15\~$9.92 per term | 15\~25% | 5\~100% | Moderate success with ASIN targeting |
 ---
 ## Key Search Term Analysis (Entire Account, 2025-12-28 ~ 2026-01-28)
 ### Top Converting Search Term: ""gluten free ramen"" (MANUAL_KEYWORD, Week 3)
@@ -817,13 +817,13 @@ Let me organize the key findings:
 - However, clicks that occurred had reasonable conversion rate (8.33%)
 **Why It Worked/Failed**:
 - Positive: Manual targeting on branded term captured high-intent traffic
-- Negative: High impression\\~click gap (3,116 impressions → 12 clicks) suggests listing relevance issues
+- Negative: High impression\~click gap (3,116 impressions → 12 clicks) suggests listing relevance issues
 - ROAS 235% was profitable but volume-constrained by poor CTR
 ---
 ### Worst Performing Pattern: AUTO Substitutes Zero-Conversion Terms
 **What Happened**:
 - Week 1: 244 AUTO substitutes terms generated 30+ clicks with $0.50 average CPC
-- Total waste: $15\\~$20 across terms with zero sales
+- Total waste: $15\~$20 across terms with zero sales
 - Examples: b003ob0kde, b0054twpnc, b006m4hz88 (all $0.50 cost, 0 sales)
 **Why It Happened**:
 - Amazon's AUTO substitutes targeting showed competitor ASINs to irrelevant audiences
@@ -837,7 +837,7 @@ Let me organize the key findings:
 ### Week 5 Complete Failure Pattern
 **What Happened**:
 - All search terms in Week 5 generated zero sales
-- Ad costs ranged $0.25\\~$1.31 per term
+- Ad costs ranged $0.25\~$1.31 per term
 - Mix of AUTO and MANUAL targeting both failed
 **Why It Happened**:
 - Post-holiday traffic drop (End of Year Holiday ended 2025-12-27)
@@ -876,13 +876,13 @@ Let me organize the key findings:
 | kimchi rice noodles | kimchi rice noodles | $1.39 | $23.99 | 1,726% | 50% | 2 | 5 |
 | korean ramen | ramen | $4.10 | $23.99 | 585% | 16.67% | 6 | 700 |
 **What Happened**:
-- MANUAL keyword campaigns achieved 8\\~100% Ad CVR across 5 top terms
+- MANUAL keyword campaigns achieved 8\~100% Ad CVR across 5 top terms
 - Total Week 3 sales from MANUAL keywords: $143.94 (6 units) from $20.82 spend
 - Average ROAS: 1,138% across these 5 terms
 **Why It Happened**:
 - Manual keyword targeting aligned search intent with product offering
-- Lower CPCs ($0.25\\~$1.02) compared to AUTO targeting enabled more click volume
-- Higher CTR on manual keywords (0.39\\~10%) vs AUTO (0.29\\~1%)
+- Lower CPCs ($0.25\~$1.02) compared to AUTO targeting enabled more click volume
+- Higher CTR on manual keywords (0.39\~10%) vs AUTO (0.29\~1%)
 **Why It Worked**:
 - Specific keyword selection (""gluten free ramen"", ""kimchi rice noodles"") matched unique product differentiators
 - Campaign structure allowed granular bid control per keyword
@@ -890,11 +890,11 @@ Let me organize the key findings:
 ---
 ## Business Impact
 ### Campaign Efficiency Crisis
-- 80\\~90% of search terms across all weeks generated zero sales despite accumulating ad costs
+- 80\~90% of search terms across all weeks generated zero sales despite accumulating ad costs
 - AUTO targeting (loose-match, substitutes) showed systematic waste pattern across 5-week period
-- Estimated wasted spend: $100\\~$150 across zero-converting AUTO terms
+- Estimated wasted spend: $100\~$150 across zero-converting AUTO terms
 ### MANUAL Keyword Success in Limited Window
-- Week 3\\~4 MANUAL keywords proved campaign viability with 20\\~30% success rate
+- Week 3\~4 MANUAL keywords proved campaign viability with 20\~30% success rate
 - However, Week 5 complete failure suggests either seasonal collapse or budget/bid issues
 - Campaign sustainability requires investigation into Week 5 performance drop
 ### Product-Market Fit Questions
@@ -954,7 +954,7 @@ Week 52→Week 4 demonstrates consistent growth trajectory with ROAS improving 1
 | ROAS % | 130.59% | 300.69% | +170.1pp | Efficiency improved during scale |
 | Ad CVR % | 2.50% | 6.49% | +159% | Conversion rate doubled |
 | Units Sold | 3 | 66 | +2,100% | Volume matched revenue growth |
-CVR gains (+159%) significantly outpaced CPC increases (+13%, $0.46→$0.52), creating positive efficiency leverage. Ad Impressions stabilized at 100K+ level from Week 2 onward, with CTR fluctuation (0.31%\\~0.50%) peaking in Week 3 (0.50%), indicating successful targeting optimization.
+CVR gains (+159%) significantly outpaced CPC increases (+13%, $0.46→$0.52), creating positive efficiency leverage. Ad Impressions stabilized at 100K+ level from Week 2 onward, with CTR fluctuation (0.31%\~0.50%) peaking in Week 3 (0.50%), indicating successful targeting optimization.
 ---
 ## Product Portfolio Performance (5 ASINs, 2025-12-28 ~ 2026-01-28)
 ### Active Products Drive All Revenue (2 Active, 3 Inactive ASINs)
@@ -1049,11 +1049,11 @@ SD consumed $125.60 (13.8% of total spend) but generated only $23.99 sales (1.3%
 **AUTO vs MANUAL Targeting Efficiency (Entire Account, Week 52 ~ Week 5)**
 | Targeting Type | Ad Cost Range | Sales Success Rate | Avg Ad CVR % | Key Observation |
 |----------------|---------------|-------------------|--------------|-----------------|
-| AUTO - loose-match | $0.04\\~$0.60 per term | <5% | 0\\~100% (extremes) | High waste, inconsistent CTR |
-| AUTO - close-match | $0.06\\~$1.26 per term | 5\\~10% | 0\\~200% | Slightly better than loose-match |
-| AUTO - substitutes | $0.50\\~$10.22 per term | 10\\~15% | 0\\~100% | Highest volume, mixed results |
-| MANUAL - KEYWORD | $0.24\\~$10.22 per term | 20\\~30% | 8\\~100% | Best performance in Week 3\\~4 |
-| MANUAL - PRODUCT | $0.15\\~$9.92 per term | 15\\~25% | 5\\~100% | Moderate success with ASIN targeting |
+| AUTO - loose-match | $0.04\~$0.60 per term | <5% | 0\~100% (extremes) | High waste, inconsistent CTR |
+| AUTO - close-match | $0.06\~$1.26 per term | 5\~10% | 0\~200% | Slightly better than loose-match |
+| AUTO - substitutes | $0.50\~$10.22 per term | 10\~15% | 0\~100% | Highest volume, mixed results |
+| MANUAL - KEYWORD | $0.24\~$10.22 per term | 20\~30% | 8\~100% | Best performance in Week 3\~4 |
+| MANUAL - PRODUCT | $0.15\~$9.92 per term | 15\~25% | 5\~100% | Moderate success with ASIN targeting |
 Out of hundreds of search terms tracked, only 10-15% generated any sales, resulting in estimated $100-150 wasted spend across zero-converting AUTO terms. Multiple search terms accumulated $0.50-$2.72 in costs with zero sales, particularly in AUTO substitutes and loose-match.
 ### Week 3 Manual Keyword Peak Performance (MANUAL_KEYWORD, 2026-W03)
 **Top MANUAL Keyword Performance (Entire Account, 2026-W03)**
@@ -1069,11 +1069,11 @@ MANUAL keyword campaigns achieved 8-100% Ad CVR with average 1,138% ROAS across 
 | Week | Period | Top Performing Terms (Sales > $0) | Total Ad Cost (Sample) | Converting Terms |
 |------|--------|-----------------------------------|----------------------|------------------|
 | Week 52 | 2025-W52 | b0bvfyfb3f (AUTO substitutes): $23.99 sales | Low volume | 1/40+ terms |
-| Week 1 | 2026-W01 | authentic ramen noodle cups, b00og8nztu, rawmyun ramen cup, rice noodle made in korea, b0cs66k7wl | $4.00\\~$10.00 range | 10/300+ terms |
-| Week 2 | 2026-W02 | rice ramen, cup noodles, korean ramen (AUTO): $47.98, b0dr3tb76t (MANUAL): $23.99 | $15.00\\~$20.00 range | 5/200+ terms |
+| Week 1 | 2026-W01 | authentic ramen noodle cups, b00og8nztu, rawmyun ramen cup, rice noodle made in korea, b0cs66k7wl | $4.00\~$10.00 range | 10/300+ terms |
+| Week 2 | 2026-W02 | rice ramen, cup noodles, korean ramen (AUTO): $47.98, b0dr3tb76t (MANUAL): $23.99 | $15.00\~$20.00 range | 5/200+ terms |
 | Week 3 | 2026-W03 | MANUAL keywords dominated: rice noodle soup, gluten free ramen, kimchi rice noodles | $25.00+ | 15/150+ terms |
 | Week 4 | 2026-W04 | MANUAL keywords: mama cup noodles, kimchi rice ramen, korean ramen | $30.00+ | 12/200+ terms |
-| Week 5 | 2026-W05 | Zero sales across all tracked terms | $3.00\\~$5.00 | 0/20+ terms |
+| Week 5 | 2026-W05 | Zero sales across all tracked terms | $3.00\~$5.00 | 0/20+ terms |
 Weekly performance volatility: sales-generating terms changed significantly week-over-week, with no consistent top performers across 5-week period. Week 5 complete failure (zero sales all terms) indicates post-holiday demand collapse or fundamental data issue.
 ---
 *Analysis based on data from 2025-12-28 ~ 2026-01-28. Week 5 performance requires validation due to anomalous zero ad sales pattern.*","Analysis Report Agent","43682","2026-01-28 10:17:54.006 +0900","2026-01-28 10:17:54.006 +0900","SYSTEM","2026-01-28 10:17:54.006 +0900","SYSTEM","aa89dccf-1446-429a-93c5-540421364059","A3LA0PS7FJZCWD","ATVPDKIKX0DER",""
@@ -2623,7 +2623,7 @@ There are some data inconsistencies worth noting: MANUAL_PRODUCT_CATEGORY appear
 **Event Period**: None specified
 1. **Strong Growth Through Week 4**: Ad Sales peaked at $427K in Week 4 (+21% vs W3), driven by improved efficiency across all campaign types (ROAS 342%, +36% vs W3)
 2. **Week 5 Significant Reduction**: Ad Cost dropped 72% ($125K → $35K) with proportional sales decline ($427K → $81K), suggesting budget constraint or strategic adjustment
-3. **AUTO Campaigns Demonstrate Superior Efficiency**: Consistently outperformed manual campaigns with ROAS 217\\~584% range while accounting for 15-25% of weekly spend
+3. **AUTO Campaigns Demonstrate Superior Efficiency**: Consistently outperformed manual campaigns with ROAS 217\~584% range while accounting for 15-25% of weekly spend
 4. **MANUAL_PRODUCT Dominates Investment**: Represents 60-85% of weekly ad spend, generating majority of sales volume despite lower efficiency (ROAS 96-267%)
 5. **Data Validation Needed**: MANUAL_PRODUCT_CATEGORY shows duplicate values with MANUAL_PRODUCT in W1-W3, indicating potential reporting sync issue
 ---
@@ -2726,10 +2726,10 @@ Analysis period: 2025-12-29 ~ 2026-01-29 (4 weeks: Week 1, 2, 3, 4, 5)
 **Analysis Period**: 2025-12-29 ~ 2026-01-29 (5 weeks)
 **Ranking Criteria**: Bottom 5 by total_sales7d and roas_percent
 1. **New Product Launch Challenges**: 8 new Gluet apple cider vinegar products (launched Dec 2025) generated ¥0 in ad sales despite ¥18,700 total ad spend across 5 weeks, indicating significant product-market fit or listing optimization issues
-2. **Zero Conversion Despite Traffic**: Bottom products accumulated 219 ad clicks (¥14,700 ad cost) with 0% Ad CVR, while established products in the account show 10\\~20% Ad CVR in same period
+2. **Zero Conversion Despite Traffic**: Bottom products accumulated 219 ad clicks (¥14,700 ad cost) with 0% Ad CVR, while established products in the account show 10\~20% Ad CVR in same period
 3. **Allulose Product Inconsistency**: B0CMXFWSJW showed volatile performance - Week 1 (ROAS 0%, ¥147 loss) → Week 4 (ROAS 375.5%, ¥2,024 profit), suggesting campaign targeting or seasonal timing issues
-4. **High CPC Without Returns**: B0CNXB6S47 maintained ¥78\\~¥154 CPC across 5 weeks with 0 sales, while top-performing allulose products achieve ¥48\\~¥70 CPC with 20% Ad CVR
-5. **Resource Allocation Gap**: Bottom 5 products consumed ¥39,600 in ad spend (5.2% of account total) with 0% contribution to sales, while top performers show 200\\~900% ROAS in same period
+4. **High CPC Without Returns**: B0CNXB6S47 maintained ¥78\~¥154 CPC across 5 weeks with 0 sales, while top-performing allulose products achieve ¥48\~¥70 CPC with 20% Ad CVR
+5. **Resource Allocation Gap**: Bottom 5 products consumed ¥39,600 in ad spend (5.2% of account total) with 0% contribution to sales, while top performers show 200\~900% ROAS in same period
 ---
 ## Bottom 5 Products Overview (Entire Account, 2025-12-29 ~ 2026-01-29)
 **Bottom 5 Performance Summary (Entire Account, 2025-12-29 ~ 2026-01-29)**
@@ -2743,7 +2743,7 @@ Analysis period: 2025-12-29 ~ 2026-01-29 (4 weeks: Week 1, 2, 3, 4, 5)
 ---
 ## Detailed Analysis by Product Category (Entire Account, 2025-12-29 ~ 2026-01-29)
 ### Category 1: Existing Allulose Products (B0CNXB6S47, B0CNXBM79J, 2025-12-29 ~ 2026-01-29)
-**Weekly Performance Trend (B0CNXB6S47, B0CNXBM79J, Week 1\\~5, January 2026)**
+**Weekly Performance Trend (B0CNXB6S47, B0CNXBM79J, Week 1\~5, January 2026)**
 | Week | ASIN | Ad Cost | Ad Clicks | CPC | Ad Sales | ROAS % |
 |------|------|---------|-----------|-----|----------|--------|
 | W01 | B0CNXB6S47 | ¥731 | 9 | ¥84.04 | ¥0 | 0.0% |
@@ -2762,17 +2762,17 @@ Analysis period: 2025-12-29 ~ 2026-01-29 (4 weeks: Week 1, 2, 3, 4, 5)
 - B0CNXBM79J generated 118 ad clicks (¥9,679 ad cost) with identical 0% Ad CVR pattern
 - Combined negative ad profit: ¥-15,460
 **Why It Happened**:
-- Click volume confirms ad visibility exists (Sessions: 16\\~92 per week), but 0 conversions suggest fundamental listing or product issues
-- Organic sales data shows B0CNXB6S47 achieved ¥544\\~¥272 organic sales in Week 1-2, indicating the product can convert without ads
-- B0CNXBM79J maintained ¥326\\~¥7,508 organic sales throughout, confirming product demand exists
-- Contrast with successful allulose product B0C9TT1R14: 20% Ad CVR, ¥48\\~¥110 CPC, ROAS 142\\~1,726% in same period
+- Click volume confirms ad visibility exists (Sessions: 16\~92 per week), but 0 conversions suggest fundamental listing or product issues
+- Organic sales data shows B0CNXB6S47 achieved ¥544\~¥272 organic sales in Week 1-2, indicating the product can convert without ads
+- B0CNXBM79J maintained ¥326\~¥7,508 organic sales throughout, confirming product demand exists
+- Contrast with successful allulose product B0C9TT1R14: 20% Ad CVR, ¥48\~¥110 CPC, ROAS 142\~1,726% in same period
 **Why It Failed**:
-- Ad traffic quality mismatch: Products generating organic sales (9\\~70% organic contribution) but failing at 0% Ad CVR suggests targeting is reaching non-converting audiences
-- Price point barrier possible: B0CNXB6S47 ASP ¥2,990 vs category leader B0C9TT1R14 ASP ¥4,593\\~¥5,690, but CPC ¥80\\~¥150 range exceeds profitable threshold
-- Listing optimization gap: Page views (18\\~122 per week) with 0 ad conversions indicates potential issues with listing images, title, or bullet points not optimized for ad traffic
+- Ad traffic quality mismatch: Products generating organic sales (9\~70% organic contribution) but failing at 0% Ad CVR suggests targeting is reaching non-converting audiences
+- Price point barrier possible: B0CNXB6S47 ASP ¥2,990 vs category leader B0C9TT1R14 ASP ¥4,593\~¥5,690, but CPC ¥80\~¥150 range exceeds profitable threshold
+- Listing optimization gap: Page views (18\~122 per week) with 0 ad conversions indicates potential issues with listing images, title, or bullet points not optimized for ad traffic
 ---
 ### Category 2: New Gluet Apple Cider Vinegar Products (8 ASINs, 2025-12-29 ~ 2026-01-29)
-**New Product Launch Performance (8 Gluet ASINs, Week 1\\~5, December 2025 \\~ January 2026)**
+**New Product Launch Performance (8 Gluet ASINs, Week 1\~5, December 2025 \~ January 2026)**
 | ASIN | Product | Launch Date | Total Ad Cost | Ad Clicks | Ad Sales | Sessions | Page Views | Inventory |
 |------|---------|-------------|---------------|-----------|----------|----------|------------|-----------|
 | B0FX81KB65 | Original 240ml | 2025-12-10 | ¥7,237 | 86 | ¥0 | 285 | 320 | 46 |
@@ -2785,21 +2785,21 @@ Analysis period: 2025-12-29 ~ 2026-01-29 (4 weeks: Week 1, 2, 3, 4, 5)
 | B0GCMD6QBJ | Asabi Cleanse Apple 960ml | 2025-12-26 | ¥665 | 6 | ¥0 | 10 | 12 | 0 |
 **What Happened**:
 - 8 new products launched December 2025 generated ¥0 in ad sales despite ¥36,658 total ad spend across 5 weeks
-- Combined 414 ad clicks with 0% Ad CVR (vs 10\\~20% Ad CVR for established products in same account)
+- Combined 414 ad clicks with 0% Ad CVR (vs 10\~20% Ad CVR for established products in same account)
 - 1,178 total sessions and 1,376 page views indicate traffic acquisition successful, but conversion completely absent
 - 4 products show 0 inventory (B0G8J83Z49, B0GC3Z9XVW, B0GCLBXMQ4, B0GCMD6QBJ), suggesting potential stock-out issues
 **Why It Happened**:
 - New-to-market product: Apple cider vinegar category in Japanese market may require education period vs established allulose products
 - Brand recognition gap: ""Gluet"" is new brand with no customer reviews or social proof (vs ""Allulose"" products with 31-month selling history)
-- Launch timing: December\\~January period overlaps with New Year holidays when Japanese consumer behavior shifts toward traditional foods
-- Stock management issues: 50% of products (4/8) showing 0 inventory within 3\\~4 weeks of launch impacts Amazon algorithm ranking
+- Launch timing: December\~January period overlaps with New Year holidays when Japanese consumer behavior shifts toward traditional foods
+- Stock management issues: 50% of products (4/8) showing 0 inventory within 3\~4 weeks of launch impacts Amazon algorithm ranking
 **Why It Failed**:
-- Listing optimization incomplete: Products with 100\\~300 sessions but 0 conversions suggests fundamental issues with listing content (images, title, A+ content) not aligned with customer search intent
-- CPC efficiency: Average ¥85\\~¥130 CPC across new products vs ¥48\\~¥70 CPC for successful existing products indicates keyword targeting may be too broad or competitive
+- Listing optimization incomplete: Products with 100\~300 sessions but 0 conversions suggests fundamental issues with listing content (images, title, A+ content) not aligned with customer search intent
+- CPC efficiency: Average ¥85\~¥130 CPC across new products vs ¥48\~¥70 CPC for successful existing products indicates keyword targeting may be too broad or competitive
 - Product-market validation missing: Zero organic sales alongside zero ad sales suggests product offering or positioning may not resonate with target market
 ---
 ### Special Case: B0CMXFWSJW Performance Recovery (アルロース2種類4構成, 2025-12-29 ~ 2026-01-29)
-**Weekly Recovery Pattern (B0CMXFWSJW, Week 1\\~4, January 2026)**
+**Weekly Recovery Pattern (B0CMXFWSJW, Week 1\~4, January 2026)**
 | Week | Ad Cost | Ad Sales | ROAS % | Ad Profit | Organic Sales | Total Sales |
 |------|---------|----------|--------|-----------|---------------|-------------|
 | W01 | ¥147 | ¥0 | 0.0% | ¥-147 | ¥5,990 | ¥5,990 |
@@ -2808,8 +2808,8 @@ Analysis period: 2025-12-29 ~ 2026-01-29 (4 weeks: Week 1, 2, 3, 4, 5)
 | W03 | ¥909 | ¥0 | 0.0% | ¥-909 | ¥545 | ¥5,990 |
 | W04 | ¥735 | ¥2,759 | 375.5% | ¥2,024 | ¥6,535 | ¥11,980 |
 **What Happened**:
-- Product oscillated between 0% ROAS (Week 1, 2, 3) and 375\\~1,328% ROAS (Week 1 alternate, Week 4)
-- Maintained consistent organic sales ¥545\\~¥6,535 weekly regardless of ad performance
+- Product oscillated between 0% ROAS (Week 1, 2, 3) and 375\~1,328% ROAS (Week 1 alternate, Week 4)
+- Maintained consistent organic sales ¥545\~¥6,535 weekly regardless of ad performance
 - Week 1 alternate data (same week period) shows ¥4,456 ad sales with ¥335 ad cost, indicating data collection anomaly possible
 **Why Recovery Occurred**:
 - Week 4 data verification needed: Data shows conflicting entries for same week periods (Week 1 has two separate rows with different performance)
@@ -2818,13 +2818,13 @@ Analysis period: 2025-12-29 ~ 2026-01-29 (4 weeks: Week 1, 2, 3, 4, 5)
 ---
 ## Business Impact
 **Zero-Conversion Product Impact on Account Health**:
-- Bottom 5 products consumed ¥39,600 in ad spend (estimated 5\\~7% of account-level ad budget) with 0% sales contribution
-- Opportunity cost: Same ¥39,600 allocated to top-performing products (ROAS 200\\~900%) could have generated ¥79,200\\~¥356,400 in additional ad sales
-- Campaign health: Products with sustained 0% ROAS for 3\\+ weeks negatively impact account-level quality scores and future bidding efficiency
+- Bottom 5 products consumed ¥39,600 in ad spend (estimated 5\~7% of account-level ad budget) with 0% sales contribution
+- Opportunity cost: Same ¥39,600 allocated to top-performing products (ROAS 200\~900%) could have generated ¥79,200\~¥356,400 in additional ad sales
+- Campaign health: Products with sustained 0% ROAS for 3\+ weeks negatively impact account-level quality scores and future bidding efficiency
 **New Product Launch Strategy Requires Adjustment**:
 - Current approach: Launch 8 products simultaneously with immediate ad investment (¥36,658 across 5 weeks)
 - Result: 0% conversion rate suggests fundamental product-market fit or listing quality issues requiring resolution before scaling ad spend
-- Inventory management critical: 50% of new products experiencing stock-outs within 3\\~4 weeks disrupts Amazon algorithm momentum for new launches","Analysis For Research","47309","2026-01-29 13:16:55.195 +0900","2026-01-29 13:16:55.195 +0900","SYSTEM","2026-01-29 13:16:55.195 +0900","SYSTEM","dfe9831e-2b41-4090-a0f9-b1bb6f30fd9f","A25NJOVN0F1199","A1VC38T7YXB528",""
+- Inventory management critical: 50% of new products experiencing stock-outs within 3\~4 weeks disrupts Amazon algorithm momentum for new launches","Analysis For Research","47309","2026-01-29 13:16:55.195 +0900","2026-01-29 13:16:55.195 +0900","SYSTEM","2026-01-29 13:16:55.195 +0900","SYSTEM","dfe9831e-2b41-4090-a0f9-b1bb6f30fd9f","A25NJOVN0F1199","A1VC38T7YXB528",""
 "48cfd806-a262-4272-9123-9dd1ea92564e","04a8c4c8-40e1-70de-71ac-e0bbfa3483cb","4491cd2c-0b54-4533-bd9d-8d19517bc8e5","828a7c9e-691c-43ee-8a43-eeab819d90ed","Analysis For Research","ai","Let me analyze this performance overview data. The date range is 2025-12-29 to 2026-01-29, with weekly periods.
 First, let me understand the data structure:
 - Week 2026-W01 (first entry): This appears to be December 29 - January 4
@@ -2856,7 +2856,7 @@ All advertising activity comes through Sponsored Products with no Sponsored Disp
 2. **Exceptional Ad Efficiency Improvement in Week 4**: ROAS surged to 374% in Week 4 (up from 248% in Week 3), with TACOS dropping to 13.9% (lowest across all weeks), despite 33% reduction in Ad Cost ($153K → $102K). This indicates highly efficient targeting during this period.
 3. **Organic Sales Contribution Increased Substantially**: Week 3 showed strongest organic performance with 55.8% organic contribution ($432K organic sales, 151 organic units), representing 35% increase in organic percentage compared to Week 2 (47.2% → 55.8%).
 4. **CTR and CVR Both Improved Significantly**: Ad CTR improved from 0.71% (Week 1) to 1.23% (Week 4), while Ad CVR increased from 8.83% to 13.75% during the same period, indicating both better ad relevance and landing page performance.
-5. **Week 5 Shows Partial Performance**: Week 5 data represents only 4 days (Jan 26\\~29), showing $142K sales with 230% ROAS. When normalized, daily performance remains consistent with overall trend.
+5. **Week 5 Shows Partial Performance**: Week 5 data represents only 4 days (Jan 26\~29), showing $142K sales with 230% ROAS. When normalized, daily performance remains consistent with overall trend.
 ---
 ## Overall Performance Summary (Entire Account, 2025-12-29 ~ 2026-01-29)
 **Performance Overview (Entire Account, 2025-12-29 ~ 2026-01-29)**
@@ -2868,7 +2868,7 @@ All advertising activity comes through Sponsored Products with no Sponsored Disp
 | W03 | $773,229 | 294 | 2,295 | 3,350 | 8.78% | $153,123 | $380,451 | 156 | 248% | 19.80% | $465,766 | 55.83% | 170,755 | 1,453 | 0.85% | $105.38 | 10.74% |
 | W04 | $734,816 | 265 | 2,137 | 3,145 | 8.43% | $102,261 | $382,410 | 154 | 374% | 13.92% | $544,719 | 48.62% | 91,375 | 1,120 | 1.23% | $91.30 | 13.75% |
 | W05* | $142,274 | 58 | 617 | 904 | 6.42% | $35,384 | $81,459 | 34 | 230% | 24.87% | $114,790 | 42.74% | 42,014 | 358 | 0.85% | $98.84 | 9.50% |
-*Week 5 represents partial week (4 days: Jan 26\\~29)
+*Week 5 represents partial week (4 days: Jan 26\~29)
 ---
 ## Weekly Performance Trend (Entire Account, W01 ~ W05, Dec 2025 ~ Jan 2026)
 **Week-over-Week Growth Analysis (Entire Account, W01-W05)**
@@ -2883,7 +2883,7 @@ All advertising activity comes through Sponsored Products with no Sponsored Disp
 | Ad CVR % | 8.03% | 8.83% | 8.52% | 10.74% (+26%) | 13.75% (+28%) | Conversion efficiency accelerated |
 ---
 ## Detailed Analysis (Entire Account, 2025-12-29 ~ 2026-01-29)
-### Peak Performance in Week 3 (Entire Account, 2026-W03, Jan 12\\~18)
+### Peak Performance in Week 3 (Entire Account, 2026-W03, Jan 12\~18)
 **Sales Performance (Entire Account, 2026-W03)**
 | Metric | W02 | W03 | Change |
 |--------|-----|-----|--------|
@@ -2907,7 +2907,7 @@ All advertising activity comes through Sponsored Products with no Sponsored Disp
 - Strong organic performance (107% growth) indicated that ad-driven visibility successfully translated into organic ranking improvements or brand awareness
 - Higher Total CVR (7.00% → 8.78%) confirmed overall listing performance improvement across both paid and organic channels
 ---
-### Exceptional Efficiency Peak in Week 4 (Entire Account, 2026-W04, Jan 19\\~25)
+### Exceptional Efficiency Peak in Week 4 (Entire Account, 2026-W04, Jan 19\~25)
 **Advertising Efficiency (Entire Account, 2026-W04)**
 | Metric | W03 | W04 | Change |
 |--------|-----|-----|--------|
@@ -3066,16 +3066,16 @@ Key findings:
 4. AUTO campaigns dominate top spending
 5. ROAS varies from 0% to 4551%
 Let me create comprehensive tables following the schema guidelines.
-## Executive Summary (Entire Account, 2026-01-19 \\~ 2026-01-25)
+## Executive Summary (Entire Account, 2026-01-19 \~ 2026-01-25)
 **Analysis Target**: Entire Account (All Active Campaigns)
-**Analysis Period**: 2026-01-19 \\~ 2026-01-25 (Week 2026-W04)
+**Analysis Period**: 2026-01-19 \~ 2026-01-25 (Week 2026-W04)
 **Campaign Universe**: 76 active campaigns analyzed, top 10 by ad spend presented
 1. **Concentrated Ad Investment**: Top 3 campaigns consumed ¥47.5K (62% of total ¥76.4K ad spend) - Allulose_SP(auto), ACV SP(Auto), and mop_B0C93TF4TR_Allulose_1kg_campaign_auto generated ¥87.2K in ad sales (ROAS 184%)
-2. **Performance Polarization**: AUTO campaigns achieved highest ROAS (up to 4551% on B0C9TT1R14_Allulose_2kg) with limited spend (¥550), while high-investment AUTO campaigns showed 61\\~374% ROAS range
-3. **Zero-Conversion Investment**: 10 campaigns (13% of analyzed) spent ¥4.1K with zero sales - primarily MANUAL_KEYWORD campaigns averaging ¥466 per campaign with 0% conversion despite 7\\~8 clicks
+2. **Performance Polarization**: AUTO campaigns achieved highest ROAS (up to 4551% on B0C9TT1R14_Allulose_2kg) with limited spend (¥550), while high-investment AUTO campaigns showed 61\~374% ROAS range
+3. **Zero-Conversion Investment**: 10 campaigns (13% of analyzed) spent ¥4.1K with zero sales - primarily MANUAL_KEYWORD campaigns averaging ¥466 per campaign with 0% conversion despite 7\~8 clicks
 4. **Product Targeting Dominance**: MANUAL_PRODUCT campaigns led efficiency with ¥53.7K sales on ¥26.3K spend (ROAS 205%), while MANUAL_KEYWORD campaigns showed lowest efficiency at 509% ROAS on higher spend (¥10.3K)
 ---
-## Top 10 Campaigns by Ad Spend (Entire Account, 2026-01-19 \\~ 2026-01-25)
+## Top 10 Campaigns by Ad Spend (Entire Account, 2026-01-19 \~ 2026-01-25)
 **Campaign Performance Overview (Entire Account, Week 2026-W04)**
 | Campaign Name | Campaign Type | Targeting | Ad Cost | Ad Sales | Units Sold | ROAS % | Ad CVR % | CPC | CTR % |
 |--------------|---------------|-----------|---------|----------|------------|---------|----------|-----|-------|
@@ -3090,7 +3090,7 @@ Let me create comprehensive tables following the schema guidelines.
 | mop_B0FX81KB65_acv_ori_15pcsx1ea_FBA_campaign_auto | SP | AUTO | ¥187 | ¥0 | 0 | 0.0% | 0.0% | ¥62.33 | 1.76% |
 | mop_B0C9J94MG7_Allulose_1kg_1_campaign_auto | SP | AUTO | ¥145 | ¥0 | 0 | 0.0% | 0.0% | ¥48.30 | 1.06% |
 ---
-## Campaign Type Performance Analysis (Entire Account, 2026-01-19 \\~ 2026-01-25)
+## Campaign Type Performance Analysis (Entire Account, 2026-01-19 \~ 2026-01-25)
 ### AUTO Campaign Performance (Entire Account, 2026-W04)
 **AUTO Campaigns Summary (10 Campaigns Active)**
 | Metric | Total |
@@ -3108,11 +3108,11 @@ Let me create comprehensive tables following the schema guidelines.
 - Top 3 AUTO campaigns (Allulose_SP(auto), ACV SP(Auto), mop_B0C93TF4TR) consumed 83% of AUTO budget (¥25.3K) but showed 184% ROAS vs remaining 7 campaigns at 1,342% ROAS
 - 2 newly launched AUTO campaigns (mop_B0FX81KB65, mop_B0C9J94MG7) spent ¥332 with zero conversions despite 5 total clicks
 **Why It Happened**:
-- High CPC on top spenders (¥72.89\\~¥133.74) vs efficient campaigns (¥34.40\\~¥48.98) created 3x cost disparity
-- Top 3 campaigns achieved only 1.02\\~4.00% CTR with 4.9\\~27.5% CVR, while efficient campaigns maintained 0.70\\~4.36% CTR but 11.4\\~37.5% CVR
-- Zero-sales campaigns generated impressions (170\\~282) and clicks (3 each) but failed to convert, indicating targeting misalignment
+- High CPC on top spenders (¥72.89\~¥133.74) vs efficient campaigns (¥34.40\~¥48.98) created 3x cost disparity
+- Top 3 campaigns achieved only 1.02\~4.00% CTR with 4.9\~27.5% CVR, while efficient campaigns maintained 0.70\~4.36% CTR but 11.4\~37.5% CVR
+- Zero-sales campaigns generated impressions (170\~282) and clicks (3 each) but failed to convert, indicating targeting misalignment
 **Why Efficiency Variance Occurred**:
-- ROAS inversely correlated with CPC - campaigns with CPC below ¥50 achieved 728\\~4,551% ROAS, while CPC above ¥70 yielded 61\\~374% ROAS
+- ROAS inversely correlated with CPC - campaigns with CPC below ¥50 achieved 728\~4,551% ROAS, while CPC above ¥70 yielded 61\~374% ROAS
 - High-volume campaigns (14.7K impressions on Allulose_SP(auto)) absorbed budget but lower CTR (1.02%) reduced conversion opportunities compared to niche campaigns (367 impressions on B0C9TT1R14 with 4.36% CTR)
 ---
 ### MANUAL_KEYWORD Campaign Performance (Entire Account, 2026-W04)
@@ -3133,11 +3133,11 @@ Let me create comprehensive tables following the schema guidelines.
 - 5 campaigns spent ¥3.1K (13% of segment budget) with zero sales despite 26 clicks, averaging 0% CVR
 **Why It Happened**:
 - CPC averaged ¥105.94 (35% higher than AUTO's ¥78.47), with highest-spend campaign at ¥111.48 limiting click volume (92 clicks from ¥10.3K spend)
-- Top campaign achieved 2.70% CTR but only 21.7% CVR, while mid-tier campaigns showed 1.10\\~2.02% CTR with 14.3\\~20.0% CVR
-- Zero-conversion campaigns (liquid_allulose, ging_acv, allulose_250gx8ea, B0C9TT1R14, ging_acv_15pcsx4ea) generated 0.22\\~5.26% CTR but 0% CVR from 1\\~8 clicks each
+- Top campaign achieved 2.70% CTR but only 21.7% CVR, while mid-tier campaigns showed 1.10\~2.02% CTR with 14.3\~20.0% CVR
+- Zero-conversion campaigns (liquid_allulose, ging_acv, allulose_250gx8ea, B0C9TT1R14, ging_acv_15pcsx4ea) generated 0.22\~5.26% CTR but 0% CVR from 1\~8 clicks each
 **Why Keyword Targeting Underperformed**:
 - High CPC consumed budget before achieving conversion-level traffic - campaigns needed 18+ clicks for first conversion but averaged only 14 clicks per ¥2,362 spend
-- Active campaigns showed 0.47\\~5.26% CTR variation indicating mixed keyword relevance, with zero-sales campaigns clustering at 0.22\\~1.06% CTR (low intent keywords)
+- Active campaigns showed 0.47\~5.26% CTR variation indicating mixed keyword relevance, with zero-sales campaigns clustering at 0.22\~1.06% CTR (low intent keywords)
 ---
 ### MANUAL_PRODUCT Campaign Performance (Entire Account, 2026-W04)
 **MANUAL_PRODUCT Campaigns Summary (10 Campaigns Active)**
@@ -3158,13 +3158,13 @@ Let me create comprehensive tables following the schema guidelines.
 **Why It Happened**:
 - High CPC at ¥105.59 (34% higher than AUTO's ¥78.47) limited traffic generation - ¥41.2K spend yielded only 390 clicks vs AUTO's 386 clicks from ¥30.3K
 - Top campaign (Allulose_SP(manu_P)) achieved highest impressions (15,314) but only 1.54% CTR, resulting in 236 clicks with 8.90% CVR
-- Zero-conversion campaigns averaged 0.0% CVR from 162\\~220 impressions each, indicating product targeting misalignment
+- Zero-conversion campaigns averaged 0.0% CVR from 162\~220 impressions each, indicating product targeting misalignment
 **Why Product Targeting Required Highest Investment**:
 - MANUAL_PRODUCT campaigns targeted competitive placements (average 15,314 impressions on top campaign vs 14,657 on top AUTO), driving up CPC through bid competition
 - Low CTR (1.62% segment average) vs AUTO (1.09%) and MANUAL_KEYWORD (1.22%) suggests product targeting captured lower-intent traffic despite higher volume
 - CVR averaged 9.90% across converting campaigns (lower than AUTO's 15.2%) indicating traffic quality issues despite premium placement costs
 ---
-## Key Campaign Insights (Entire Account, 2026-01-19 \\~ 2026-01-25)
+## Key Campaign Insights (Entire Account, 2026-01-19 \~ 2026-01-25)
 ### High-Efficiency Outlier Campaigns
 **mop_B0C9TT1R14_Allulose_2kg (AUTO)**: Achieved 4,551% ROAS with minimal spend (¥550 generating ¥25,050 sales)
 - Exceptional metrics: 37.5% CVR, 4.36% CTR, ¥34.40 CPC
@@ -3172,9 +3172,9 @@ Let me create comprehensive tables following the schema guidelines.
 - **Implication**: Niche targeting identified high-intent audience but low impression volume prevents scale
 ### Zero-Conversion Campaign Concentration
 **Investment Without Returns**: 10 campaigns (5 MANUAL_KEYWORD, 4 MANUAL_PRODUCT, 1 AUTO) spent ¥4.1K with 0% ROAS
-- **Pattern**: Campaigns generated 103\\~3,127 impressions and 1\\~8 clicks each but failed to convert
+- **Pattern**: Campaigns generated 103\~3,127 impressions and 1\~8 clicks each but failed to convert
 - **Cost Structure**: Average ¥411 spend per zero-conversion campaign vs ¥2,858 average on converting campaigns
-- **Traffic Quality**: CTR ranged 0.22\\~5.26% but 0% CVR indicates targeting-offer mismatch rather than traffic volume issue","Analysis For Research","27233","2026-01-29 13:18:50.919 +0900","2026-01-29 13:18:50.919 +0900","SYSTEM","2026-01-29 13:18:50.919 +0900","SYSTEM","dfe9831e-2b41-4090-a0f9-b1bb6f30fd9f","A25NJOVN0F1199","A1VC38T7YXB528",""
+- **Traffic Quality**: CTR ranged 0.22\~5.26% but 0% CVR indicates targeting-offer mismatch rather than traffic volume issue","Analysis For Research","27233","2026-01-29 13:18:50.919 +0900","2026-01-29 13:18:50.919 +0900","SYSTEM","2026-01-29 13:18:50.919 +0900","SYSTEM","dfe9831e-2b41-4090-a0f9-b1bb6f30fd9f","A25NJOVN0F1199","A1VC38T7YXB528",""
 "481e4019-7c1a-4fc8-b7c8-c932539adffc","04a8c4c8-40e1-70de-71ac-e0bbfa3483cb","4491cd2c-0b54-4533-bd9d-8d19517bc8e5","828a7c9e-691c-43ee-8a43-eeab819d90ed","Analysis For Research","ai","Let me analyze the campaign ranking overview data for the period 2026-01-26 to 2026-01-29 (Week 5, 2026).
 Key observations:
 1. Analysis period: 4 days (2026-01-26 to 2026-01-29, Week 5)
@@ -3210,10 +3210,10 @@ Important notes:
 **Analysis Target**: Entire Account  
 **Analysis Period**: 2026-01-26 ~ 2026-01-29 (Week 5, 4 days)  
 **Event Period**: N/A
-1. **Top 2 Campaigns Drive Majority of Sales**: MANUAL_KEYWORD campaigns for Allulose 1kg (B0C93TF4TR: ¥17,118 sales, ¥6,611 ad cost) and 250g (B0CBM8665Z: ¥16,199 sales, ¥6,130 ad cost) account for 65% of total top-10 ad sales with ROAS 259\\~264%
+1. **Top 2 Campaigns Drive Majority of Sales**: MANUAL_KEYWORD campaigns for Allulose 1kg (B0C93TF4TR: ¥17,118 sales, ¥6,611 ad cost) and 250g (B0CBM8665Z: ¥16,199 sales, ¥6,130 ad cost) account for 65% of total top-10 ad sales with ROAS 259\~264%
 2. **Strong AUTO Campaign Performance**: Allulose 1kg (B0C9J94MG7) AUTO campaign achieved exceptional 5,009% ROAS (¥8,127 sales from ¥162 ad cost) with 100% CVR, ranking #1 in sales efficiency
 3. **Zero-Sales Campaigns Require Attention**: 12 out of 30 active campaigns (40%) generated zero sales despite consuming ¥4,787 in ad spend, primarily AUTO campaigns for ACV and new products
-4. **HIGH CPC in MANUAL Campaigns**: MANUAL_KEYWORD campaigns show significantly higher CPC (¥94\\~¥182) compared to AUTO campaigns (¥44\\~¥68), with MANUAL_PRODUCT showing the widest range (¥51\\~¥187)
+4. **HIGH CPC in MANUAL Campaigns**: MANUAL_KEYWORD campaigns show significantly higher CPC (¥94\~¥182) compared to AUTO campaigns (¥44\~¥68), with MANUAL_PRODUCT showing the widest range (¥51\~¥187)
 ---
 ## Campaign Performance Overview (Entire Account, 2026-01-26 ~ 2026-01-29)
 **Top 10 Campaigns by Ad Cost (Entire Account, Week 5, 2026-01)**
@@ -3267,9 +3267,9 @@ Important notes:
 **Why It Happened**:
 - New product launches (ACV variants, Vegetable Yogurt) lack market validation and optimized targeting
 - Allulose 250g campaigns show conversion issues: AUTO campaign had 0% CVR despite 12 clicks; MANUAL_PRODUCT had 4.23% CTR but 0 conversions
-- Low click volumes (1\\~12 clicks per campaign) prevent meaningful conversion data accumulation
+- Low click volumes (1\~12 clicks per campaign) prevent meaningful conversion data accumulation
 **Why It Failed**:
-- High CPC (¥51\\~¥187) combined with zero conversions indicates targeting-conversion mismatch
+- High CPC (¥51\~¥187) combined with zero conversions indicates targeting-conversion mismatch
 - AUTO campaigns for secondary Allulose products (250g variants, Liquid 2ea/3ea) underperform despite sister SKU (1kg B0C93TF4TR, B0C9J94MG7) showing strong results
 - ACV category lacks proven demand signals in current market
 ### High-Performance Outlier: Allulose 1kg AUTO Campaign (B0C9J94MG7, 2026-01-26 ~ 2026-01-29)
@@ -3290,7 +3290,7 @@ Important notes:
 - Highest sales rank among all AUTO campaigns despite being #8 in ad cost
 **Why It Happened**:
 - Premium pricing (¥2,709 ASP) combined with efficient targeting maximized revenue per conversion
-- Low CPC (¥54.09, 52% below MANUAL_KEYWORD average ¥110\\~¥182) enabled profitable customer acquisition
+- Low CPC (¥54.09, 52% below MANUAL_KEYWORD average ¥110\~¥182) enabled profitable customer acquisition
 - Same product (B0C9J94MG7) shows strong organic demand, reducing reliance on high ad spend
 **Why It Worked**:
 - AUTO targeting successfully identified high-intent audiences without expensive manual keyword bidding
@@ -3300,20 +3300,20 @@ Important notes:
 **CPC Distribution by Campaign Type:**
 | Campaign Type | Avg CPC (¥) | CPC Range (¥) | Highest CPC Campaign | Lowest CPC Campaign |
 |---------------|-------------|---------------|----------------------|---------------------|
-| AUTO | 57.95 | 43.33\\~102.00 | Vegetable Yogurt (¥102) | Allulose 1kg (¥43.89) |
-| MANUAL_KEYWORD | 130.49 | 60.97\\~429.00 | Veg Yogurt 30pcs (¥429) | ACV Ginger 4ea (¥60.97) |
-| MANUAL_PRODUCT | 99.27 | 51.37\\~187.26 | Veg Yogurt 14pcs (¥187.26) | Liquid Allulose (¥51.37) |
+| AUTO | 57.95 | 43.33\~102.00 | Vegetable Yogurt (¥102) | Allulose 1kg (¥43.89) |
+| MANUAL_KEYWORD | 130.49 | 60.97\~429.00 | Veg Yogurt 30pcs (¥429) | ACV Ginger 4ea (¥60.97) |
+| MANUAL_PRODUCT | 99.27 | 51.37\~187.26 | Veg Yogurt 14pcs (¥187.26) | Liquid Allulose (¥51.37) |
 **What Happened**:
 - MANUAL_KEYWORD campaigns show 2.3× higher average CPC (¥130.49) vs. AUTO campaigns (¥57.95)
-- Widest CPC variance in MANUAL_KEYWORD: ¥60.97\\~¥429.00 (7× range)
+- Widest CPC variance in MANUAL_KEYWORD: ¥60.97\~¥429.00 (7× range)
 - New product categories (Vegetable Yogurt) consistently show highest CPC across all campaign types
 **Why It Happened**:
 - Established Allulose products benefit from lower CPCs in AUTO campaigns due to algorithmic learning and proven conversion history
 - MANUAL_KEYWORD campaigns face competitive bidding on high-intent keywords, driving up costs
 - New products (Vegetable Yogurt, some ACV variants) enter markets with limited search volume data, resulting in experimental bidding and higher CPCs
 **Why It Matters**:
-- High CPC in MANUAL campaigns (¥94\\~¥182 for top spenders) combined with 10\\~23% CVR still generates positive ROAS (157\\~539%)
-- Zero-sales campaigns with high CPC (¥95\\~¥187) require targeting optimization before scaling spend
+- High CPC in MANUAL campaigns (¥94\~¥182 for top spenders) combined with 10\~23% CVR still generates positive ROAS (157\~539%)
+- Zero-sales campaigns with high CPC (¥95\~¥187) require targeting optimization before scaling spend
 - AUTO campaigns offer cost efficiency for established products but may lack scale compared to MANUAL strategies","Analysis For Research","27404","2026-01-29 13:18:53.719 +0900","2026-01-29 13:18:53.719 +0900","SYSTEM","2026-01-29 13:18:53.719 +0900","SYSTEM","dfe9831e-2b41-4090-a0f9-b1bb6f30fd9f","A25NJOVN0F1199","A1VC38T7YXB528",""
 "91a8121c-9046-4df0-b9a9-4f49d286ca3d","04a8c4c8-40e1-70de-71ac-e0bbfa3483cb","4491cd2c-0b54-4533-bd9d-8d19517bc8e5","828a7c9e-691c-43ee-8a43-eeab819d90ed","Analysis For Research","ai","Let me analyze the search term ranking overview data. This shows search term performance across different ad target types (AUTO close-match, complements, loose-match, substitutes, and MANUAL_KEYWORD and MANUAL_PRODUCT).
 Key observations:
@@ -3361,7 +3361,7 @@ MANUAL_PRODUCT campaigns are consuming the bulk of ad spend—the top two terms 
 2. **MANUAL_PRODUCT Dominates Volume**: Category targeting (category=""甘味料"") captured 1,289 clicks with ¥158,893 ad spend, representing approximately 60% of top-term ad investment
 3. **AUTO Campaigns Show Superior Efficiency**: AUTO loose-match ""アルロース"" achieved 691% ROAS (¥60,522 sales from ¥8,758 cost) - 3.8x higher ROAS than MANUAL_PRODUCT equivalent despite similar CVR
 4. **Significant Zero-Conversion Spend**: ¥11,261 spent on non-converting terms including ""アップルサイダービネガー"" (¥5,556), ""カロリーゼロ 砂糖"" (¥1,564), and product ASIN ""b07j111zrt"" (¥4,401) - data validation or negative targeting recommended
-5. **High-CPC Keywords May Require Attention**: Several manual keywords show CPC ¥100\\~¥161 (""アルロース 液体"" ¥161.41, ""あるロース"" ¥127.69), significantly higher than AUTO campaigns (¥52\\~¥98 range)
+5. **High-CPC Keywords May Require Attention**: Several manual keywords show CPC ¥100\~¥161 (""アルロース 液体"" ¥161.41, ""あるロース"" ¥127.69), significantly higher than AUTO campaigns (¥52\~¥98 range)
 ---
 ## Core Performance Overview (Entire Account, 2025-12-29 ~ 2026-01-29)
 **Top Search Terms by Ad Investment (Entire Account, 2025-12-29 ~ 2026-01-29)**
@@ -3393,11 +3393,11 @@ MANUAL_PRODUCT campaigns are consuming the bulk of ad spend—the top two terms 
 - Variant ""アルロース 1kg"" achieved exceptional 913% ROAS (¥17,379 sales from ¥1,903 cost)
 - ""アップルサイダービネガー"" (apple cider vinegar) consumed ¥3,933 with zero conversions
 **Why It Happened**:
-- High CVR (13.88\\~19.44%) on allulose-related terms indicates strong search intent alignment
+- High CVR (13.88\~19.44%) on allulose-related terms indicates strong search intent alignment
 - ""甘味料"" (sweetener) generic term shows outstanding 2906.5% ROAS with only 3 clicks, suggesting highly qualified traffic
 - ""アップルサイダービネガー"" zero conversions despite 30 clicks points to product catalog mismatch
 **Why It Worked/Failed**:
-- Close-match effectiveness: Lower CPC (¥52\\~¥80 range) compared to manual keywords while maintaining strong CVR
+- Close-match effectiveness: Lower CPC (¥52\~¥80 range) compared to manual keywords while maintaining strong CVR
 - ""アルロース 1kg"" outperforms MANUAL_KEYWORD equivalent (913% vs 502% ROAS) with half the CPC (¥52.85 vs ¥102.11)
 - Zero-conversion terms: ""アップルサイダービネガー"" and ""アサビクレンズ"" (¥3,933 + ¥299 = ¥4,232 wasted) require negative keyword addition
 ---
@@ -3411,15 +3411,15 @@ MANUAL_PRODUCT campaigns are consuming the bulk of ad spend—the top two terms 
 | アルロース 液体 | ¥690 | 9 | ¥7,920 | 5 | 1148.5% | 55.56% | ¥76.61 | 14.52% |
 **What Happened**:
 - Loose-match ""アルロース"" generated ¥60,522 sales (¥8,758 cost) with 691% ROAS
-- ""アルロース 1kg"" and ""アルロース 液体"" achieved exceptional 1152\\~1148% ROAS
+- ""アルロース 1kg"" and ""アルロース 液体"" achieved exceptional 1152\~1148% ROAS
 - ""アップルサイダービネガー"" repeated zero-conversion pattern (¥1,623 wasted)
 **Why It Happened**:
-- Loose-match expands reach to long-tail variations while maintaining 18.87\\~22.22% CVR on core terms
+- Loose-match expands reach to long-tail variations while maintaining 18.87\~22.22% CVR on core terms
 - ""アルロース 液体"" (liquid allulose) shows 55.56% CVR with 14.52% CTR, indicating strong specific intent
 - Same irrelevant term ""アップルサイダービネガー"" appearing across both close-match and loose-match
 **Why It Worked/Failed**:
 - Loose-match efficiency advantage: ""アルロース"" achieves 691% ROAS (vs 414% close-match, 182% MANUAL_PRODUCT)
-- Lower CPC range (¥60\\~¥82) enables profitable scaling
+- Lower CPC range (¥60\~¥82) enables profitable scaling
 - ""アップルサイダービネガー"" total waste across AUTO campaigns: ¥5,556 (¥3,933 close + ¥1,623 loose) with zero return
 ---
 **AUTO Complements Top Terms (Entire Account, 2025-12-29 ~ 2026-01-29)**
@@ -3437,7 +3437,7 @@ MANUAL_PRODUCT campaigns are consuming the bulk of ad spend—the top two terms 
 **Why It Happened**:
 - Complement targeting captures related product browsing traffic
 - ""b0c93tf4tr"" extraordinary 100% CVR suggests highly relevant product pairing
-- High CTR on zero-conversion terms (6.41\\~50%) indicates visual appeal but poor conversion
+- High CTR on zero-conversion terms (6.41\~50%) indicates visual appeal but poor conversion
 **Why It Worked/Failed**:
 - Minimal spend impact: ¥1,907 total represents <1% of analyzed ad investment
 - ""b0c93tf4tr"" success (¥21,177 sales from ¥449) shows complement targeting potential
@@ -3452,16 +3452,16 @@ MANUAL_PRODUCT campaigns are consuming the bulk of ad spend—the top two terms 
 | b0c93tf4tr | ¥245 | 5 | ¥7,605 | 3 | 3102.4% | 60.00% | ¥49.05 | 2.48% |
 | b0c9tt1r14 | ¥188 | 5 | ¥4,175 | 1 | 2223.4% | 20.00% | ¥37.50 | 8.62% |
 **What Happened**:
-- Substitutes targeting shows strong efficiency: ""アルロース"" 679.7% ROAS, product ASINs reaching 1198\\~3102% ROAS
+- Substitutes targeting shows strong efficiency: ""アルロース"" 679.7% ROAS, product ASINs reaching 1198\~3102% ROAS
 - Low investment volume: Top 5 terms = ¥3,924 total ad cost
-- High CVR range (16.67\\~60%) indicates qualified competitive traffic
+- High CVR range (16.67\~60%) indicates qualified competitive traffic
 **Why It Happened**:
 - Substitute targeting captures customers comparing alternative sweetener products
-- Lower CPCs (¥37\\~¥102 range) enable efficient competitive conquest
+- Lower CPCs (¥37\~¥102 range) enable efficient competitive conquest
 - Product-based substitutes (ASINs) outperform search term substitutes
 **Why It Worked/Failed**:
 - Substitutes effectiveness demonstrated but underutilized: ¥3,924 investment vs ¥27,368 from close+loose-match
-- Potential scaling opportunity: Maintaining 679\\~3102% ROAS while increasing budget allocation
+- Potential scaling opportunity: Maintaining 679\~3102% ROAS while increasing budget allocation
 - Limited business impact due to small scale (<2% of analyzed ad spend)
 ---
 ### MANUAL Campaign Performance (Entire Account, 2025-12-29 ~ 2026-01-29)
@@ -3474,17 +3474,17 @@ MANUAL_PRODUCT campaigns are consuming the bulk of ad spend—the top two terms 
 | アルロース 液体 | アルロース 液体 | ¥4,843 | 30 | ¥9,810 | 4 | 202.6% | 13.33% | ¥161.41 | 0.93% |
 | アサビ | アサビ | ¥1,740 | 20 | ¥0 | 0 | 0% | 0% | ¥86.99 | 1.07% |
 **What Happened**:
-- Manual keywords show 202\\~502% ROAS range with ¥20,595 total investment (top 5 terms)
+- Manual keywords show 202\~502% ROAS range with ¥20,595 total investment (top 5 terms)
 - Hiragana variant ""あるロース"" outperforms kanji ""アルロース"" (476.9% vs 377.8% ROAS)
 - ""アルロース 液体"" has highest CPC at ¥161.41, lowest CVR at 13.33%
 - ""アサビ"" and ""カロリーゼロ 砂糖"" consumed ¥3,304 with zero conversions
 **Why It Happened**:
-- Manual keywords face higher CPCs (¥86\\~¥161) than AUTO campaigns (¥52\\~¥82), reducing ROAS despite similar CVR
+- Manual keywords face higher CPCs (¥86\~¥161) than AUTO campaigns (¥52\~¥82), reducing ROAS despite similar CVR
 - ""あるロース"" achieves 10.68% CTR (3x higher than standard ""アルロース"" 3.41%), suggesting lower competition
 - Zero-conversion keywords: Catalog mismatch or irrelevant traffic targeting
 **Why It Worked/Failed**:
 - Manual keyword efficiency gap: ""アルロース 1kg"" shows 502% ROAS vs 913% (AUTO close-match) and 1152% (AUTO loose-match)
-- CPC disadvantage: Manual average ¥86\\~¥161 vs AUTO ¥52\\~¥82 erodes profitability
+- CPC disadvantage: Manual average ¥86\~¥161 vs AUTO ¥52\~¥82 erodes profitability
 - Wasted budget: ¥3,304 on non-converting terms (""アサビ"" ¥1,740, ""カロリーゼロ 砂糖"" ¥1,564) requires review
 ---
 **MANUAL_PRODUCT Top Terms (Entire Account, 2025-12-29 ~ 2026-01-29)**
@@ -3498,12 +3498,12 @@ MANUAL_PRODUCT campaigns are consuming the bulk of ad spend—the top two terms 
 **What Happened**:
 - MANUAL_PRODUCT dominates investment: ¥180,630 across top 5 terms (top 2 alone = ¥158,893)
 - Category targeting ""甘味料"" captures 1,499 clicks with ¥180,630 spend
-- ROAS range 182\\~530%, significantly lower than AUTO campaigns (414\\~2906%)
-- CPC range ¥79\\~¥126, mid-point between AUTO and MANUAL_KEYWORD
+- ROAS range 182\~530%, significantly lower than AUTO campaigns (414\~2906%)
+- CPC range ¥79\~¥126, mid-point between AUTO and MANUAL_KEYWORD
 **Why It Happened**:
 - Category targeting ""甘味料"" (sweetener) drives majority volume but at moderate efficiency
 - Product targeting captures broader search terms including specific ASINs (b0ck5z2dr8, b0clrm1mmb)
-- Lower CVR (9.66\\~22.68%) vs AUTO campaigns (13.88\\~66.67%) due to broader targeting
+- Lower CVR (9.66\~22.68%) vs AUTO campaigns (13.88\~66.67%) due to broader targeting
 **Why It Worked/Failed**:
 - Volume vs Efficiency trade-off: MANUAL_PRODUCT delivers 60% of ad investment but lower ROAS than AUTO
 - ""アルロース"" efficiency gap: 182% ROAS (MANUAL_PRODUCT) vs 691% (AUTO loose-match) at 1.5x CPC (¥126 vs ¥82)
@@ -3723,8 +3723,8 @@ The inventory situation becomes clearer when examining the Week 5 collapse—an 
 - Pause 12 zero-conversion campaigns: Free up ¥4,787/week
 - Reallocate to proven performers (B0C9TT1R14, B0C9J94MG7 AUTO campaigns): 
   - Current ROAS 1,000-5,000% range
-  - Projected incremental sales: ¥47,870\\~¥239,350/week
-  - **Weekly opportunity cost**: ¥47,870\\~¥239,350 ($330-$1,650)
+  - Projected incremental sales: ¥47,870\~¥239,350/week
+  - **Weekly opportunity cost**: ¥47,870\~¥239,350 ($330-$1,650)
 ---
 ## Correlation Between Stock-Out and Performance Decline
 ### Causal Evidence Chain
@@ -3977,9 +3977,9 @@ Key findings:
 **Key Performance Highlights:**
 1. **AUTO campaigns dominate with $1,434 in ad sales (70% of total)**: Close-match targeting leads with $686 (34% of total sales), driven by core terms ""eyelash serum"" ($183), ""eyelash growth serum"" ($111), and ""lash serum"" ($94)
 2. **Brand term ""ruminae"" achieves exceptional efficiency**: 21.7% Ad CVR with $166 sales at only $38 ad cost, ranking #1 in MANUAL_KEYWORD campaigns (10 units sold with perfect same-SKU attribution)
-3. **MANUAL campaigns show high intent but elevated costs**: Average CPC $1.66 vs AUTO $1.24 (+34% higher), yet manual targeting delivers competitive conversion rates of 16\\~30% on key terms
+3. **MANUAL campaigns show high intent but elevated costs**: Average CPC $1.66 vs AUTO $1.24 (+34% higher), yet manual targeting delivers competitive conversion rates of 16\~30% on key terms
 4. **Complement/substitute targeting captures $321 in incremental sales (16% of total)**: Product ASIN targeting (B0F1M6YLVJ, B0FN7LDTB7) achieves 100% Ad CVR, though at minimal volume (1-3 clicks each)
-5. **Efficiency varies significantly by match type**: Close-match delivers 21.3% Ad CVR on ""eyelash serum"" with $49 ad cost generating $183 sales, while loose-match achieves 10.5\\~38.5% CVR at higher CPC ($1.22\\~$1.29)
+5. **Efficiency varies significantly by match type**: Close-match delivers 21.3% Ad CVR on ""eyelash serum"" with $49 ad cost generating $183 sales, while loose-match achieves 10.5\~38.5% CVR at higher CPC ($1.22\~$1.29)
 ---
 ## Overall Search Term Performance (Eyelash Serum Products, 2025-08-01 ~ 2026-01-28)
 **Top 10 Search Terms by Total Sales (All Campaign Types)**
@@ -4021,14 +4021,14 @@ Key findings:
 - Combined close-match generates $686 total sales (34% of all search term sales) with $320 ad cost
 **Why It Happened**:
 - Core product terms capture high-intent buyers searching directly for eyelash products
-- CTR 0.65\\~1.28% indicates moderate visibility among 5,234\\~6,581 impressions per term
-- Lower CPC ($1.05\\~$1.43) compared to manual campaigns enables efficient scaling
+- CTR 0.65\~1.28% indicates moderate visibility among 5,234\~6,581 impressions per term
+- Lower CPC ($1.05\~$1.43) compared to manual campaigns enables efficient scaling
 - Top ranking position (1-3/192 for impressions, clicks, and cost) confirms dominant visibility
 **Why It Worked**:
 - Close-match balances relevance and reach: specific enough for intent, broad enough for volume
-- Strong conversion rates (9\\~21% Ad CVR) despite moderate CTR shows product-market fit
-- Ad profit of $134\\~$37 per term demonstrates sustainable acquisition economics
-- Same-SKU attribution rates (67\\~100%) confirm customers purchasing the advertised product
+- Strong conversion rates (9\~21% Ad CVR) despite moderate CTR shows product-market fit
+- Ad profit of $134\~$37 per term demonstrates sustainable acquisition economics
+- Same-SKU attribution rates (67\~100%) confirm customers purchasing the advertised product
 ### Brand Term Excellence (MANUAL_KEYWORD, 2025-08-01 ~ 2026-01-28)
 **What Happened**:
 - ""ruminae"" achieves $166 sales with only $38 ad cost (21.7% Ad CVR, $128 ad profit)
@@ -4049,33 +4049,33 @@ Key findings:
 - MANUAL_MANUAL ""korean eyelash serum"" drives highest total sales ($227) but negative ad profit (-$8)
 - High ad cost $236 (133 clicks at $1.77 CPC) exceeds revenue despite 12 units sold
 - MANUAL_KEYWORD terms show better profitability: ""lash conditioner"" ($182 sales, $86 profit), ""eyelash conditioner"" ($157 sales, $106 profit)
-- Manual campaigns average CPC $1.58\\~$1.66 vs AUTO $1.24 (+28\\~34% higher)
+- Manual campaigns average CPC $1.58\~$1.66 vs AUTO $1.24 (+28\~34% higher)
 **Why It Happened**:
 - Manual targeting allows precise control but faces higher competition (336-531 competing terms vs 192 in AUTO)
 - ""korean eyelash serum"" targets broad traffic (28,372 impressions) with low CTR 0.47%, driving up total spend
-- Conditioner-related terms show stronger intent: 1.97\\~2.61% CTR vs 0.47% for broad korean serum terms
+- Conditioner-related terms show stronger intent: 1.97\~2.61% CTR vs 0.47% for broad korean serum terms
 - Lower ranking in cost efficiency (#1-3 for spend) indicates aggressive bidding strategy
 **Why It Worked/Failed**:
 - Volume vs Efficiency trade-off: ""korean eyelash serum"" captures 133 clicks but 9.0% CVR can't overcome $1.77 CPC
 - Niche terms perform better: ""lash conditioner"" achieves 24.5% CVR, covering higher CPC $1.81 with strong conversion
 - Manual campaigns excel at capturing specific intent (conditioner, enhancing serum) but struggle with broad terms
-- Same-SKU attribution 59\\~100% shows targeting accuracy, but cost structure requires optimization
+- Same-SKU attribution 59\~100% shows targeting accuracy, but cost structure requires optimization
 ### Product Targeting Hidden Gems (AUTO complements, 2025-08-01 ~ 2026-01-28)
 **What Happened**:
-- ASIN-based targeting achieves 50\\~100% Ad CVR on complement products (B0F1M6YLVJ, B0FN7LDTB7, etc.)
+- ASIN-based targeting achieves 50\~100% Ad CVR on complement products (B0F1M6YLVJ, B0FN7LDTB7, etc.)
 - Total complement sales $110 from only $110 ad cost, minimal volume (1-7 clicks per ASIN)
-- CPC range $0.60\\~$1.95, average $1.16 (lower than manual campaigns)
+- CPC range $0.60\~$1.95, average $1.16 (lower than manual campaigns)
 - Perfect conversion on several ASINs: B0FN7LDTB7 (100% CVR, $18 sales), B0D714LX6K (100% CVR, $11.50 sales)
 **Why It Happened**:
 - Product targeting captures customers browsing complementary items (lash growth products, eye care)
 - Low impression volume (1-36 per ASIN) suggests limited but highly relevant audience
-- CTR 6.67\\~100% indicates strong relevance when shown to right shoppers
+- CTR 6.67\~100% indicates strong relevance when shown to right shoppers
 - Ranking #1-10 in sales within complements category (125 total terms) confirms top performance
 **Why It Worked**:
 - Complement targeting reaches customers already interested in similar products
 - Minimal competition (47-125 terms in complements pool) keeps CPC manageable
 - 100% Ad CVR on low-volume terms suggests product-market fit for specific shopper segments
-- Ad profit $10\\~$42 per ASIN, though small scale limits total contribution to 8% of AUTO sales
+- Ad profit $10\~$42 per ASIN, though small scale limits total contribution to 8% of AUTO sales
 ---
 ## Business Impact (Eyelash Serum Products, 2025-08-01 ~ 2026-01-28)
 **Strategic Positioning:**
@@ -4083,9 +4083,9 @@ Key findings:
 - 70% of sales from AUTO campaigns indicates healthy organic discovery and category dominance, while 30% manual targeting captures high-intent segments
 **Efficiency Spectrum:**
 - AUTO campaigns deliver superior cost efficiency ($1.24 avg CPC, $735 total ad profit) with 91 units sold
-- Manual campaigns trade efficiency for control: $1.58\\~$1.66 CPC enables precise targeting but requires conversion optimization on broad terms like ""korean eyelash serum""
+- Manual campaigns trade efficiency for control: $1.58\~$1.66 CPC enables precise targeting but requires conversion optimization on broad terms like ""korean eyelash serum""
 **Growth Opportunity:**
-- Complement/substitute targeting reveals untapped adjacent categories with 50\\~100% conversion rates
+- Complement/substitute targeting reveals untapped adjacent categories with 50\~100% conversion rates
 - Low-volume, high-converting ASINs (B0F1M6YLVJ, B0FN7LDTB7) suggest potential for scaled product targeting campaigns
 - End of Year Holiday period (2025-12-20 ~ 2025-12-27) likely boosted performance, though data shows sustained search term relevance across 6-month period","Analysis For Research","30710","2026-01-28 14:37:03.219 +0900","2026-01-28 14:37:03.219 +0900","SYSTEM","2026-01-28 14:37:03.219 +0900","SYSTEM","3e32bf40-e468-4561-b53f-d9336048eb46","A19X59JXVA12QX","ATVPDKIKX0DER",""
 "c8ad595d-8396-4022-893b-740b1ef97641","94b8f478-10b1-705b-8ee7-921b78849e5c","7b8a5b82-13d0-478f-b533-7263e2c4183a","434a6162-378b-40cc-a6e6-321f9b28ecec","Analysis Evaluate","ai","Let me evaluate the research results systematically according to the evaluation framework provided.
@@ -4219,7 +4219,7 @@ ROAS consistently stays above 100%, with peaks reaching 228% in Week 44, suggest
 1. **Strong Launch Performance**: Product achieved $16,035.06 total sales with 1,045 units sold across 15 active weeks (Week 42 ~ Week 05 2026), following 11-week dormant period with zero activity
 2. **Efficient Ad Performance**: Generated $8,738.18 ad sales from $5,329.77 ad spending (ROAS 163.97%, TACOS 33.23%), with SP campaigns driving 100% of ad revenue
 3. **Growth Momentum Established**: Weekly sales grew from initial $359.80 (Week 42, 100% organic) to peak $2,412.90 (Week 48, +570%), demonstrating strong market traction post-ad launch
-4. **organic Contribution Declining**: organic sales percentage decreased from 69.04% (Week 43) to 31.86%\\~60.23% range in recent weeks (W01-W04 2026), indicating growing ad dependency as primary revenue driver
+4. **organic Contribution Declining**: organic sales percentage decreased from 69.04% (Week 43) to 31.86%\~60.23% range in recent weeks (W01-W04 2026), indicating growing ad dependency as primary revenue driver
 5. **High CTR Performance**: Average CTR 0.48% across active period with peak 0.75% (Week 01 2026), significantly above typical benchmark, driven by targeted product positioning
 ---
 ## Overall Performance Summary (Ruminae Korean Eyelash Growth Serum (B0DF7DC877), 2025-08-01 ~ 2026-01-28)
@@ -4285,8 +4285,8 @@ ROAS consistently stays above 100%, with peaks reaching 228% in Week 44, suggest
 ### Peak Sales Achievement and Efficiency Patterns
 **What Happened**:
 - Sales peaked at $2,412.90 (Week 48, 210 units), representing 570% growth from launch week
-- Ad spending fluctuated significantly ($78.56\\~$661.53), with Week 47 recording highest investment ($661.53) and strongest absolute ad sales ($1,136.66)
-- ROAS ranged 101.29%\\~172.21%, showing efficiency volatility despite sales growth
+- Ad spending fluctuated significantly ($78.56\~$661.53), with Week 47 recording highest investment ($661.53) and strongest absolute ad sales ($1,136.66)
+- ROAS ranged 101.29%\~172.21%, showing efficiency volatility despite sales growth
 **Why It Happened**:
 - Week 47-48 concentrated ad investment ($661.53 and $485.61) generated combined $1,831.56 ad sales from 89 ad units
 - Week 48 achieved highest organic percentage (75.24%, $1,815.42) driven by 158 organic units, indicating strong word-of-mouth or repeat purchase momentum
@@ -4300,7 +4300,7 @@ ROAS consistently stays above 100%, with peaks reaching 228% in Week 44, suggest
 ### End of Year Holiday Impact and Recovery Pattern
 **Event Context**: End of Year Holiday period (2025-12-20 ~ 2025-12-27) spans Weeks 51-52 and partial Week 01
 **What Happened**:
-- Week 49-52 maintained $946\\~$1,091 sales range (average $996.05) with declining trend from Week 48 peak
+- Week 49-52 maintained $946\~$1,091 sales range (average $996.05) with declining trend from Week 48 peak
 - ROAS fluctuated dramatically: 172.21% (W49) → 142.17% (W50) → 164.39% (W51) → 103.60% (W52)
 - Week 01 split data shows bifurcated performance: First segment achieved 228.38% ROAS with 0.75% CTR (peak), second segment 165.52% ROAS with increased ad spending ($449.96)
 **Why It Happened**:
@@ -4308,24 +4308,24 @@ ROAS consistently stays above 100%, with peaks reaching 228% in Week 44, suggest
 - Week 52 efficiency drop to 103.60% ROAS occurred despite consistent ad spending ($335.30) and high CTR (0.55%), driven by ad CVR decline to 9.40% (vs 13.71% in Week 51)
 - Holiday period CTR improvement (0.39% → 0.75% peak in Week 01a) driven by increased consumer shopping activity, though actual conversion rates remained mixed
 **Why It Worked**:
-- Sustained CTR performance above 0.50% during Weeks 51-52 (vs 0.19%\\~0.39% in Weeks 49-50) captured holiday shopping traffic effectively
+- Sustained CTR performance above 0.50% during Weeks 51-52 (vs 0.19%\~0.39% in Weeks 49-50) captured holiday shopping traffic effectively
 - Week 01a achieved highest single-week ROAS (228.38%) by maintaining strong CTR (0.75%) while reducing CPC to $1.32, optimizing cost-per-acquisition
-- Holiday period maintained consistent sales volume ($946\\~$1,091) despite not showing typical seasonal surge, indicating stable baseline demand with controlled ad investment
+- Holiday period maintained consistent sales volume ($946\~$1,091) despite not showing typical seasonal surge, indicating stable baseline demand with controlled ad investment
 ---
 ## Recent Trend Analysis (Ruminae Korean Eyelash Growth Serum (B0DF7DC877), Week 01 ~ Week 05, January 2026)
 ### Post-Holiday Recovery and organic Contribution Decline
 **What Happened**:
 - Weekly sales recovered from split Week 01 ($489.28 + $917.40) to peak $1,920.43 (Week 04), averaging $1,404.57 across Weeks 02-04
 - Ad spending escalated significantly: Week 01b ($449.96) → Week 03 ($849.82) → Week 04 ($863.44), representing 48% increase from Week 02 to Week 03
-- organic percentage declined sharply in Week 01b-03 range (31.86%\\~36.87%), contrasting with 60.22%\\~56.91% in Weeks 02 and 04
+- organic percentage declined sharply in Week 01b-03 range (31.86%\~36.87%), contrasting with 60.22%\~56.91% in Weeks 02 and 04
 **Why It Happened**:
 - Week 03 ad cost peak ($849.82, highest in analysis period) generated $1,415.58 ad sales (73 units) but compressed organic contribution to 36.87% ($594.56)
-- Ad impression volume increased to 105,000+ range (Weeks 03-04) with click volume 633\\~676, maintaining CTR 0.60%\\~0.64%
+- Ad impression volume increased to 105,000+ range (Weeks 03-04) with click volume 633\~676, maintaining CTR 0.60%\~0.64%
 - Week 05 shows dramatic 83% sales drop ($323.82) but represents partial week data (18 units sold), requiring cautious interpretation
 **Why It Worked**:
 - High ad investment strategy (Weeks 03-04) successfully maintained sales momentum post-holiday with combined $2,567.00 ad revenue from 109 ad units
 - Week 04 achieved balance recovery with organic percentage returning to 56.91% while sustaining high ad volume ($863.44 spending)
-- Consistent CTR performance 0.53%\\~0.64% (Weeks 01-04) demonstrated sustained audience engagement despite fluctuating efficiency metrics
+- Consistent CTR performance 0.53%\~0.64% (Weeks 01-04) demonstrated sustained audience engagement despite fluctuating efficiency metrics
 ---
 ## Campaign Structure Insights (Ruminae Korean Eyelash Growth Serum (B0DF7DC877), Active Period)
 ### SP-Only Strategy Performance
@@ -4335,7 +4335,7 @@ ROAS consistently stays above 100%, with peaks reaching 228% in Week 44, suggest
 - SP campaign efficiency delivered 163.97% average ROAS with 556 ad units sold at $1.38 average CPC
 **Why It Happened**:
 - Single-campaign strategy concentrated all budget and optimization efforts on SP KEYWORD and/or PRODUCT targeting
-- SP campaigns achieved consistent double-digit ad CVR (8.04%\\~19.35% range, average 11.90%), indicating strong keyword-to-purchase intent alignment
+- SP campaigns achieved consistent double-digit ad CVR (8.04%\~19.35% range, average 11.90%), indicating strong keyword-to-purchase intent alignment
 - No SD diversification suggests deliberate focus on direct search-based acquisition rather than display/awareness channels
 ---
 ## Business Context (Ruminae Korean Eyelash Growth Serum (B0DF7DC877), 2025-08-01 ~ 2026-01-28)
@@ -4347,7 +4347,7 @@ ROAS consistently stays above 100%, with peaks reaching 228% in Week 44, suggest
 - Peak weekly performance ($2,412.90, Week 48) indicates scalability potential with appropriate investment levels
 **Efficiency and Sustainability Balance**:
 - 163.97% overall ROAS with 33.23% TACOS provides profitable growth foundation
-- organic contribution average 54.50% maintains diversified revenue streams, though recent decline to 31.86%\\~36.87% (Weeks 01b-03) requires monitoring for long-term sustainability","Analysis For Research","24535","2026-01-28 14:39:22.172 +0900","2026-01-28 14:39:22.172 +0900","SYSTEM","2026-01-28 14:39:22.172 +0900","SYSTEM","3e32bf40-e468-4561-b53f-d9336048eb46","A19X59JXVA12QX","ATVPDKIKX0DER",""
+- organic contribution average 54.50% maintains diversified revenue streams, though recent decline to 31.86%\~36.87% (Weeks 01b-03) requires monitoring for long-term sustainability","Analysis For Research","24535","2026-01-28 14:39:22.172 +0900","2026-01-28 14:39:22.172 +0900","SYSTEM","2026-01-28 14:39:22.172 +0900","SYSTEM","3e32bf40-e468-4561-b53f-d9336048eb46","A19X59JXVA12QX","ATVPDKIKX0DER",""
 "1c13b32a-c354-4f08-b6ac-6fe7943eabca","94b8f478-10b1-705b-8ee7-921b78849e5c","7b8a5b82-13d0-478f-b533-7263e2c4183a","434a6162-378b-40cc-a6e6-321f9b28ecec","Analysis Report Agent","ai","The user is asking for a report focused on the top 5 best performing keywords for single keyword campaigns, based on the analysis results provided.
 Let me review the data:
 From the ""Top Search Terms by Sales and CVR for ASIN B0DF7DC877"" analysis, I can see:
@@ -4649,10 +4649,10 @@ Exact Match에서 다음 조건이 충족되면 Phrase Match 테스트를 고려
 - CPC $1.77, CVR 9.03%로 비효율
 이 키워드는 28,372 impressions로 트래픽은 많지만 전환 효율이 낮습니다.
 **단계별 접근 제안:**
-1. **1단계 (현재\\~4주)**: 핵심 5개 키워드 Exact Match로 시작
+1. **1단계 (현재\~4주)**: 핵심 5개 키워드 Exact Match로 시작
    - ""eyelash serum"", ""lash serum"", ""ruminae"" 등
    - 검증된 성과 기반 안정적 운영
-2. **2단계 (4\\~8주)**: 성과 좋은 키워드만 Phrase Match 확장
+2. **2단계 (4\~8주)**: 성과 좋은 키워드만 Phrase Match 확장
    - ""eyelash serum"" → [eyelash serum] 테스트
    - ""best eyelash serum"", ""natural eyelash serum"" 등 자동 포함
    - 검색어 리포트 모니터링으로 불필요한 변형 네거티브 처리
@@ -4665,7 +4665,7 @@ Exact Match에서 다음 조건이 충족되면 Phrase Match 테스트를 고려
 - 184.9% ROAS, 11.8% CVR
 **Phrase Match [lash serum] 확장 시 기대효과:**
 - ""korean lash serum"", ""best lash serum"", ""lash serum growth"" 등 추가 커버
-- 17,591 impressions → 25,000\\~30,000 impressions 확장 가능성
+- 17,591 impressions → 25,000\~30,000 impressions 확장 가능성
 - 단, CVR 10% 이상 유지 필요 (현재 11.8%)
 **리스크 관리:**
 - 초기 예산 20% 증액으로 테스트 ($16/week → $19/week)
@@ -4785,7 +4785,7 @@ The account shows heavy reliance on paid advertising for revenue generation, wit
 **Performance Overview (Entire Account, 2026-01-01 ~ 2026-01-28)**
 | Period | Sales | Units Sold | Sessions | Page Views | Total CVR % | ASP | Ad Cost | Ad Sales | Ad Units Sold | ROAS % | TACOS % | Ad Profit | Ad Sales Contribution | Ad Units Sold Contribution | Organic % | Ad Impressions | Ad Clicks | Ad CTR % | Ad CPC | Ad CVR % |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-01-01 \\~ 2026-01-28 | $1,271.47 | 53 | 529 | 688 | 7.70% | $23.99 | $627.03 | $1,151.52 | 48 | 183.65% | 49.32% | $524.49 | $1,151.52 | 48 | 9.43% | 116,046 | 489 | 0.42% | $1.28 | 9.82% |
+| 2026-01-01 \~ 2026-01-28 | $1,271.47 | 53 | 529 | 688 | 7.70% | $23.99 | $627.03 | $1,151.52 | 48 | 183.65% | 49.32% | $524.49 | $1,151.52 | 48 | 9.43% | 116,046 | 489 | 0.42% | $1.28 | 9.82% |
 ---
 ## Detailed Analysis (Entire Account, 2026-01-01 ~ 2026-01-28)
 ### Ad Revenue Dependency (Entire Account, 2026-01-01 ~ 2026-01-28)
@@ -4954,8 +4954,8 @@ The first AUTO campaign produced zero revenue despite receiving 2,120 impression
 **Campaign Count**: 4 campaigns analyzed (2 AUTO, 1 MANUAL_KEYWORD, 1 MANUAL_PRODUCT)
 Key findings on underperforming campaigns:
 1. **Zero-conversion AUTO campaign**: New AUTO campaign (launched 1/20) spent $8.22 with 12 clicks but generated zero sales → 100% waste, requires immediate review or pause
-2. **Volume-focused AUTO campaign shows lowest engagement**: Campaign ""12/18/2025"" drove 83% of total impressions (95,860) but CTR 30% lower than account average (0.394% vs \\~0.54%) → high impression volume not translating to clicks
-3. **MANUAL campaigns demonstrate superior efficiency**: Despite 93% lower spend ($144 vs $483), MANUAL campaigns achieved ROAS 202\\~242% and CVR 10.9\\~14.3% → more efficient targeting compensates for scale limitations
+2. **Volume-focused AUTO campaign shows lowest engagement**: Campaign ""12/18/2025"" drove 83% of total impressions (95,860) but CTR 30% lower than account average (0.394% vs \~0.54%) → high impression volume not translating to clicks
+3. **MANUAL campaigns demonstrate superior efficiency**: Despite 93% lower spend ($144 vs $483), MANUAL campaigns achieved ROAS 202\~242% and CVR 10.9\~14.3% → more efficient targeting compensates for scale limitations
 4. **Conversion efficiency inversely correlated with impression volume**: Highest-volume campaign shows 9.5% CVR, while lowest-volume MANUAL_PRODUCT achieves 14.3% CVR → traffic quality vs. quantity trade-off
 ---
 ## Campaign Performance Overview (Entire Account, 2026-01-01 ~ 2026-01-28)
@@ -4986,7 +4986,7 @@ Key findings on underperforming campaigns:
 **Why It Happened**:
 - **Traffic Quality Issue**: CTR 0.566% suggests relatively relevant targeting, but 0% CVR indicates severe mismatch between ad promise and landing page/product
 - **Insufficient Learning Period**: Only 8 days of data with minimal click volume (12 clicks) → AUTO targeting may not have sufficient data for optimization
-- **Possible Product-Market Fit Issues**: Same ASIN (B0FY52P86K) performs in other campaigns with 10\\~14% CVR, suggesting campaign-specific targeting or settings problem
+- **Possible Product-Market Fit Issues**: Same ASIN (B0FY52P86K) performs in other campaigns with 10\~14% CVR, suggesting campaign-specific targeting or settings problem
 **Why It Failed**:
 - CTR performing 44% above high-volume campaign indicates ad relevance is not the issue
 - The stark contrast with other campaigns for same ASIN (Manual Keyword: 10.9% CVR, Manual Product: 14.3% CVR) points to AUTO targeting quality issue
@@ -5009,11 +5009,11 @@ Key findings on underperforming campaigns:
 **What Happened**:
 - Campaign captures 83% of total account impressions (95,860) and drives 76% of ad spend ($474.62)
 - CTR 27% lower than account average (0.394% vs. 0.537% average across other campaigns)
-- Generated majority of sales ($863.64, 36 units) but at lower efficiency (ROAS 181.96%) compared to MANUAL campaigns (202\\~242%)
+- Generated majority of sales ($863.64, 36 units) but at lower efficiency (ROAS 181.96%) compared to MANUAL campaigns (202\~242%)
 **Why It Happened**:
 - **Volume vs. Quality Trade-off**: AUTO targeting prioritizes impression volume (95,860, 15x more than next campaign) over precision → lower engagement
-- **Broad Match Impact**: CTR 0.394% is 27\\~31% lower than MANUAL campaigns (0.538\\~0.568%), suggesting less targeted traffic
-- **Scale Advantage**: Despite lower CTR/ROAS, absolute sales contribution ($863.64) is 5\\~7x higher than any other campaign → volume compensates for efficiency
+- **Broad Match Impact**: CTR 0.394% is 27\~31% lower than MANUAL campaigns (0.538\~0.568%), suggesting less targeted traffic
+- **Scale Advantage**: Despite lower CTR/ROAS, absolute sales contribution ($863.64) is 5\~7x higher than any other campaign → volume compensates for efficiency
 **Why It Works (Despite Low Ranking)**:
 - Delivers 75% of total account ad sales with ROAS 181.96% (still profitable at 1.82x return)
 - Lower CTR offset by massive impression volume → 378 total clicks (10x more than next campaign)
@@ -5032,7 +5032,7 @@ Key findings on underperforming campaigns:
 - MANUAL campaigns show 30% higher CTR (0.553% vs. 0.426%) and 31% higher CVR (12.12% vs. 9.23%)
 - AUTO campaigns deliver 3x more absolute sales ($863.64 vs. $287.88) through 3.3x higher spend
 **Why It Happened**:
-- **Precision vs. Scale**: MANUAL targeting (keyword/product) enables more relevant traffic → 30\\~50% better engagement metrics
+- **Precision vs. Scale**: MANUAL targeting (keyword/product) enables more relevant traffic → 30\~50% better engagement metrics
 - **CPC Structure**: MANUAL CPC 18% higher ($1.46 vs. $1.24) but superior conversion (CVR 12.1% vs. 9.2%) drives better ROAS
 - **Volume Limitations**: MANUAL campaigns capture only 17% of impressions (18,066 vs. 97,980) → efficiency gains limited by reach
 **Why MANUAL Performs Better (Per Dollar Basis)**:
@@ -5087,7 +5087,7 @@ Let me ensure:
 **Total Performance Overview (Entire Account, 2026-01-01 ~ 2026-01-28)**
 | Period | Sales | Units Sold | Sessions | Page Views | Total CVR % | ASP | Ad Cost | Ad Sales | Ad Units Sold | ROAS % | TACOS % | Ad Profit | Ad Sales Contribution | Ad Units Sold Contribution | Organic % | Ad Impressions | Ad Clicks | Ad CTR % | Ad CPC | Ad CVR % |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-01-01 \\~ 2026-01-28 | $1,271.47 | 53 | 529 | 688 | 7.70% | $23.99 | $627.03 | $1,151.52 | 48 | 183.65% | 49.32% | $524.49 | $1,151.52 | 48 | 9.43% | 116,046 | 489 | 0.42% | $1.28 | 9.82% |
+| 2026-01-01 \~ 2026-01-28 | $1,271.47 | 53 | 529 | 688 | 7.70% | $23.99 | $627.03 | $1,151.52 | 48 | 183.65% | 49.32% | $524.49 | $1,151.52 | 48 | 9.43% | 116,046 | 489 | 0.42% | $1.28 | 9.82% |
 Ad investment $627.03 generated $1,151.52 in attributable sales (48 units) with net profit $524.49. ROAS 183.65% indicates $1.83 return per dollar, while TACOS 49.32% shows ad cost consumes approximately half of total revenue.
 ---
 ## Campaign Performance Analysis (Entire Account, 2026-01-01 ~ 2026-01-28)
@@ -5113,8 +5113,8 @@ Entire ad operation relies exclusively on SP campaigns (116,046 impressions, 489
 | MANUAL_KEYWORD | mop_B0FY52P86K...keyword | 11,908 | 64 | $94.62 | $167.93 | 7 | 0.538 | 10.938 | 177.48 | $1.48 | $23.99 |
 | AUTO | mop_B0FY52P86K...auto | 2,120 | 12 | $8.22 | $0.00 | 0 | 0.566 | 0.000 | 0.00 | $0.69 | - |
 | MANUAL_PRODUCT | mop_B0FY52P86K...product | 6,158 | 35 | $49.57 | $119.95 | 5 | 0.568 | 14.286 | 241.98 | $1.42 | $23.99 |
-**Volume-Dominant AUTO Campaign (12/18/2025)**: Captures 83% of impressions (95,860) and drives 76% of ad spend ($474.62) but shows lowest engagement efficiency → CTR 0.394% is 27% below MANUAL campaign average (0.538\\~0.568%), indicating broad targeting trades precision for volume. Despite efficiency gaps, delivers 75% of total ad sales ($863.64) through scale advantage.
-**Zero-Conversion Waste (mop_B0FY52P86K...auto)**: Launched 1/20 with 8 days runtime, generated 12 clicks (highest CTR 0.566%) but zero conversions → $8.22 complete loss. Same ASIN achieves 10.9\\~14.3% CVR in other campaigns, suggesting AUTO targeting quality issue rather than product problem. Insufficient learning period (12 clicks) for meaningful algorithm optimization.
+**Volume-Dominant AUTO Campaign (12/18/2025)**: Captures 83% of impressions (95,860) and drives 76% of ad spend ($474.62) but shows lowest engagement efficiency → CTR 0.394% is 27% below MANUAL campaign average (0.538\~0.568%), indicating broad targeting trades precision for volume. Despite efficiency gaps, delivers 75% of total ad sales ($863.64) through scale advantage.
+**Zero-Conversion Waste (mop_B0FY52P86K...auto)**: Launched 1/20 with 8 days runtime, generated 12 clicks (highest CTR 0.566%) but zero conversions → $8.22 complete loss. Same ASIN achieves 10.9\~14.3% CVR in other campaigns, suggesting AUTO targeting quality issue rather than product problem. Insufficient learning period (12 clicks) for meaningful algorithm optimization.
 **MANUAL Campaign Superiority**: MANUAL campaigns achieve 199.65% average ROAS (+12% vs AUTO's 178.87%) with 77% less spend ($144 vs $483). MANUAL_PRODUCT shows best efficiency (ROAS 241.98%, CVR 14.3%) but scale limited to 8% of total spend.
 ### MANUAL vs AUTO Strategy Comparison (Entire Account, 2026-01-01 ~ 2026-01-28)
 **Campaign Strategy Performance (Entire Account, 2026-01-01 ~ 2026-01-28)**
@@ -5133,7 +5133,7 @@ MANUAL delivers $2.00 per dollar invested vs AUTO's $1.79 with 30% higher CTR (0
 | Clicks | 489 | CTR 0.42% | 99.58% impression loss |
 | Average CPC | - | $1.28 | Moderate acquisition cost |
 | Conversions | 48 | Ad CVR 9.82% | Strong purchase intent |
-CTR 0.42% (489 clicks from 116,046 impressions) indicates broad targeting capturing less relevant impressions or creative optimization needs. However, Ad CVR 9.82% significantly exceeds typical 2\\~5% benchmarks → strong product listing quality and competitive pricing for engaged visitors. Funnel shows ""filter effect"" where low initial engagement concentrates high-intent buyers.
+CTR 0.42% (489 clicks from 116,046 impressions) indicates broad targeting capturing less relevant impressions or creative optimization needs. However, Ad CVR 9.82% significantly exceeds typical 2\~5% benchmarks → strong product listing quality and competitive pricing for engaged visitors. Funnel shows ""filter effect"" where low initial engagement concentrates high-intent buyers.
 ---
 ## Data Notes
 **Campaign Launch Date Verification**: AUTO campaign ""mop_B0FY52P86K...auto"" shows launch date 2026-01-20 with only 8 days of data. Confirm if this is a new campaign or if 1/1-1/19 data is missing due to sync issue.","Analysis Report Agent","26060","2026-01-28 16:43:18.609 +0900","2026-01-28 16:43:18.609 +0900","SYSTEM","2026-01-28 16:43:18.609 +0900","SYSTEM","1e758e40-1059-48c5-9762-fda160f372f8","A1JB42EEQY1TVD","ATVPDKIKX0DER",""
@@ -5326,26 +5326,26 @@ Key findings:
 4. Ad conversion rate of 10.09% is solid, but the low click-through rate of 0.32% suggests visibility or relevance issues
 5. Post-holiday demand normalization is expected, but current ad efficiency is below acceptable thresholds
 The SP campaigns are the primary concern, driving nearly all ad spend while delivering negative returns. SD campaigns show better efficiency with 137.8% ROAS, but represent minimal volume. This post-holiday period reveals that paid advertising is currently unprofitable and requires immediate optimization or budget reallocation. I need to complete the analysis structure while being mindful of the data integrity issue. The organic sales figure requires verification since the calculation ($87,771.77 - $30,511.15 = $57,260.62) doesn't align with the provided organic_sales field. I'll proceed with the three-section format: Executive Summary, core performance metrics table, and detailed campaign-type breakdown. I should maintain neutral language when discussing the below break-even ROAS situation and focus exclusively on the metrics provided without introducing external financial considerations. The SP campaigns warrant primary attention given their 98% share of ad spend, while SD campaigns merit secondary review. The ad profit calculation checks out: $30,511.15 in attributed sales minus $31,872.43 in ad costs equals -$1,361.28. Now I need to structure the data into tables following the markdown format requirements—ensuring column counts align across headers, separators, and rows, and escaping any special characters. Then I'll write up the analysis.
-# Performance Analysis (Entire Account, 2025-12-28 \\~ 2026-01-27)
-## Executive Summary (Entire Account, 2025-12-28 \\~ 2026-01-27)
+# Performance Analysis (Entire Account, 2025-12-28 \~ 2026-01-27)
+## Executive Summary (Entire Account, 2025-12-28 \~ 2026-01-27)
 **Analysis Target**: Entire Account  
-**Analysis Period**: 2025-12-28 \\~ 2026-01-27 (31 days, post-holiday period)  
+**Analysis Period**: 2025-12-28 \~ 2026-01-27 (31 days, post-holiday period)  
 **Event Context**: Analysis begins immediately after End of Year Holiday period (ended 2025-12-27)
 1. **Ad Profitability Below Break-Even**: Total ad spend $31,872 generated $30,511 in attributed sales (ROAS 95.73%), resulting in -$1,361 ad loss. TACOS 36.31% indicates 36% of total sales consumed by advertising costs.
 2. **Strong Organic Foundation**: Despite ad efficiency challenges, organic sales contributed $58,135 (66.23% of total sales) with 2,557 units, demonstrating established market presence and product demand.
 3. **Post-Holiday Performance Context**: Analysis period immediately follows End of Year Holiday (ended 2025-12-27), where reduced promotional intensity and normalized demand typically result in lower advertising efficiency compared to peak season.
 4. **SP Campaign Dominance with Efficiency Gap**: Sponsored Product campaigns account for 98% of ad spend ($31,238 of $31,872) but show ROAS 94.87% (below break-even), while Sponsored Display maintains minimal impact at 2% of total ad spend.
 ---
-## Overall Performance Summary (Entire Account, 2025-12-28 \\~ 2026-01-27)
-**Performance Overview (Entire Account, 2025-12-28 \\~ 2026-01-27)**
+## Overall Performance Summary (Entire Account, 2025-12-28 \~ 2026-01-27)
+**Performance Overview (Entire Account, 2025-12-28 \~ 2026-01-27)**
 | Period | Sales | Units Sold | Sessions | Page Views | Total CVR % | ASP | Ad Cost | Ad Sales | Ad Units Sold | ROAS % | TACOS % | Ad Profit | Ad Sales Contribution % | Organic % | Ad Impressions | Ad Clicks | Ad CTR % | Ad CPC | Ad CVR % |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2025-12-28 \\~ 2026-01-27 | $87,771.77 | 3,896 | 47,340 | 59,084 | 6.59% | $22.53 | $31,872.43 | $30,511.15 | 1,378 | 95.73% | 36.31% | -$1,361.28 | 34.76% | 66.23% | 4,269,411 | 13,658 | 0.32% | $2.33 | 10.09% |
+| 2025-12-28 \~ 2026-01-27 | $87,771.77 | 3,896 | 47,340 | 59,084 | 6.59% | $22.53 | $31,872.43 | $30,511.15 | 1,378 | 95.73% | 36.31% | -$1,361.28 | 34.76% | 66.23% | 4,269,411 | 13,658 | 0.32% | $2.33 | 10.09% |
 **Note**: Organic sales calculated as $58,135.19 shows slight variance from simple subtraction method ($87,771.77 - $30,511.15 = $57,260.62). This $874.57 difference may indicate attribution methodology or data sync timing variation requiring verification.
 ---
-## Detailed Analysis (Entire Account, 2025-12-28 \\~ 2026-01-27)
-### Campaign Type Performance Breakdown (Entire Account, 2025-12-28 \\~ 2026-01-27)
-**Campaign Performance Comparison (Entire Account, 2025-12-28 \\~ 2026-01-27)**
+## Detailed Analysis (Entire Account, 2025-12-28 \~ 2026-01-27)
+### Campaign Type Performance Breakdown (Entire Account, 2025-12-28 \~ 2026-01-27)
+**Campaign Performance Comparison (Entire Account, 2025-12-28 \~ 2026-01-27)**
 | Campaign Type | Ad Cost | Cost Share % | Ad Sales | Sales Share % | Ad Units Sold | ROAS % | Ad Impressions | Ad Clicks | Ad CTR % | Ad CPC | Ad CVR % |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | SP (Sponsored Products) | $31,238.26 | 98.01% | $29,636.58 | 97.13% | 1,339 | 94.87% | 4,234,541 | 13,571 | 0.32% | $2.30 | 9.87% |
@@ -5450,12 +5450,12 @@ The sales rank data reveals some interesting movement. B0FS6M7W65 experienced a 
 | Sleep Mask | B08VVRG88M | $9,635 | $6,913 | 71.7% | $17,086 | 60.1% | 46.6% |
 **What Happened**:
 - 6 products achieved ROAS above 140%, consuming only 13.3% of total ad budget ($4,009)
-- 4 highest-spend products operate at 71.5%\\~102.1% ROAS range, accounting for 86.7% of budget ($26,189)
+- 4 highest-spend products operate at 71.5%\~102.1% ROAS range, accounting for 86.7% of budget ($26,189)
 - High-efficiency segment includes both established products (Eye Cream, Carrot Cream) and new launches (Sleep Mask Tube, Vitamin C Serum)
 **Why It Happened**:
 - High-efficiency products benefit from strong organic presence (74%+ organic for Carrot Cream, Pretty Pop Cream)
 - Lower competition in specialized categories (Eye treatments, niche formulations) enables better ad efficiency
-- High-spend products compete in crowded categories (Facial Masks, Cleansers) requiring more aggressive bidding (CPC $2.61\\~$2.96 vs $1.23\\~$1.89 for efficient group)
+- High-spend products compete in crowded categories (Facial Masks, Cleansers) requiring more aggressive bidding (CPC $2.61\~$2.96 vs $1.23\~$1.89 for efficient group)
 **Why Different Strategies Work**:
 - Volume-focused products (standard-efficiency group) prioritize market share and catalog visibility over immediate ROAS
 - Efficiency-focused products validate demand and profitability before scaling investment
@@ -5504,23 +5504,23 @@ The sales rank data reveals some interesting movement. B0FS6M7W65 experienced a 
 - Small volume ($173 ad spend) limits business impact, but accuracy important for decision-making
 ---
 ## Business Impact (Entire Account, 2025-12-28 ~ 2026-01-27)
-Portfolio demonstrates healthy post-holiday performance with $72,069 in total sales, though efficiency improvements possible through rebalancing ad investment. Top 3 products effectively drive volume but operate at lower ROAS (71%\\~76%), while smaller products validate higher efficiency at 140%+ ROAS. Category ranking improvements for Peel Gel and Sleep Mask indicate strong organic momentum, though Sleep Mask Tube's ranking collapse requires investigation. Data quality issue with Eye Cream necessitates verification before optimization decisions.","Analysis For Research","25260","2026-01-28 05:26:34.614 +0900","2026-01-28 05:26:34.614 +0900","SYSTEM","2026-01-28 05:26:34.614 +0900","SYSTEM","d7ace212-fab4-4c09-a2aa-3b4e85aee8d8","A35GMS2S6JY161","ATVPDKIKX0DER",""
+Portfolio demonstrates healthy post-holiday performance with $72,069 in total sales, though efficiency improvements possible through rebalancing ad investment. Top 3 products effectively drive volume but operate at lower ROAS (71%\~76%), while smaller products validate higher efficiency at 140%+ ROAS. Category ranking improvements for Peel Gel and Sleep Mask indicate strong organic momentum, though Sleep Mask Tube's ranking collapse requires investigation. Data quality issue with Eye Cream necessitates verification before optimization decisions.","Analysis For Research","25260","2026-01-28 05:26:34.614 +0900","2026-01-28 05:26:34.614 +0900","SYSTEM","2026-01-28 05:26:34.614 +0900","SYSTEM","d7ace212-fab4-4c09-a2aa-3b4e85aee8d8","A35GMS2S6JY161","ATVPDKIKX0DER",""
 "157fef09-6d57-4a42-a3bd-8eb6b96d3261","648884d8-6061-70ed-ea7c-905d532b85e4","c494ce39-d44c-41db-a256-1683b96956d2","507b0e3b-b9c8-44e7-9ba5-a0a10462b058","최근 30일 최고 광고 매출 최적화 세트 분석","ai","# 최근 30일 최고 광고 매출 최적화 세트 분석
 ## 핵심 요약
-최근 30일(2025-12-28 \\~ 2026-01-27) 동안 **Peel Gel (B07CYYSNVV)**이 광고 매출 $4,773으로 3위를 기록했으며, **Sleep Mask (B08VVRG88M)**가 $6,913으로 1위, **Foam Cleanser (B085KX1SRX)**가 $4,982로 2위를 차지했습니다. 그러나 광고 효율성 측면에서는 상위 3개 제품이 ROAS 71.5\\~76.3%로 손익분기점 이하를 기록한 반면, 소규모 투자 제품들(Eye Cream, Carrot Cream 등)은 ROAS 139\\~505%의 높은 효율성을 보였습니다. 전체 계정은 광고비 $31,872 대비 광고 매출 $30,511(ROAS 95.73%)로 -$1,361의 광고 손실을 기록했으나, 강력한 오가닉 기반($58,135, 66.23%)이 전체 비즈니스를 지탱하고 있습니다.
+최근 30일(2025-12-28 \~ 2026-01-27) 동안 **Peel Gel (B07CYYSNVV)**이 광고 매출 $4,773으로 3위를 기록했으며, **Sleep Mask (B08VVRG88M)**가 $6,913으로 1위, **Foam Cleanser (B085KX1SRX)**가 $4,982로 2위를 차지했습니다. 그러나 광고 효율성 측면에서는 상위 3개 제품이 ROAS 71.5\~76.3%로 손익분기점 이하를 기록한 반면, 소규모 투자 제품들(Eye Cream, Carrot Cream 등)은 ROAS 139\~505%의 높은 효율성을 보였습니다. 전체 계정은 광고비 $31,872 대비 광고 매출 $30,511(ROAS 95.73%)로 -$1,361의 광고 손실을 기록했으나, 강력한 오가닉 기반($58,135, 66.23%)이 전체 비즈니스를 지탱하고 있습니다.
 ---
 ## 전체 계정 성과 분석
 **분석 내용:**
 연말 홀리데이 직후 기간임에도 불구하고 총 매출 $87,772를 달성했으나, 광고 효율성은 ROAS 95.73%로 손익분기점 미달입니다. TACOS 36.31%는 전체 매출의 36%가 광고비로 소진되었음을 의미하며, 이는 광고 최적화가 시급함을 시사합니다. 그러나 오가닉 매출이 66.23%를 차지하며 제품 수요와 시장 입지가 견고함을 입증하고 있어, 광고 효율 개선 시 전체 수익성이 크게 향상될 가능성이 높습니다.
-**Overall Performance Summary (Entire Account, 2025-12-28 \\~ 2026-01-27)**
+**Overall Performance Summary (Entire Account, 2025-12-28 \~ 2026-01-27)**
 | Period | Sales | Units Sold | Sessions | Page Views | Total CVR % | ASP | Ad Cost | Ad Sales | Ad Units Sold | ROAS % | TACOS % | Ad Profit | Ad Sales Contribution % | Organic % | Ad Impressions | Ad Clicks | Ad CTR % | Ad CPC | Ad CVR % |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2025-12-28 \\~ 2026-01-27 | $87,771.77 | 3,896 | 47,340 | 59,084 | 6.59% | $22.53 | $31,872.43 | $30,511.15 | 1,378 | 95.73% | 36.31% | -$1,361.28 | 34.76% | 66.23% | 4,269,411 | 13,658 | 0.32% | $2.33 | 10.09% |
+| 2025-12-28 \~ 2026-01-27 | $87,771.77 | 3,896 | 47,340 | 59,084 | 6.59% | $22.53 | $31,872.43 | $30,511.15 | 1,378 | 95.73% | 36.31% | -$1,361.28 | 34.76% | 66.23% | 4,269,411 | 13,658 | 0.32% | $2.33 | 10.09% |
 ---
 ## 캠페인 유형별 성과 분석
 **분석 내용:**
 SP(Sponsored Products) 캠페인이 전체 광고비의 98%($31,238)를 차지하며 포트폴리오를 주도하지만, ROAS 94.87%로 손익분기점 미달 상태입니다. 반면 SD(Sponsored Display) 캠페인은 2% 투자($634)로 ROAS 137.91%의 높은 효율을 보이나 규모가 작아 전체 영향력은 제한적입니다. SP 캠페인의 낮은 CTR 0.32%(4.2M 노출 대비 13,571 클릭)는 타겟팅 또는 크리에이티브 최적화 기회를 시사하며, CPC $2.30의 높은 클릭 단가와 결합되어 수익성 격차를 발생시키고 있습니다.
-**Campaign Performance Comparison (Entire Account, 2025-12-28 \\~ 2026-01-27)**
+**Campaign Performance Comparison (Entire Account, 2025-12-28 \~ 2026-01-27)**
 | Campaign Type | Ad Cost | Cost Share % | Ad Sales | Sales Share % | Ad Units Sold | ROAS % | Ad Impressions | Ad Clicks | Ad CTR % | Ad CPC | Ad CVR % |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | SP (Sponsored Products) | $31,238.26 | 98.01% | $29,636.58 | 97.13% | 1,339 | 94.87% | 4,234,541 | 13,571 | 0.32% | $2.30 | 9.87% |
@@ -5529,7 +5529,7 @@ SP(Sponsored Products) 캠페인이 전체 광고비의 98%($31,238)를 차지�
 ## 상위 10개 ASIN 광고 매출 순위
 **분석 내용:**
 Sleep Mask가 광고 매출 $6,913으로 1위를 차지했으나 ROAS 71.7%로 효율성은 낮으며, 광고비 $9,635(전체의 31.9%)를 소진했습니다. Peel Gel은 3위 광고 매출($4,773)이지만 총 매출 $18,029로 전체 1위이며, 오가닉 비중 71.3%와 카테고리 랭킹 #3(Facial Polishes)을 달성하며 가장 균형잡힌 성과를 보였습니다. 주목할 점은 Eye Cream의 데이터 이상(광고 매출 $876 > 총 매출 $500)으로 검증이 필요하며, Sleep Mask Tube는 카테고리 랭킹이 #265에서 #2,614로 급락하여 즉각적인 조사가 필요합니다.
-**Top 10 Products by Ad Sales (Entire Account, 2025-12-28 \\~ 2026-01-27)**
+**Top 10 Products by Ad Sales (Entire Account, 2025-12-28 \~ 2026-01-27)**
 | Product | ASIN | Period | Sales | Units Sold | Sessions | Total CVR % | ASP | Ad Cost | Ad Sales | Ad Units Sold | ROAS % | TACOS % | Ad Sales Contribution | Organic % | Ad Impressions | Ad Clicks | Ad CTR % | Ad CPC | Ad CVR % |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Sleep Mask | B08VVRG88M | 31 days | $17,086 | 845 | 25,615 | 2.69% | $20.22 | $9,635 | $6,913 | 335 | 71.7% | 56.4% | 46.6% | 60.1% | 471,059 | 3,687 | 0.78% | $2.61 | 9.09% |
@@ -5546,7 +5546,7 @@ Sleep Mask가 광고 매출 $6,913으로 1위를 차지했으나 ROAS 71.7%로 �
 ## 광고 투자 집중도 분석
 **분석 내용:**
 상위 3개 제품(Sleep Mask, Foam Cleanser, Peel Gel)이 전체 광고비의 75.7%($22,857)를 소진하며 73.0% ROAS를 기록한 반면, 나머지 7개 제품은 24.3% 예산($7,341)으로 165.5% ROAS를 달성했습니다. 이는 대규모 투자 제품들이 시장 점유율과 가시성 확보에 집중하는 반면, 소규모 제품들은 효율성을 우선시하는 이원화된 전략을 보여줍니다. Sleep Mask 단독으로 전체 광고비의 31.9%를 차지하며 카탈로그 드라이버 역할을 수행하고 있으나, 효율성 개선 여지가 큽니다.
-**Ad Spend Distribution by Product (Entire Account, 2025-12-28 \\~ 2026-01-27)**
+**Ad Spend Distribution by Product (Entire Account, 2025-12-28 \~ 2026-01-27)**
 | Product | ASIN | Ad Cost | Cost Share | Ad Sales | ROAS % | Impact Analysis |
 |---|---|---|---|---|---|---|
 | Sleep Mask | B08VVRG88M | $9,635 | 31.9% | $6,913 | 71.7% | Largest ad investment with below-average efficiency |
@@ -5557,7 +5557,7 @@ Sleep Mask가 광고 매출 $6,913으로 1위를 차지했으나 ROAS 71.7%로 �
 ---
 ## 효율성 세그먼트 분석
 **분석 내용:**
-포트폴리오는 명확한 효율성 이원화를 보입니다. 6개 고효율 제품(ROAS 139\\~505%)은 13.3% 예산($4,009)으로 높은 수익성을 입증하며, Eye Cream(505.6%), Carrot Cream(188.0%), Sleep Mask Tube(179.3%)가 선두를 달립니다. 반면 4개 표준 효율 제품(ROAS 71\\~102%)은 86.7% 예산($26,189)을 소진하며 볼륨 중심 전략을 구사합니다. 고효율 그룹은 낮은 CPC($1.23\\~$1.89)와 강력한 오가닉 기반(74%+)을 활용하는 반면, 대규모 투자 제품들은 경쟁 카테고리에서 높은 CPC($2.61\\~$2.96)를 감수하며 시장 점유율을 추구합니다.
+포트폴리오는 명확한 효율성 이원화를 보입니다. 6개 고효율 제품(ROAS 139\~505%)은 13.3% 예산($4,009)으로 높은 수익성을 입증하며, Eye Cream(505.6%), Carrot Cream(188.0%), Sleep Mask Tube(179.3%)가 선두를 달립니다. 반면 4개 표준 효율 제품(ROAS 71\~102%)은 86.7% 예산($26,189)을 소진하며 볼륨 중심 전략을 구사합니다. 고효율 그룹은 낮은 CPC($1.23\~$1.89)와 강력한 오가닉 기반(74%+)을 활용하는 반면, 대규모 투자 제품들은 경쟁 카테고리에서 높은 CPC($2.61\~$2.96)를 감수하며 시장 점유율을 추구합니다.
 **High-Efficiency Products (ROAS > 140%)**
 | Product | ASIN | Ad Cost | Ad Sales | ROAS % | Total Sales | Organic % | Launch Date |
 |---|---|---|---|---|---|---|---|
