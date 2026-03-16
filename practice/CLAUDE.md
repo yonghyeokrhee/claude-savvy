@@ -78,11 +78,15 @@ practice/
 │   └── report-feb-2026.md      # 2월 월간 보고서
 └── .claude/
     ├── agents/
-    │   └── campaign-analyzer.md
+    │   ├── campaign-analyzer.md  # 캠페인 분석 에이전트 (보라색)
+    │   ├── search-analyst.md     # 검색광고 분석 에이전트 (파란색)
+    │   ├── shopping-analyst.md   # 쇼핑검색 분석 에이전트 (초록색)
+    │   └── budget-analyst.md     # 예산 분석 에이전트 (노란색)
     └── skills/
-        ├── mop-report/         # 월간 보고서 자동 생성 Skill
-        ├── parse-chat-history/ # 채팅 기록 파싱 Skill
-        └── support-explorer/   # MOP 서비스 대화형 학습 Skill
+        ├── mop-report/           # 월간 보고서 자동 생성 Skill (단순 버전)
+        ├── mop-deep-analysis/    # 3-Agent 심층 분석 Skill (발전 버전)
+        ├── parse-chat-history/   # 채팅 기록 파싱 Skill
+        └── support-explorer/     # MOP 서비스 대화형 학습 Skill
 ```
 
 ## 작업 시 주의사항
