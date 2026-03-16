@@ -53,7 +53,7 @@ agents.md best-practices.md core-concepts.md getting-started.md introduction.md 
 
 ## practice/ 실습 파일
 
-practice/.claude/agents/campaign-analyzer.md practice/.claude/skills/mop-report/SKILL.md practice/.claude/skills/parse-chat-history/SKILL.md practice/.claude/skills/support-explorer/SKILL.md practice/claude-md.md practice/CLAUDE.md practice/data/budget-usage.md practice/data/campaign-search.md practice/data/campaign-shopping.md practice/data/report-feb-2026.md practice/sub-agent-create.md practice/sub-agent-skill.md practice/sub-agent.md 
+practice/.claude/agents/campaign-analyzer.md practice/.claude/agents/search-analyst.md practice/.claude/agents/shopping-analyst.md practice/.claude/agents/budget-analyst.md practice/.claude/skills/mop-report/SKILL.md practice/.claude/skills/mop-deep-analysis/SKILL.md practice/.claude/skills/parse-chat-history/SKILL.md practice/.claude/skills/support-explorer/SKILL.md practice/claude-md.md practice/CLAUDE.md practice/data/budget-usage.md practice/data/campaign-search.md practice/data/campaign-shopping.md practice/data/report-feb-2026.md practice/sub-agent-create.md practice/sub-agent-skill.md practice/sub-agent.md
 
 ## 핵심 참조 레포
 
