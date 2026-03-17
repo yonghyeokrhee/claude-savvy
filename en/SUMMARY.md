@@ -21,5 +21,6 @@
 * [MCP](mcp.md)
   * [MCP Practice — Connect Notion](practice/mcp.md)
   * [MCP Practice — Connect Obsidian](practice/mcp-obsidian.md)
+  * [MCP Practice — Connect RDS MySQL](mcp-rds-mysql.md)
 * [Persona & Output Style](persona.md)
 * [CLAUDE.md](practice/claude-md.md)

@@ -1,7 +1,7 @@
 # GitBook 프로젝트 — Claude 컨텍스트
 
 > 이 파일은 SUMMARY.md 또는 .md 파일 변경 시 자동으로 갱신됩니다.
-> 마지막 갱신: 2026-03-06 11:13:31
+> 마지막 갱신: 2026-03-17 10:16:21
 
 ## 프로젝트 개요
 
@@ -43,6 +43,7 @@ GitHub 연동 GitBook 기반 **Claude Code 한글 강의 교재** 프로젝트.
 * [MCP](mcp.md)
   * [MCP 실습 — Notion 연결](practice/mcp.md)
   * [MCP 실습 — Obsidian 연결](practice/mcp-obsidian.md)
+  * [MCP 실습 — RDS MySQL 연결](mcp-rds-mysql.md)
 * [Persona & Output Style](persona.md)
 * [Claude.md](practice/claude-md.md)
 ```
