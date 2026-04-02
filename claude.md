@@ -1,7 +1,7 @@
 # GitBook 프로젝트 — Claude 컨텍스트
 
 > 이 파일은 SUMMARY.md 또는 .md 파일 변경 시 자동으로 갱신됩니다.
-> 마지막 갱신: 2026-04-02 22:14:21
+> 마지막 갱신: 2026-04-02 22:20:16
 
 ## 프로젝트 개요
 
@@ -50,7 +50,7 @@ GitHub 연동 GitBook 기반 **Claude Code 한글 강의 교재** 프로젝트.
 ## 에이전트 팀 & 워크플로우
 
 * [Agent Team — 에이전트 팀](agent-team.md)
-* [OpenClaw](openclaw-agent/README.md)
+* [OpenClaw](openclaw.md)
 * [OpenClaw 에이전트 심화](openclaw-agent-deep.md)
 * [에이전트 워크플로우 실전](agent-workflow-practice.md)
 ```
