@@ -28,6 +28,6 @@
 ## 에이전트 팀 & 워크플로우
 
 * [Agent Team — 에이전트 팀](agent-team.md)
-* [OpenClaw](openclaw-agent/README.md)
+* [OpenClaw](openclaw.md)
 * [OpenClaw 에이전트 심화](openclaw-agent-deep.md)
 * [에이전트 워크플로우 실전](agent-workflow-practice.md)
