@@ -1,96 +1,109 @@
-# MOP 프로젝트 — Claude 컨텍스트
+# MOP Project — Claude Context
 
-## Agent 활용 목적
-CS 담당자이고, 매일 고객 대응 할 거야.
+## Agent Purpose
+CS representative handling daily customer support.
 
-## MOP 서비스 개요
+## MOP Service Overview
 
-**MOP(Marketing Optimization Platform)**는 LG CNS가 제공하는 AI 광고 최적화 솔루션이다.
-검색광고와 쇼핑검색광고의 성과를 자동으로 최적화한다.
+**MOP (Marketing Optimization Platform)** is an AI-powered ad optimization solution by LG CNS.
+It automatically optimizes the performance of search ads and shopping search ads.
 
-- 공식 지원: support.mop.co.kr
-- 문의: mop_support@lgcns.com
+- Official support: support.mop.co.kr
+- Contact: mop_support@lgcns.com
 
-## 요금제
+## Plans
 
-| 플랜 | 설명 |
-|------|------|
-| Basic | 무료. 회원가입만으로 즉시 이용 가능 |
-| Lite / Pro | 유료 월정액. 전문 컨설턴트 온보딩 제공 |
-| API Center | 고객사 데이터/시스템 직접 연결. 고급 사용자용 |
+| Plan | Description |
+|------|-------------|
+| Basic | Free. Available immediately upon sign-up |
+| Lite / Pro | Paid monthly. Includes professional consultant onboarding |
+| API Center | Direct integration with client data/systems. For advanced users |
 
-## 주요 기능
+## Key Features
 
-### 쇼핑검색광고 최적화
-- 캠페인 생성 및 관리
-- 목표입찰 설정
-- 품절 이상 감지
-- 예산 민감도 조절
-- 경쟁 심화도 분석
-- 제외키워드 관리
+### Shopping Search Ad Optimization
+- Campaign creation and management
+- Target bid configuration
+- Out-of-stock anomaly detection
+- Budget sensitivity adjustment
+- Competition intensity analysis
+- Negative keyword management
 
-### 검색광고 최적화
-- 순위 유지
-- 예산 민감도 설정
-- 경쟁 분석
+### Search Ad Optimization
+- Rank maintenance
+- Budget sensitivity settings
+- Competition analysis
 
-### 예산 최적화
-- 예산 추세 분석
-- 채널별 예산 최적화
-- 기여도 측정
+### Budget Optimization
+- Budget trend analysis
+- Channel-level budget optimization
+- Attribution measurement
 
-### 분석 및 리포트
-- 캠페인 리포트
-- 최적화 리포트
-- 대용량 데이터 리포트
-- 실시간 대시보드
-- 소재 효율성 분석
-- 이상 감지 알림
+### Analytics & Reporting
+- Campaign reports
+- Optimization reports
+- Large-scale data reports
+- Real-time dashboard
+- Creative efficiency analysis
+- Anomaly detection alerts
 
-## 핵심 용어
+## Key Terms
 
-| 용어 | 설명 |
-|------|------|
-| 애드써클 (AdCircle) | 캠페인 그룹 단위. 팀원 권한 관리의 기본 단위 |
-| 목표입찰 | AI가 ROAS 목표에 맞춰 자동으로 입찰가를 조정하는 기능 |
-| Spend Pacing | 예산이 기간 내 고르게 소진되도록 자동 조절하는 기능 |
-| ROAS | 광고비 대비 매출 비율. (매출 / 광고비) × 100 |
+| Term | Description |
+|------|-------------|
+| AdCircle | Campaign group unit. Base unit for team permission management |
+| Target Bid | AI automatically adjusts bids to meet ROAS targets |
+| Spend Pacing | Automatically spreads budget evenly across the campaign period |
+| ROAS | Return on Ad Spend. (Revenue / Ad Cost) × 100 |
 
-## 사용자 역할
+## User Roles
 
-- **관리자**: 데이터 연동 → 애드써클 생성 → 팀원 권한 부여 → 최적화 설정
-- **운영자**: 애드써클 초대 수락 → 데이터 확인 → 최적화 설정
-- **보기 사용자**: 데이터 조회만 가능
+- **Admin**: Connect data → Create AdCircle → Grant team permissions → Configure optimization
+- **Operator**: Accept AdCircle invitation → Review data → Configure optimization
+- **Viewer**: Read-only access to data
 
-## 사용자 유형
+## User Types
 
-- **광고주**: 자사 광고를 직접 운영
-- **대행사**: 여러 클라이언트 광고를 동시 관리
+- **Advertiser**: Manages own ads directly
+- **Agency**: Manages multiple client ad accounts simultaneously
 
-## 이 디렉토리의 파일 구조
+## Directory Structure
 
 ```
 practice/
 ├── data/
-│   ├── campaign-search.md      # 검색광고 캠페인 성과 데이터
-│   ├── campaign-shopping.md    # 쇼핑광고 캠페인 성과 데이터
-│   ├── budget-usage.md         # 예산 집행 현황
-│   └── report-feb-2026.md      # 2월 월간 보고서
+│   ├── campaign-search.md      # Search ad campaign performance data
+│   ├── campaign-shopping.md    # Shopping ad campaign performance data
+│   ├── budget-usage.md         # Budget usage status
+│   └── report-feb-2026.md      # February 2026 monthly report
 └── .claude/
     ├── agents/
-    │   ├── campaign-analyzer.md  # 캠페인 분석 에이전트 (보라색)
-    │   ├── search-analyst.md     # 검색광고 분석 에이전트 (파란색)
-    │   ├── shopping-analyst.md   # 쇼핑검색 분석 에이전트 (초록색)
-    │   └── budget-analyst.md     # 예산 분석 에이전트 (노란색)
+    │   ├── campaign-analyzer.md  # Campaign analysis agent (purple)
+    │   ├── search-analyst.md     # Search ad analyst agent (blue)
+    │   ├── shopping-analyst.md   # Shopping search analyst agent (green)
+    │   └── budget-analyst.md     # Budget analyst agent (yellow)
     └── skills/
-        ├── mop-report/           # 월간 보고서 자동 생성 Skill (단순 버전)
-        ├── mop-deep-analysis/    # 3-Agent 심층 분석 Skill (발전 버전)
-        ├── parse-chat-history/   # 채팅 기록 파싱 Skill
-        └── support-explorer/     # MOP 서비스 대화형 학습 Skill
+        ├── mop-report/           # Monthly report auto-generation skill (simple)
+        ├── mop-deep-analysis/    # 3-agent deep analysis skill (advanced)
+        ├── parse-chat-history/   # Chat history parsing skill
+        └── support-explorer/     # MOP service interactive learning skill
 ```
 
-## 작업 시 주의사항
+## DB Query Rules
 
-- 캠페인 성과 분석 시 ROAS 기준: 300% 이상 = 우수, 200% 미만 = 개선 필요
-- 보고서는 마케터가 팀에 바로 공유할 수 있는 형식으로 작성
-- 용어는 MOP 공식 명칭을 사용 (예: "광고그룹" 아닌 "애드써클")
+- No `SELECT *` — always specify required columns explicitly
+- For wide tables (>10 columns), refer to the column guide below and auto-select — never ask the user to pick columns
+- Audit columns (`created_by`, `created_datetime`, `updated_by`, `updated_datetime`) are excluded by default — include only when explicitly requested
+- For unknown tables, run `describe_table` first, then auto-select key columns (IDs, status, type fields)
+
+### Default Columns by Table
+
+#### advertiser_units
+- **Core**: `unit_id`, `unit_status`, `status`, `advertiser_id`, `media_type`, `campaign_id`, `use_yn`
+- **Detailed**: + `collectable_status`, `media_source`, `media_account_id`, `analytics_type`, `analytics_account_id`, `analytics_view_id`, `analytics_conversion`, `start_date`, `end_date`, `status_code`, `status_reason`
+
+## Notes
+
+- ROAS benchmark for campaign analysis: ≥300% = excellent, <200% = needs improvement
+- Reports should be formatted for direct team sharing by marketers
+- Use official MOP terminology (e.g., "AdCircle" not "ad group")

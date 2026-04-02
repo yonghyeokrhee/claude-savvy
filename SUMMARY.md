@@ -24,3 +24,4 @@
   * [MCP 실습 — RDS MySQL 연결](mcp-rds-mysql.md)
 * [Persona & Output Style](persona.md)
 * [Claude.md](practice/claude-md.md)
+* [OpenClaw](openclaw-agent/README.md)

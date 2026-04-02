@@ -1,206 +1,188 @@
-# 예산 최적화 보고서
+# Budget Optimization Report
 
-> 분석 기준 기간: 2026년 2월
-> 작성일: 2026년 3월 16일
-> 작성: MOP Budget Analyst
+> Analysis Period: February 2026 | Generated: 2026-03-17 | Analyst: Budget Analyst Agent
 
 ---
 
-## 한 줄 진단
+## One-Line Diagnosis
 
-검색광고(예산 비중 75%, ROAS 206%)와 쇼핑검색(예산 비중 25%, ROAS 698%) 간 ROAS 격차가 3.4배로 긴급 재배분 기준(3배 초과)을 넘어섰으며, 현 구조를 유지하면 월 약 1,150만 원 이상의 매출 기회를 상실하고 있다.
+Shopping search (ROAS 698%) is generating 3.39x the return of search ads (ROAS 206%), yet receives only 25% of total budget — a critical misallocation that leaves an estimated 15,900,000–33,200,000 KRW in monthly revenue unrealized.
 
 ---
 
-## 현재 배분 개요
+## Current Allocation Overview
 
-| 채널 | 배정 예산 | 예산 비중 | 집행액 | 집행률 | ROAS | 발생 매출 | 매출 기여율 |
-|---|---|---|---|---|---|---|---|
-| 검색광고 | 9,000,000원 | 75% | 8,200,000원 | 91% | 206% | 16,900,000원 | 48.2% |
-| 쇼핑검색 | 3,000,000원 | 25% | 2,600,000원 | 87% | 698% | 18,150,000원 | 51.8% |
-| **합계** | **12,000,000원** | **100%** | **10,800,000원** | **90%** | **325%** | **35,050,000원** | **100%** |
-
-### 캠페인별 상세 성과
-
-| 캠페인 | 채널 | 집행 광고비 | 발생 매출 | ROAS | 평가 |
+| Channel | Budget Share | Spend | ROAS | Revenue | Revenue Share |
 |---|---|---|---|---|---|
-| 브랜드_쇼핑검색 | 쇼핑검색 | 1,700,000원 | 12,750,000원 | 750% | 우수 |
-| 리타겟팅_쇼핑 | 쇼핑검색 | 900,000원 | 5,400,000원 | 600% | 우수 |
-| 봄신상_검색광고 | 검색광고 | 2,400,000원 | 9,600,000원 | 400% | 우수 |
-| 경쟁사키워드_검색 | 검색광고 | 3,000,000원 | 4,500,000원 | 150% | 개선 필요 |
-| 신규고객_검색 | 검색광고 | 2,800,000원 | 2,800,000원 | 100% | 비효율 |
+| Search Ads | 75% (9,000,000 KRW) | 8,200,000 KRW | 206% | 16,900,000 KRW | 48.2% |
+| Shopping Search | 25% (3,000,000 KRW) | 2,600,000 KRW | 698% | 18,150,000 KRW | 51.8% |
+| **Total** | **100%** | **10,800,000 KRW** | **325%** | **35,050,000 KRW** | **100%** |
+
+**Campaign-level breakdown:**
+
+| Campaign | Channel | Spend | Revenue | ROAS | Rating |
+|---|---|---|---|---|---|
+| 브랜드_쇼핑검색 | Shopping | 1,700,000 KRW | 12,750,000 KRW | 750% | Efficient |
+| 리타겟팅_쇼핑 | Shopping | 900,000 KRW | 5,400,000 KRW | 600% | Efficient |
+| 봄신상_검색광고 | Search | 2,400,000 KRW | 9,600,000 KRW | 400% | Efficient |
+| 경쟁사키워드_검색 | Search | 3,000,000 KRW | 4,500,000 KRW | 150% | Needs Review |
+| 신규고객_검색 | Search | 2,800,000 KRW | 2,800,000 KRW | 100% | Inefficient |
 
 ---
 
-## 효율성 진단
+## Efficiency Assessment
 
-### 집행률 — 양호 (85~95% 구간)
+**Utilization Rate: 90% — Efficient (both channels within 85–95% target band)**
+- Search Ads: 91% | Shopping Search: 87%
 
-전체 집행률 90%는 기준상 "효율" 구간에 해당한다. 검색광고 91%, 쇼핑검색 87% 모두 정상 범위다.
+**Channel ROAS Gap: 3.39x (698% vs 206%) — Urgent Reallocation (threshold: 3x exceeded)**
 
-### 채널 ROAS 격차 — 긴급 재배분 필요 (3배 초과)
+**Overall ROAS: 325% — Efficient (300%+ threshold met)**
 
-쇼핑검색 ROAS(698%) 대비 검색광고 ROAS(206%)의 격차는 **3.4배**다. 기준상 3배 초과는 "긴급 재배분" 신호다.
+However, the aggregate ROAS rating conceals a structural problem. The two lowest-performing search campaigns — 경쟁사키워드_검색 (ROAS 150%) and 신규고객_검색 (ROAS 100%) — together consume 5,800,000 KRW, which is 53.7% of total spend, yet generate a blended ROAS of only 128%. These two campaigns are being cross-subsidized by the high-performing shopping campaigns.
 
-- 예산 비중: 검색 75% vs 쇼핑 25% — 예산은 검색에 3배 집중
-- 매출 기여율: 검색 48.2% vs 쇼핑 51.8% — 매출은 이미 쇼핑이 역전
+Budget distribution and revenue contribution are inverted:
+- Search ads receive 75% of budget but deliver 48.2% of revenue.
+- Shopping search receives 25% of budget but delivers 51.8% of revenue.
 
-예산 투입 구조와 실제 매출 기여 구조가 완전히 역전되어 있다.
-
-### 전체 ROAS — 우수 (300% 이상), 단 구조적 취약
-
-전체 ROAS 325%는 기준상 "우수" 구간이다. 그러나 이는 쇼핑검색의 고성과(698%)가 검색광고 내 저효율 캠페인 2개(ROAS 100~150%)를 가려주는 효과다.
-
-저효율 2개 캠페인(경쟁사키워드_검색 + 신규고객_검색)의 합산 광고비는 **5,800,000원으로 전체 집행액의 53.7%**를 차지하며, 합산 가중 평균 ROAS는 128%에 불과하다.
+The 봄신상_검색광고 (ROAS 400%) is the one search campaign performing above threshold and warrants continuation.
 
 ---
 
-## 기회비용 분석
+## Opportunity Cost Analysis
 
-### 1,000,000원 단위 채널 이동 효과
+**Basis: Reallocating the two inefficient search campaigns to shopping search**
 
-검색광고에서 쇼핑검색으로 100만 원을 이동할 때마다 발생하는 순 매출 변화:
+Current revenue from 경쟁사키워드_검색 + 신규고객_검색 (combined spend 5,800,000 KRW):
+- 4,500,000 + 2,800,000 = 7,300,000 KRW
 
-| 항목 | 금액 |
+If the same 5,800,000 KRW were redirected to shopping search at the current channel ROAS of 698%:
+- Projected revenue: 5,800,000 × 6.98 = 40,484,000 KRW
+
+**Gross foregone revenue: 40,484,000 − 7,300,000 = 33,184,000 KRW per month**
+
+Applying a conservative saturation discount — assuming shopping ROAS degrades to 400% as budget scales significantly:
+- Conservative projected revenue: 5,800,000 × 4.00 = 23,200,000 KRW
+- **Conservative foregone revenue: 23,200,000 − 7,300,000 = 15,900,000 KRW per month**
+
+**Per 1,000,000 KRW shifted from low-efficiency search to shopping search:**
+
+| Item | Amount |
 |---|---|
-| 검색광고에서 제거 시 매출 감소 | -2,060,000원 (ROAS 206% 적용) |
-| 쇼핑검색 추가 집행 시 매출 증가 | +6,980,000원 (ROAS 698% 적용) |
-| **100만 원 이동 시 순 매출 증가** | **+4,920,000원** |
-
-### 저효율 2개 캠페인 예산 재배분 시 효과
-
-경쟁사키워드_검색(3,000,000원, ROAS 150%)과 신규고객_검색(2,800,000원, ROAS 100%)의 예산 합계 5,800,000원을 단계적으로 쇼핑검색으로 이동하는 시뮬레이션:
-
-| 이동 금액 | 현재 구조 매출 손실 | 쇼핑검색 전환 후 매출 증가 | 순 매출 변화 |
-|---|---|---|---|
-| 1,000,000원 이동 | -1,250,000원 (가중 ROAS 125%) | +6,980,000원 | **+5,730,000원** |
-| 2,000,000원 이동 | -2,500,000원 | +13,960,000원 | **+11,460,000원** |
-| 5,800,000원 전체 이동 | -7,250,000원 | +40,484,000원 | **+33,234,000원** |
-
-> 단, 쇼핑검색 예산을 단기간에 대폭 늘리면 ROAS가 점진적으로 하락할 수 있다. 보수적 추정(ROAS 550% 가정)을 적용해도 5,800,000원 이동 시 순 매출 증가는 +24,640,000원으로 여전히 유의미하다.
+| Revenue lost from removing search spend (blended ROAS 125%) | -1,250,000 KRW |
+| Revenue gained from adding shopping spend (ROAS 698%) | +6,980,000 KRW |
+| Net revenue gain per 1,000,000 KRW shifted | **+5,730,000 KRW** |
 
 ---
 
-## 최적 배분 제안
+## Optimal Allocation Proposal
 
-### ROAS 가중 최적 비중 산출
+**Methodology: ROAS-weighted reallocation with a 60:40 transitional target (vs. theoretical 22.8:77.2)**
 
-> 계산: 각 채널 ROAS / 전체 채널 ROAS 합산 × 100
-> 검색 206 + 쇼핑 698 = 904
+The theoretical ROAS-weighted optimum would place 77.2% of budget in shopping search. This is the mathematical maximum but ignores the brand awareness and new customer acquisition functions of search advertising. A 60:40 (search:shopping) split is the recommended first-step transition for March.
 
-| 채널 | ROAS | 이론적 최적 비중 | 3월 권장 비중 |
-|---|---|---|---|
-| 검색광고 | 206% | 22.8% | 60% |
-| 쇼핑검색 | 698% | 77.2% | 40% |
-
-이론적 최적(쇼핑 77%)은 검색광고의 브랜드 인지도 유지 역할과 신규 고객 유입 기능을 무시한 극단적 배분이다. 3월에는 단계적 이동의 첫 스텝으로 쇼핑 40%를 현실적 목표로 제시한다.
-
-### 캠페인별 세부 조정안
-
-| 캠페인 | 현재 예산 | 제안 예산 | 변화 | 근거 |
-|---|---|---|---|---|
-| 브랜드_쇼핑검색 | 1,700,000원 | 2,900,000원 | +1,200,000원 | ROAS 750%, 최우선 확대 대상 |
-| 리타겟팅_쇼핑 | 900,000원 | 1,900,000원 | +1,000,000원 | ROAS 600%, 안정적 성과 확장 |
-| 봄신상_검색광고 | 2,400,000원 | 2,800,000원 | +400,000원 | ROAS 400%, 시즌 특수 유지 |
-| 경쟁사키워드_검색 | 3,000,000원 | 1,500,000원 | -1,500,000원 | ROAS 150%, 기준 미달 — 50% 삭감 |
-| 신규고객_검색 | 2,800,000원 | 900,000원 | -1,900,000원 | ROAS 100%, 소재 교체 전 최소 운영 |
-| **합계** | **10,800,000원** | **10,000,000원** | — | 절감액 전액 쇼핑검색 재배분 |
-
----
-
-## 3월 예산 시나리오
-
-### 공통 가정
-
-- 채널 ROAS는 2월 실적 기준 유지 (검색 206%, 쇼핑 698%)
-- 검색 60% : 쇼핑 40% 재배분 비중 적용
-- 봄 시즌 시기적 요소에 따른 ROAS 상승 효과는 별도 미반영 (보수적 추정)
-
----
-
-### 시나리오 A: 보수적 — 현 예산 유지 (12,000,000원)
-
-예산 추가 없이 배분 조정만으로 효율 극대화. 리스크 최소화 전략.
-
-| 채널 | 배정 예산 | 비중 | 예상 ROAS | 예상 매출 |
-|---|---|---|---|---|
-| 검색광고 | 7,200,000원 | 60% | 206% | 14,832,000원 |
-| 쇼핑검색 | 4,800,000원 | 40% | 698% | 33,504,000원 |
-| **합계** | **12,000,000원** | **100%** | **402%** | **48,336,000원** |
-
-- 2월 실적 대비 매출 변화: 35,050,000원 → 48,336,000원 (**+13,286,000원, +37.9%**)
-- 예산 동결 상태에서도 재배분만으로 매출 약 38% 증가 기대
-- 권장 대상: 예산 동결 또는 예산 증액 승인이 어려운 상황
-
----
-
-### 시나리오 B: 균형 — 10% 증액 (13,200,000원)
-
-쇼핑검색 예산 확대와 봄 시즌 수요 공략을 동시에 추구. 성장과 안정의 균형.
-
-| 채널 | 배정 예산 | 비중 | 예상 ROAS | 예상 매출 |
-|---|---|---|---|---|
-| 검색광고 | 7,920,000원 | 60% | 206% | 16,315,200원 |
-| 쇼핑검색 | 5,280,000원 | 40% | 698% | 36,854,400원 |
-| **합계** | **13,200,000원** | **100%** | **402%** | **53,169,600원** |
-
-- 2월 실적 대비 매출 변화: +18,119,600원 (**+51.7%**)
-- 추가 투입 1,200,000원으로 추가 창출 매출: 4,833,600원 (추가 ROAS 403%)
-- 권장 대상: 봄 시즌을 활용한 일반적 성장 목표 — **3월 권장 시나리오**
-
----
-
-### 시나리오 C: 공격적 — 20% 증액 (14,400,000원)
-
-쇼핑검색 최우선 확대. 봄 시즌 매출 극대화를 위한 공격적 투자.
-
-| 채널 | 배정 예산 | 비중 | 예상 ROAS | 예상 매출 |
-|---|---|---|---|---|
-| 검색광고 | 8,640,000원 | 60% | 206% | 17,798,400원 |
-| 쇼핑검색 | 5,760,000원 | 40% | 698% | 40,204,800원 |
-| **합계** | **14,400,000원** | **100%** | **403%** | **58,003,200원** |
-
-- 2월 실적 대비 매출 변화: +22,953,200원 (**+65.5%**)
-- 추가 투입 2,400,000원으로 추가 창출 매출: 9,667,200원 (추가 ROAS 403%)
-- 권장 대상: 봄 시즌 집중 공략이 경영 목표와 연계된 경우
-- 주의사항: 쇼핑검색 예산 급증 시 ROAS 희석 가능 — 주 단위 모니터링 필수
-
----
-
-### 시나리오 비교 요약
-
-| 구분 | 총 예산 | 예상 총매출 | 예상 ROAS | 2월 대비 매출 증가 | 리스크 |
+| Campaign | Current Share | Current Spend | Proposed Share | Proposed Spend | Expected ROAS |
 |---|---|---|---|---|---|
-| 2월 실적 (기준) | 10,800,000원 | 35,050,000원 | 325% | — | — |
-| A. 보수적 (현 예산 유지) | 12,000,000원 | 48,336,000원 | 402% | +13,286,000원 (+37.9%) | 낮음 |
-| B. 균형 (10% 증액) | 13,200,000원 | 53,169,600원 | 402% | +18,119,600원 (+51.7%) | 중간 |
-| C. 공격적 (20% 증액) | 14,400,000원 | 58,003,200원 | 403% | +22,953,200원 (+65.5%) | 중간~높음 |
+| 브랜드_쇼핑검색 | 15.7% | 1,700,000 KRW | 24.2% | 2,900,000 KRW | 700%+ |
+| 리타겟팅_쇼핑 | 8.3% | 900,000 KRW | 15.8% | 1,900,000 KRW | 580%+ |
+| 봄신상_검색광고 | 22.2% | 2,400,000 KRW | 23.3% | 2,800,000 KRW | 380%+ |
+| 경쟁사키워드_검색 | 27.8% | 3,000,000 KRW | 12.5% | 1,500,000 KRW | 200% (target bid revised) |
+| 신규고객_검색 | 25.9% | 2,800,000 KRW | 7.5% | 900,000 KRW | Minimum test |
+| **Total** | **100%** | **10,800,000 KRW** | **100%** | **10,000,000 KRW** | **~402%** |
+
+Note: The proposed column totals 10,000,000 KRW. The remaining 800,000 KRW savings from the reallocation is absorbed into the shopping campaigns in the March scenarios below.
+
+**Projected revenue under optimal allocation at 10,800,000 KRW spend: ~43,400,000 KRW**
+vs. current revenue of 35,050,000 KRW — projected uplift of **+8,350,000 KRW (+23.8%)** with no budget increase.
 
 ---
 
-## 핵심 권고사항
+## March Budget Scenarios
 
-### 1. 경쟁사키워드_검색 예산 즉시 50% 삭감
-
-ROAS 150%는 MOP 기준(200% 미만 = 개선 필요)을 하회하며, 3,000,000원이라는 가장 큰 단일 캠페인 예산을 소모하고 있다. 절감한 1,500,000원을 브랜드_쇼핑검색에 즉시 이동하면 이론상 매출 약 **7,770,000원 추가 창출**이 가능하다. 잔여 1,500,000원은 MOP 목표입찰 기능으로 ROAS 목표를 200%로 설정해 자동 최적화를 가동한다.
-
-### 2. 브랜드_쇼핑검색 예산 2,900,000원으로 확대 + MOP Spend Pacing 설정
-
-ROAS 750%로 전 캠페인 최고 성과를 기록 중이다. 봄 시즌 수요 증가가 예상되는 3월이 확대 적기다. 현재 예산 상한(1,700,000원)이 성과 확장의 병목이 될 수 있으므로 즉시 상향 조정한다. MOP Spend Pacing을 활성화해 예산이 월초에 집중 소진되지 않도록 설정한다.
-
-### 3. 신규고객_검색 소재 전면 교체 — 2주 내 ROAS 200% 미달성 시 추가 삭감
-
-ROAS 100%는 광고비와 매출이 동일한 손익분기점으로, 실질 이익이 전혀 없는 적자 구조다. 3월 1주차에 광고 소재(키워드, 소재 문구, 랜딩페이지)를 교체하고 예산을 900,000원으로 최소화한다. MOP 이상 감지 알림을 설정해 ROAS 이탈 시 즉시 알림을 받도록 구성하고, 3월 15일 중간 점검 시 ROAS 200% 미달성이면 예산 추가 50% 삭감 후 쇼핑검색으로 전환한다.
+### Common Assumptions
+- Channel ROAS held at February actuals: Search 206%, Shopping 698%
+- Budget allocation ratio: Search 60% / Shopping 40%
+- Spring season uplift not modeled (conservative baseline)
 
 ---
 
-## 즉시 실행 체크리스트 (3월 1주차)
+### Scenario A: Maintain Current Budget (12,000,000 KRW)
 
-- [ ] 경쟁사키워드_검색 일 예산 한도 50% 삭감 (3,000,000원 → 1,500,000원)
-- [ ] 경쟁사키워드_검색 MOP 목표입찰 ROAS 목표값 200%로 설정
-- [ ] 브랜드_쇼핑검색 월 예산 상한 2,900,000원으로 상향
-- [ ] 브랜드_쇼핑검색 MOP Spend Pacing 활성화
-- [ ] 리타겟팅_쇼핑 월 예산 상한 1,900,000원으로 상향
-- [ ] 신규고객_검색 예산 900,000원으로 축소 + 소재 교체 착수
-- [ ] 신규고객_검색 MOP 이상 감지 알림 설정 (ROAS 100% 기준)
-- [ ] 3월 15일 중간 점검 일정 등록 — 쇼핑검색 ROAS 추이 및 신규고객_검색 소재 효과 확인
+Reallocation only — maximize efficiency without additional investment.
+
+| Channel | Allocated Budget | Share | Expected ROAS | Expected Revenue |
+|---|---|---|---|---|
+| Search Ads | 7,200,000 KRW | 60% | 206% | 14,832,000 KRW |
+| Shopping Search | 4,800,000 KRW | 40% | 698% | 33,504,000 KRW |
+| **Total** | **12,000,000 KRW** | **100%** | **402%** | **48,336,000 KRW** |
+
+- February vs March change: 35,050,000 KRW → 48,336,000 KRW (**+13,286,000 KRW, +37.9%**)
+- No new budget required — all gains from reallocation alone
+- Recommended when: budget is frozen or approval for increase is not yet secured
+
+---
+
+### Scenario B: 10% Increase (13,200,000 KRW)
+
+Direct the additional 1,200,000 KRW entirely to shopping search, split proportionally between 브랜드_쇼핑검색 and 리타겟팅_쇼핑.
+
+| Channel | Allocated Budget | Share | Expected ROAS | Expected Revenue |
+|---|---|---|---|---|
+| Search Ads | 7,920,000 KRW | 60% | 206% | 16,315,200 KRW |
+| Shopping Search | 5,280,000 KRW | 40% | 698% | 36,854,400 KRW |
+| **Total** | **13,200,000 KRW** | **100%** | **402%** | **53,169,600 KRW** |
+
+- February vs March change: +18,119,600 KRW (**+51.7%**)
+- Incremental revenue from 1,200,000 KRW additional spend: **+4,833,600 KRW (incremental ROAS 403%)**
+- Recommended when: standard growth target for spring season — **recommended base scenario for March**
+
+---
+
+### Scenario C: 20% Increase (14,400,000 KRW)
+
+Direct the additional 2,400,000 KRW to shopping search, with a portion also increasing 봄신상_검색광고 to capture spring season peak demand.
+
+| Channel | Allocated Budget | Share | Expected ROAS | Expected Revenue |
+|---|---|---|---|---|
+| Search Ads | 8,640,000 KRW | 60% | 206% | 17,798,400 KRW |
+| Shopping Search | 5,760,000 KRW | 40% | 698% | 40,204,800 KRW |
+| **Total** | **14,400,000 KRW** | **100%** | **403%** | **58,003,200 KRW** |
+
+- February vs March change: +22,953,200 KRW (**+65.5%**)
+- Incremental revenue from 2,400,000 KRW additional spend: **+9,667,200 KRW (incremental ROAS 403%)**
+- Recommended when: spring season demand signals are strong and the business is targeting aggressive growth
+- Risk note: Rapid shopping search budget scaling may cause ROAS degradation due to audience saturation — require weekly ROAS monitoring and a stop-loss trigger at ROAS below 500%
+
+---
+
+### Scenario Comparison
+
+| Scenario | Total Budget | Expected Revenue | Expected ROAS | vs February Revenue | Risk |
+|---|---|---|---|---|---|
+| February Actual (baseline) | 10,800,000 KRW | 35,050,000 KRW | 325% | — | — |
+| A. Maintain (reallocation only) | 12,000,000 KRW | 48,336,000 KRW | 402% | +13,286,000 KRW (+37.9%) | Low |
+| B. +10% Increase | 13,200,000 KRW | 53,169,600 KRW | 402% | +18,119,600 KRW (+51.7%) | Medium |
+| C. +20% Increase | 14,400,000 KRW | 58,003,200 KRW | 403% | +22,953,200 KRW (+65.5%) | Medium-High |
+
+---
+
+## Key Recommendations
+
+1. **Immediately cut 경쟁사키워드_검색 budget by 50% (3,000,000 KRW to 1,500,000 KRW) and activate MOP target bid at ROAS 200%.** This is the single highest-impact action available. The campaign is consuming the largest budget share of any campaign (27.8%) at ROAS 150%, which is below the 200% minimum threshold. Cutting it by half and routing the 1,500,000 KRW freed to 브랜드_쇼핑검색 is projected to generate an incremental **+7,770,000 KRW in revenue** based on the ROAS differential (750% vs 150%). The remaining 1,500,000 KRW stays in the campaign with MOP's 목표입찰 set to ROAS 200% for automated self-correction.
+
+2. **Scale 브랜드_쇼핑검색 budget to 2,900,000 KRW and enable MOP Spend Pacing.** At ROAS 750%, this is the highest-performing campaign across both channels. The March spring season creates favorable conditions for expanding reach. Increasing its budget from 1,700,000 KRW to 2,900,000 KRW (+71%) removes the current ceiling on the top performer. Spend Pacing must be activated to prevent the increased budget from front-loading in the first week of the month and causing early exhaustion.
+
+3. **Reduce 신규고객_검색 to a 900,000 KRW test budget, replace all creative assets in week 1 of March, and set a hard ROAS review gate at March 15.** At ROAS 100%, this campaign returns exactly what it costs — there is zero margin contribution. Reducing the budget from 2,800,000 KRW to 900,000 KRW frees 1,900,000 KRW for redeployment while retaining enough scale to meaningfully test new creative. Set MOP's 이상 감지 알림 at ROAS 100% as a floor alert. If the campaign has not reached ROAS 200% by the March 15 checkpoint, execute an additional 50% budget cut and shift the remainder to 리타겟팅_쇼핑.
+
+---
+
+## Week-1 March Execution Checklist
+
+- [ ] Reduce 경쟁사키워드_검색 daily budget cap by 50% (3,000,000 KRW → 1,500,000 KRW)
+- [ ] Set MOP 목표입찰 ROAS target to 200% on 경쟁사키워드_검색
+- [ ] Increase 브랜드_쇼핑검색 monthly budget ceiling to 2,900,000 KRW
+- [ ] Activate MOP Spend Pacing on 브랜드_쇼핑검색
+- [ ] Increase 리타겟팅_쇼핑 monthly budget ceiling to 1,900,000 KRW
+- [ ] Reduce 신규고객_검색 budget to 900,000 KRW and begin creative refresh
+- [ ] Set MOP 이상 감지 알림 on 신규고객_검색 at ROAS floor of 100%
+- [ ] Schedule March 15 mid-month review: shopping ROAS trend + 신규고객_검색 creative performance
