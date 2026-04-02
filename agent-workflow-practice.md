@@ -134,6 +134,8 @@ async def main():
          └──────────────┘
 ```
 
+![리서치 파이프라인 패턴](images/research-pipeline-pattern.svg)
+
 Claude Code에서 실행:
 
 ```
@@ -293,6 +295,8 @@ asyncio.run(main())
 비용이 중요한 환경
   → 모델 계층화 (Opus/Sonnet/Haiku)
 ```
+
+![워크플로우 선택 가이드](images/workflow-selection-guide.svg)
 
 > 참조:
 > - [Claude Agent SDK 공식 문서](https://platform.claude.com/docs/en/agent-sdk/overview)

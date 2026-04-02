@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="dsd" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000018"/></filter>
+    <marker id="ad" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#7c3aed"/></marker>
+    <marker id="adu" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#6366f1"/></marker>
+  </defs>
+  <rect width="560" height="340" rx="16" fill="#fafafa"/>
+
+  <!-- Lead Agent (top) -->
+  <rect x="140" y="14" width="280" height="56" rx="12" fill="#7c3aed" filter="url(#dsd)"/>
+  <text x="195" y="40" style="font-size:14px; fill:#fff; font-weight:700">Lead Agent (Opus)</text>
+  <text x="170" y="58" style="font-size:10px; fill:#ddd6fe">"Compare 3 competitors' pricing"</text>
+
+  <!-- Arrows down -->
+  <line x1="220" y1="70" x2="110" y2="110" stroke="#7c3aed" stroke-width="2" marker-end="url(#ad)"/>
+  <line x1="280" y1="70" x2="280" y2="110" stroke="#7c3aed" stroke-width="2" marker-end="url(#ad)"/>
+  <line x1="340" y1="70" x2="450" y2="110" stroke="#7c3aed" stroke-width="2" marker-end="url(#ad)"/>
+
+  <!-- Sub-agents -->
+  <rect x="40" y="112" width="140" height="70" rx="10" fill="#6366f1" filter="url(#dsd)"/>
+  <text x="65" y="136" style="font-size:13px; fill:#fff; font-weight:600">Sonnet 1</text>
+  <text x="60" y="154" style="font-size:10px; fill:#c7d2fe">Competitor A</text>
+  <text x="60" y="170" style="font-size:10px; fill:#c7d2fe">Web Research</text>
+
+  <rect x="210" y="112" width="140" height="70" rx="10" fill="#6366f1" filter="url(#dsd)"/>
+  <text x="235" y="136" style="font-size:13px; fill:#fff; font-weight:600">Sonnet 2</text>
+  <text x="230" y="154" style="font-size:10px; fill:#c7d2fe">Competitor B</text>
+  <text x="230" y="170" style="font-size:10px; fill:#c7d2fe">Web Research</text>
+
+  <rect x="380" y="112" width="140" height="70" rx="10" fill="#6366f1" filter="url(#dsd)"/>
+  <text x="405" y="136" style="font-size:13px; fill:#fff; font-weight:600">Sonnet 3</text>
+  <text x="400" y="154" style="font-size:10px; fill:#c7d2fe">Competitor C</text>
+  <text x="400" y="170" style="font-size:10px; fill:#c7d2fe">Web Research</text>
+
+  <!-- Parallel indicator -->
+  <rect x="42" y="188" width="136" height="4" rx="2" fill="#818cf8"/>
+  <rect x="212" y="188" width="136" height="4" rx="2" fill="#818cf8"/>
+  <rect x="382" y="188" width="136" height="4" rx="2" fill="#818cf8"/>
+
+  <!-- Arrows up to merge -->
+  <line x1="110" y1="196" x2="220" y2="236" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#adu)"/>
+  <line x1="280" y1="196" x2="280" y2="236" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#adu)"/>
+  <line x1="450" y1="196" x2="340" y2="236" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#adu)"/>
+
+  <!-- Merge point -->
+  <circle cx="280" cy="228" r="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="275" y="232" style="font-size:10px; fill:#6366f1; font-weight:bold">&#8595;</text>
+
+  <!-- Lead Agent (bottom) -->
+  <rect x="140" y="244" width="280" height="56" rx="12" fill="#7c3aed" filter="url(#dsd)"/>
+  <text x="195" y="270" style="font-size:14px; fill:#fff; font-weight:700">Lead Agent (Opus)</text>
+  <text x="180" y="288" style="font-size:10px; fill:#ddd6fe">Synthesize + Comparison Table</text>
+
+  <!-- Output -->
+  <line x1="280" y1="300" x2="280" y2="320" stroke="#10b981" stroke-width="2" marker-end="url(#adg)"/>
+  <defs>
+    <marker id="adg" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#10b981"/></marker>
+  </defs>
+  <rect x="220" y="318" width="120" height="18" rx="4" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="240" y="331" style="font-size:10px; fill:#065f46; font-weight:600">Final Report</text>
+</svg>
