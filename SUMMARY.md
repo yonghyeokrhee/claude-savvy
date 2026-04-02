@@ -30,5 +30,6 @@
 * [Agent Team — 에이전트 팀](agent-team.md)
 * [OpenClaw](openclaw.md)
   * [OpenClaw는 왜 일상 자동화가 되는가](openclaw-automation.md)
+  * [OpenClaw 실전 구성 패턴 4가지](openclaw-usage-patterns.md)
 * [OpenClaw 에이전트 심화](openclaw-agent-deep.md)
 * [에이전트 워크플로우 실전](agent-workflow-practice.md)

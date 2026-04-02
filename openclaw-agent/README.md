@@ -16,7 +16,11 @@ Maintain GitBook content, structure, publishing flow, and release hygiene for th
 - Push cleanly to GitHub
 - Publish through the repo's GitBook flow
 
+## Agents
+- `workflow-manager.md` — manages the internal GitBook completion workflow, batching, delegation, review, and publish discipline
+
 ## Immediate TODO
 - Document the actual GitBook deployment path used by this repo
 - Add branch / remote / publishing notes
 - Add common prompts for Claude Code
+- Use `workflow-manager.md` as the control document for future editing batches
