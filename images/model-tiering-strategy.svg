@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="shadow5" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000020"/>
+    </filter>
+    <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="grad3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="260" rx="16" fill="#fafafa"/>
+
+  <!-- Opus tier -->
+  <rect x="30" y="20" width="540" height="65" rx="12" fill="url(#grad1)" filter="url(#shadow5)"/>
+  <text x="55" y="48" style="font-size:18px; fill:#fff; font-weight:700">Opus 4.6</text>
+  <text x="55" y="68" style="font-size:12px; fill:#ffffffcc">Strategy, Complex Decisions, Admin</text>
+  <text x="400" y="48" style="font-size:12px; fill:#fde68a; font-weight:600">milo (Strategy Lead)</text>
+  <text x="400" y="68" style="font-size:11px; fill:#ffffffcc">Highest reasoning capability</text>
+  <!-- Arrow down -->
+  <text x="285" y="100" style="font-size:16px; fill:#94a3b8">&#9660;</text>
+
+  <!-- Sonnet tier -->
+  <rect x="30" y="100" width="540" height="65" rx="12" fill="url(#grad2)" filter="url(#shadow5)"/>
+  <text x="55" y="128" style="font-size:18px; fill:#fff; font-weight:700">Sonnet 4.6</text>
+  <text x="55" y="148" style="font-size:12px; fill:#ffffffcc">Coding, Analysis, Content, Execution</text>
+  <text x="340" y="128" style="font-size:12px; fill:#bfdbfe; font-weight:600">bob, angela, josh</text>
+  <text x="340" y="148" style="font-size:11px; fill:#ffffffcc">Best cost/performance ratio</text>
+  <!-- Arrow down -->
+  <text x="285" y="180" style="font-size:16px; fill:#94a3b8">&#9660;</text>
+
+  <!-- Haiku tier -->
+  <rect x="30" y="180" width="540" height="60" rx="12" fill="url(#grad3)" filter="url(#shadow5)"/>
+  <text x="55" y="208" style="font-size:18px; fill:#fff; font-weight:700">Haiku 4.5</text>
+  <text x="55" y="226" style="font-size:12px; fill:#ffffffcc">Simple Q&A, Classification, Routing</text>
+  <text x="340" y="208" style="font-size:12px; fill:#e2e8f0; font-weight:600">Cron (simple tasks)</text>
+  <text x="340" y="226" style="font-size:11px; fill:#ffffffcc">Lowest cost per token</text>
+
+  <!-- Cost indicator on right -->
+  <text x="555" y="55" style="font-size:16px; fill:#fde68a">$$$</text>
+  <text x="560" y="135" style="font-size:16px; fill:#bfdbfe">$$</text>
+  <text x="565" y="215" style="font-size:16px; fill:#e2e8f0">$</text>
+</svg>

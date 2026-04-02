@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="shadow3" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000020"/>
+    </filter>
+    <marker id="arr3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+    </marker>
+    <style>
+      .t3 { font-size: 16px; font-weight: 700; fill: #1a1a2e; }
+      .l3 { font-size: 13px; fill: #333; }
+      .l3b { font-size: 13px; font-weight: 600; fill: #1a1a2e; }
+      .l3s { font-size: 11px; fill: #666; }
+      .l3w { font-size: 13px; fill: #fff; font-weight: 600; }
+      .l3ws { font-size: 11px; fill: #ffffffcc; }
+    </style>
+  </defs>
+
+  <rect width="780" height="520" rx="16" fill="#fafafa"/>
+
+  <!-- Node -->
+  <rect x="20" y="16" width="740" height="488" rx="14" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="40" y="42" class="l3s">Node: VPS (4GB+ RAM, Ubuntu)</text>
+
+  <!-- Gateway -->
+  <rect x="50" y="60" width="700" height="430" rx="12" fill="#f0f4ff" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow3)"/>
+  <text x="75" y="88" class="t3">Gateway</text>
+
+  <!-- Telegram channel -->
+  <rect x="80" y="108" width="140" height="55" rx="10" fill="#0088cc" filter="url(#shadow3)"/>
+  <text x="105" y="138" class="l3w">Telegram</text>
+  <text x="108" y="154" class="l3ws">1 Bot</text>
+
+  <!-- Arrow -->
+  <line x1="220" y1="135" x2="280" y2="135" stroke="#6366f1" stroke-width="2" marker-end="url(#arr3)"/>
+
+  <!-- Bindings box -->
+  <rect x="280" y="100" width="180" height="120" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="305" y="124" class="l3b">Bindings</text>
+  <text x="295" y="146" class="l3s">DM (default) -> milo</text>
+  <text x="295" y="164" class="l3s">group:Dev    -> bob</text>
+  <text x="295" y="182" class="l3s">group:Mktg   -> angela</text>
+  <text x="295" y="200" class="l3s">group:Biz    -> josh</text>
+
+  <!-- Arrows to agents -->
+  <line x1="460" y1="120" x2="510" y2="120" stroke="#6366f1" stroke-width="2" marker-end="url(#arr3)"/>
+  <line x1="460" y1="155" x2="510" y2="300" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <line x1="460" y1="175" x2="510" y2="380" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <line x1="460" y1="195" x2="510" y2="455" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <!-- Strategy Lead (Opus) -->
+  <rect x="510" y="88" width="220" height="75" rx="12" fill="#7c3aed" filter="url(#shadow3)"/>
+  <text x="540" y="116" class="l3w">milo (Strategy Lead)</text>
+  <text x="540" y="136" class="l3ws">claude-opus-4-6</text>
+  <text x="540" y="152" class="l3ws">Strategy, Planning, Delegation</text>
+  <!-- Crown/star icon -->
+  <text x="710" y="118" style="font-size:18px">&#9733;</text>
+
+  <!-- Delegation arrows from milo -->
+  <path d="M620 163 L620 180 Q620 190 610 190 L560 190 Q550 190 550 200 L550 270" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5 3" fill="none" marker-end="url(#arr3d)"/>
+  <defs>
+    <marker id="arr3d" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- Worker agents row -->
+  <!-- Bob -->
+  <rect x="80" y="270" width="200" height="95" rx="10" fill="#6366f1" filter="url(#shadow3)"/>
+  <text x="110" y="298" class="l3w">bob (Dev)</text>
+  <text x="110" y="316" class="l3ws">claude-sonnet-4-6</text>
+  <text x="110" y="336" class="l3ws">Coding, Deploy, Architecture</text>
+  <text x="110" y="354" class="l3ws">PR, Bug fix, Tests</text>
+
+  <!-- Angela -->
+  <rect x="295" y="270" width="200" height="95" rx="10" fill="#ec4899" filter="url(#shadow3)"/>
+  <text x="325" y="298" class="l3w">angela (Marketing)</text>
+  <text x="325" y="316" class="l3ws">claude-sonnet-4-6</text>
+  <text x="325" y="336" class="l3ws">Content, SNS, Research</text>
+  <text x="325" y="354" class="l3ws">Competitor Watch</text>
+
+  <!-- Josh -->
+  <rect x="510" y="270" width="200" height="95" rx="10" fill="#f59e0b" filter="url(#shadow3)"/>
+  <text x="540" y="298" style="font-size:13px; fill:#1a1a2e; font-weight:600">josh (Business)</text>
+  <text x="540" y="316" style="font-size:11px; fill:#1a1a2ecc">claude-sonnet-4-6</text>
+  <text x="540" y="336" style="font-size:11px; fill:#1a1a2ecc">Revenue, KPI, Customer</text>
+  <text x="540" y="354" style="font-size:11px; fill:#1a1a2ecc">Feedback, Analysis</text>
+
+  <!-- Connection lines between workers (delegation) -->
+  <line x1="280" y1="317" x2="295" y2="317" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="495" y1="317" x2="510" y2="317" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <!-- Cron schedule strip -->
+  <rect x="80" y="385" width="630" height="90" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow3)"/>
+  <text x="105" y="410" class="l3b">Cron Schedule (Independent per Agent)</text>
+
+  <rect x="100" y="420" width="135" height="22" rx="4" fill="#ede9fe"/>
+  <text x="108" y="436" style="font-size:10px; fill:#5b21b6">milo: daily-strategy</text>
+
+  <rect x="245" y="420" width="135" height="22" rx="4" fill="#e0e7ff"/>
+  <text x="253" y="436" style="font-size:10px; fill:#3730a3">bob: nightly-coding</text>
+
+  <rect x="390" y="420" width="140" height="22" rx="4" fill="#fce7f3"/>
+  <text x="398" y="436" style="font-size:10px; fill:#9d174d">angela: daily-content</text>
+
+  <rect x="540" y="420" width="155" height="22" rx="4" fill="#fef3c7"/>
+  <text x="548" y="436" style="font-size:10px; fill:#92400e">josh: weekly-revenue</text>
+
+  <rect x="100" y="448" width="150" height="22" rx="4" fill="#fce7f3"/>
+  <text x="108" y="464" style="font-size:10px; fill:#9d174d">angela: competitor-watch</text>
+
+  <rect x="260" y="448" width="165" height="22" rx="4" fill="#fef3c7"/>
+  <text x="268" y="464" style="font-size:10px; fill:#92400e">josh: customer-feedback</text>
+
+  <!-- Cost -->
+  <rect x="510" y="448" width="185" height="24" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="545" y="465" style="font-size:12px; fill:#15803d">$70 ~ 140 / month</text>
+</svg>

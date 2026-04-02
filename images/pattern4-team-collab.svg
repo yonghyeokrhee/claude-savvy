@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="shadow4" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000020"/>
+    </filter>
+    <marker id="arr4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+    </marker>
+    <style>
+      .t4 { font-size: 16px; font-weight: 700; fill: #1a1a2e; }
+      .l4b { font-size: 13px; font-weight: 600; fill: #1a1a2e; }
+      .l4s { font-size: 11px; fill: #666; }
+      .l4w { font-size: 13px; fill: #fff; font-weight: 600; }
+      .l4ws { font-size: 11px; fill: #ffffffcc; }
+    </style>
+  </defs>
+
+  <rect width="800" height="540" rx="16" fill="#fafafa"/>
+
+  <!-- Node -->
+  <rect x="20" y="16" width="760" height="508" rx="14" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="40" y="42" class="l4s">Node: On-premise Server or Cloud (8GB+ RAM)</text>
+
+  <!-- Gateway -->
+  <rect x="50" y="60" width="720" height="450" rx="12" fill="#f0f4ff" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow4)"/>
+  <text x="75" y="88" class="t4">Gateway</text>
+
+  <!-- Channels column -->
+  <rect x="80" y="105" width="150" height="55" rx="10" fill="#4A154B" filter="url(#shadow4)"/>
+  <text x="115" y="130" class="l4w">Slack</text>
+  <text x="98" y="150" class="l4ws">MyCompany Workspace</text>
+
+  <rect x="80" y="174" width="150" height="45" rx="10" fill="#0088cc" filter="url(#shadow4)"/>
+  <text x="105" y="202" class="l4w">Telegram</text>
+
+  <!-- Bindings -->
+  <rect x="260" y="100" width="190" height="130" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="285" y="124" class="l4b">Bindings (Channel Routing)</text>
+
+  <text x="275" y="148" class="l4s">#support     -> cs</text>
+  <text x="275" y="166" class="l4s">#engineering -> eng</text>
+  <text x="275" y="184" class="l4s">#sales       -> sales</text>
+  <text x="275" y="202" class="l4s">#general     -> general</text>
+  <text x="275" y="220" class="l4s">telegram:ADMIN -> admin</text>
+
+  <!-- Arrows channels to bindings -->
+  <line x1="230" y1="132" x2="260" y2="145" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="230" y1="196" x2="260" y2="210" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr4)"/>
+
+  <!-- Arrows bindings to agents -->
+  <line x1="450" y1="145" x2="490" y2="145" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="450" y1="165" x2="490" y2="215" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="450" y1="183" x2="490" y2="286" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="450" y1="200" x2="490" y2="356" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="450" y1="217" x2="490" y2="426" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr4)"/>
+
+  <!-- Agent: CS -->
+  <rect x="490" y="108" width="260" height="75" rx="10" fill="#10b981" filter="url(#shadow4)"/>
+  <text x="520" y="132" class="l4w">CS Agent (#support)</text>
+  <text x="520" y="150" class="l4ws">claude-sonnet-4-6</text>
+  <text x="520" y="168" class="l4ws">FAQ, Ticket Routing, Escalation</text>
+
+  <!-- Agent: Eng -->
+  <rect x="490" y="195" width="260" height="75" rx="10" fill="#6366f1" filter="url(#shadow4)"/>
+  <text x="520" y="219" class="l4w">Eng Bot (#engineering)</text>
+  <text x="520" y="237" class="l4ws">claude-sonnet-4-6</text>
+  <text x="520" y="255" class="l4ws">Code Review, Deploy, Incident</text>
+
+  <!-- Agent: Sales -->
+  <rect x="490" y="282" width="260" height="75" rx="10" fill="#f59e0b" filter="url(#shadow4)"/>
+  <text x="520" y="306" style="font-size:13px; fill:#1a1a2e; font-weight:600">Sales Agent (#sales)</text>
+  <text x="520" y="324" style="font-size:11px; fill:#1a1a2ecc">claude-sonnet-4-6</text>
+  <text x="520" y="342" style="font-size:11px; fill:#1a1a2ecc">Lead Research, Pipeline, CRM</text>
+
+  <!-- Agent: General -->
+  <rect x="490" y="369" width="260" height="55" rx="10" fill="#94a3b8" filter="url(#shadow4)"/>
+  <text x="520" y="393" class="l4w">Helper (#general)</text>
+  <text x="520" y="411" class="l4ws">claude-haiku-4-5 (low cost)</text>
+
+  <!-- Agent: Admin -->
+  <rect x="490" y="436" width="260" height="60" rx="10" fill="#7c3aed" filter="url(#shadow4)"/>
+  <text x="520" y="460" class="l4w">Admin (Telegram Only)</text>
+  <text x="520" y="478" class="l4ws">claude-opus-4-6 (full control)</text>
+  <text x="730" y="462" style="font-size:16px">&#9733;</text>
+
+  <!-- Model tier legend -->
+  <rect x="80" y="245" width="170" height="115" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow4)"/>
+  <text x="100" y="268" class="l4b">Model Tiers</text>
+  <rect x="95" y="278" width="12" height="12" rx="3" fill="#7c3aed"/>
+  <text x="115" y="290" class="l4s">Opus - Admin</text>
+  <rect x="95" y="298" width="12" height="12" rx="3" fill="#6366f1"/>
+  <text x="115" y="310" class="l4s">Sonnet - CS, Eng, Sales</text>
+  <rect x="95" y="318" width="12" height="12" rx="3" fill="#94a3b8"/>
+  <text x="115" y="330" class="l4s">Haiku - General</text>
+  <text x="95" y="350" style="font-size:10px; fill:#999">cost-optimized per role</text>
+
+  <!-- Thread isolation note -->
+  <rect x="80" y="378" width="170" height="100" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow4)"/>
+  <text x="100" y="400" class="l4b">Thread = Session</text>
+  <text x="95" y="420" class="l4s">#support ticket</text>
+  <text x="95" y="436" class="l4s">  -> isolated session</text>
+  <text x="95" y="456" class="l4s">#eng PR review</text>
+  <text x="95" y="472" class="l4s">  -> isolated session</text>
+
+  <!-- Cost -->
+  <rect x="80" y="488" width="170" height="26" rx="13" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="105" y="506" style="font-size:12px; fill:#15803d">$140 ~ 380 / month</text>
+</svg>

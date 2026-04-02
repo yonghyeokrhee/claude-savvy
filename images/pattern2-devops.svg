@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="shadow2" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000020"/>
+    </filter>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+    </marker>
+    <style>
+      .t2 { font-size: 16px; font-weight: 700; fill: #1a1a2e; }
+      .l2 { font-size: 13px; fill: #333; }
+      .l2b { font-size: 13px; font-weight: 600; fill: #1a1a2e; }
+      .l2s { font-size: 11px; fill: #666; }
+      .l2w { font-size: 13px; fill: #fff; font-weight: 600; }
+      .l2ws { font-size: 11px; fill: #ffffffcc; }
+    </style>
+  </defs>
+
+  <rect width="760" height="500" rx="16" fill="#fafafa"/>
+
+  <!-- Node -->
+  <rect x="20" y="16" width="720" height="468" rx="14" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="40" y="42" class="l2s">Node: VPS (Ubuntu, 2GB+ RAM)</text>
+
+  <!-- Gateway -->
+  <rect x="50" y="60" width="680" height="410" rx="12" fill="#f0f4ff" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow2)"/>
+  <text x="75" y="88" class="t2">Gateway</text>
+
+  <!-- Channels -->
+  <text x="75" y="118" class="l2b">Channels</text>
+
+  <!-- Slack -->
+  <rect x="80" y="130" width="140" height="60" rx="10" fill="#4A154B" filter="url(#shadow2)"/>
+  <text x="117" y="156" class="l2w">Slack</text>
+  <text x="100" y="176" class="l2ws">#devops  #alerts</text>
+
+  <!-- Telegram -->
+  <rect x="80" y="204" width="140" height="50" rx="10" fill="#0088cc" filter="url(#shadow2)"/>
+  <text x="105" y="234" class="l2w">Telegram</text>
+
+  <!-- Arrows to bindings -->
+  <line x1="220" y1="160" x2="280" y2="185" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <line x1="220" y1="229" x2="280" y2="205" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- Bindings -->
+  <rect x="280" y="160" width="130" height="70" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="300" y="185" class="l2b">Bindings</text>
+  <text x="295" y="204" class="l2s">slack:#devops  -> devops</text>
+  <text x="295" y="218" class="l2s">telegram       -> devops</text>
+
+  <!-- Arrow to agent -->
+  <line x1="410" y1="195" x2="470" y2="195" stroke="#6366f1" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Agent devops -->
+  <rect x="470" y="128" width="240" height="145" rx="12" fill="#6366f1" filter="url(#shadow2)"/>
+  <text x="500" y="158" class="l2w">Agent "devops"</text>
+  <text x="500" y="178" class="l2ws">claude-sonnet-4-6</text>
+  <text x="500" y="198" class="l2ws">SOUL.md: DevOps Engineer</text>
+
+  <!-- Tools inside agent -->
+  <rect x="495" y="210" width="55" height="22" rx="4" fill="#818cf850" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="504" y="226" style="font-size:10px; fill:#fff">github</text>
+  <rect x="557" y="210" width="45" height="22" rx="4" fill="#818cf850" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="565" y="226" style="font-size:10px; fill:#fff">exec</text>
+  <rect x="609" y="210" width="55" height="22" rx="4" fill="#818cf850" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="617" y="226" style="font-size:10px; fill:#fff">docker</text>
+  <rect x="495" y="238" width="90" height="22" rx="4" fill="#818cf850" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="503" y="254" style="font-size:10px; fill:#fff">node-monitor</text>
+
+  <!-- Sessions -->
+  <rect x="80" y="280" width="340" height="175" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow2)"/>
+  <text x="105" y="308" class="l2b">Sessions (Thread Isolation)</text>
+
+  <rect x="100" y="320" width="300" height="26" rx="4" fill="#f1f5f9"/>
+  <text x="110" y="338" style="font-size:11px; font-family:monospace; fill:#333">agent:devops:slack:#devops</text>
+
+  <rect x="120" y="352" width="280" height="26" rx="4" fill="#e8f0fe"/>
+  <text x="130" y="370" style="font-size:11px; font-family:monospace; fill:#555">  thread:T123 (deploy thread)</text>
+
+  <rect x="120" y="384" width="280" height="26" rx="4" fill="#e8f0fe"/>
+  <text x="130" y="402" style="font-size:11px; font-family:monospace; fill:#555">  thread:T456 (incident thread)</text>
+
+  <rect x="100" y="416" width="300" height="26" rx="4" fill="#f1f5f9"/>
+  <text x="110" y="434" style="font-size:11px; font-family:monospace; fill:#333">agent:devops:telegram:USER_ID</text>
+
+  <!-- Cron -->
+  <rect x="440" y="280" width="280" height="175" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow2)"/>
+  <text x="465" y="308" class="l2b">Cron Jobs</text>
+
+  <rect x="460" y="320" width="240" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+  <text x="475" y="340" style="font-size:11px; fill:#333">server-health (hourly)</text>
+
+  <rect x="460" y="358" width="240" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+  <text x="475" y="378" style="font-size:11px; fill:#333">ci-status (daily 9AM)</text>
+
+  <rect x="460" y="396" width="240" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+  <text x="475" y="416" style="font-size:11px; fill:#333">dep-scan (weekly Mon)</text>
+
+  <!-- Cost -->
+  <rect x="460" y="434" width="240" height="26" rx="13" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="520" y="452" style="font-size:12px; fill:#15803d">$25 ~ 50 / month</text>
+</svg>
