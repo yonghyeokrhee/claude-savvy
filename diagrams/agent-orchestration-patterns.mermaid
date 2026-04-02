@@ -1,0 +1,55 @@
+---
+title: 에이전트 오케스트레이션 패턴 비교
+---
+graph TB
+    subgraph pattern1["1. Orchestrator-Worker"]
+        O1[Orchestrator] --> W1[Worker 1]
+        O1 --> W2[Worker 2]
+        O1 --> W3[Worker 3]
+        W1 -.->|결과| O1
+        W2 -.->|결과| O1
+        W3 -.->|결과| O1
+    end
+
+    subgraph pattern2["2. Swarm"]
+        S1[Agent 1] <--> S2[Agent 2]
+        S2 <--> S3[Agent 3]
+        S3 <--> S4[Agent 4]
+        S4 <--> S1
+        SS[(공유 상태)]
+        S1 --> SS
+        S2 --> SS
+        S3 --> SS
+        S4 --> SS
+    end
+
+    subgraph pattern3["3. Hierarchical"]
+        H1[Manager] --> H2[Supervisor A]
+        H1 --> H3[Supervisor B]
+        H2 --> H4[Worker A1]
+        H2 --> H5[Worker A2]
+        H3 --> H6[Worker B1]
+        H3 --> H7[Worker B2]
+    end
+
+    subgraph pattern4["4. Pipeline"]
+        P1[분석 Agent] --> P2[설계 Agent]
+        P2 --> P3[구현 Agent]
+        P3 --> P4[테스트 Agent]
+        P4 --> P5[배포 Agent]
+    end
+
+    subgraph pattern5["5. Mesh"]
+        M1[Agent 1] <--> M2[Agent 2]
+        M1 <--> M3[Agent 3]
+        M1 <--> M4[Agent 4]
+        M2 <--> M3
+        M2 <--> M4
+        M3 <--> M4
+    end
+
+    style pattern1 fill:#e8f4fd,stroke:#2196F3
+    style pattern2 fill:#fff3e0,stroke:#FF9800
+    style pattern3 fill:#e8f5e9,stroke:#4CAF50
+    style pattern4 fill:#fce4ec,stroke:#E91E63
+    style pattern5 fill:#f3e5f5,stroke:#9C27B0

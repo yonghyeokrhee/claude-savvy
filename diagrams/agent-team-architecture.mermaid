@@ -1,0 +1,37 @@
+---
+title: Claude Code Agent Team 아키텍처
+---
+graph TB
+    User([사용자]) -->|자연어 요청| Lead
+
+    subgraph team["Agent Team"]
+        Lead[Team Lead<br/>메인 Claude Code 세션]
+
+        Lead -->|생성 & 배정| T1[Teammate 1<br/>보안 리뷰어]
+        Lead -->|생성 & 배정| T2[Teammate 2<br/>성능 분석가]
+        Lead -->|생성 & 배정| T3[Teammate 3<br/>테스트 검증자]
+
+        T1 <-->|직접 대화| T2
+        T2 <-->|직접 대화| T3
+        T1 <-->|직접 대화| T3
+
+        T1 -.->|완료 알림| Lead
+        T2 -.->|완료 알림| Lead
+        T3 -.->|완료 알림| Lead
+
+        TL[(공유 태스크 리스트<br/>pending → in_progress → completed)]
+        T1 --> TL
+        T2 --> TL
+        T3 --> TL
+
+        MB[(Mailbox<br/>에이전트 간 메시지)]
+    end
+
+    Lead -->|결과 종합| Result([최종 결과])
+
+    style Lead fill:#4A90D9,color:#fff
+    style T1 fill:#E8913A,color:#fff
+    style T2 fill:#E8913A,color:#fff
+    style T3 fill:#E8913A,color:#fff
+    style TL fill:#f0f0f0,stroke:#666
+    style MB fill:#f0f0f0,stroke:#666

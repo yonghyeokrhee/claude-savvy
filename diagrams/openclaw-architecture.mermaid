@@ -1,0 +1,52 @@
+---
+title: OpenClaw 아키텍처
+---
+graph TB
+    subgraph channels["메시징 채널"]
+        CH1[WhatsApp]
+        CH2[Telegram]
+        CH3[Slack]
+        CH4[Discord]
+        CH5[Signal]
+        CH6[iMessage]
+        CH7[웹챗]
+    end
+
+    subgraph gateway["OpenClaw Gateway (ws://127.0.0.1:18789)"]
+        SM[세션 관리]
+        CR[채널 라우팅]
+        TR[툴 레지스트리]
+        EB[이벤트 버스]
+        SEC[보안 관문<br/>페어링 모드]
+    end
+
+    subgraph agents["에이전트 런타임"]
+        A1[개인 비서<br/>SOUL: personal.md]
+        A2[DevOps Bot<br/>SOUL: devops.md]
+        A3[커뮤니티 관리<br/>SOUL: mod.md]
+    end
+
+    subgraph llm["LLM 백엔드"]
+        L1[Claude]
+        L2[GPT]
+        L3[DeepSeek]
+    end
+
+    subgraph tools["도구"]
+        T1[파일 시스템]
+        T2[셸 명령]
+        T3[웹 브라우저]
+        T4[API 호출]
+        T5[이메일]
+    end
+
+    CH1 & CH2 & CH3 & CH4 & CH5 & CH6 & CH7 --> gateway
+    gateway --> agents
+    agents --> llm
+    agents --> tools
+
+    style gateway fill:#2d3436,color:#fff
+    style channels fill:#e8f4fd,stroke:#2196F3
+    style agents fill:#fff3e0,stroke:#FF9800
+    style llm fill:#e8f5e9,stroke:#4CAF50
+    style tools fill:#fce4ec,stroke:#E91E63

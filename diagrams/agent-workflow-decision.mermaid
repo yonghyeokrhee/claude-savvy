@@ -1,0 +1,41 @@
+---
+title: 에이전트 워크플로우 선택 가이드
+---
+flowchart TD
+    Start([작업 시작]) --> Q1{작업이 단순한가?}
+
+    Q1 -->|예| Single[단일 Claude Code 세션]
+    Q1 -->|아니오| Q2{병렬 처리가<br/>가능한가?}
+
+    Q2 -->|아니오| Pipeline[파이프라인 패턴<br/>순차 실행]
+    Q2 -->|예| Q3{팀원 간 대화가<br/>필요한가?}
+
+    Q3 -->|아니오| SubAgent[Sub-Agent<br/>결과만 반환]
+    Q3 -->|예| AgentTeam[Agent Team<br/>상호 커뮤니케이션]
+
+    Q4{프로덕션<br/>자동화?}
+    SubAgent --> Q4
+    AgentTeam --> Q4
+
+    Q4 -->|예| SDK[Claude Agent SDK]
+    Q4 -->|아니오| CLI[Claude Code CLI]
+
+    Q5{멀티 채널<br/>필요?}
+    SDK --> Q5
+    CLI --> Q5
+
+    Q5 -->|예| OpenClaw[OpenClaw<br/>멀티 플랫폼 에이전트]
+    Q5 -->|아니오| Done([완료])
+    OpenClaw --> Done
+    Single --> Done
+    Pipeline --> Done
+
+    style Start fill:#4A90D9,color:#fff
+    style Done fill:#4CAF50,color:#fff
+    style Single fill:#e8f4fd,stroke:#2196F3
+    style SubAgent fill:#fff3e0,stroke:#FF9800
+    style AgentTeam fill:#fce4ec,stroke:#E91E63
+    style SDK fill:#e8f5e9,stroke:#4CAF50
+    style OpenClaw fill:#f3e5f5,stroke:#9C27B0
+    style Pipeline fill:#fff9c4,stroke:#FFC107
+    style CLI fill:#e0e0e0,stroke:#666
