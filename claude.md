@@ -1,7 +1,7 @@
 # GitBook 프로젝트 — Claude 컨텍스트
 
 > 이 파일은 SUMMARY.md 또는 .md 파일 변경 시 자동으로 갱신됩니다.
-> 마지막 갱신: 2026-04-02 21:59:05
+> 마지막 갱신: 2026-04-02 22:14:21
 
 ## 프로젝트 개요
 
@@ -46,7 +46,13 @@ GitHub 연동 GitBook 기반 **Claude Code 한글 강의 교재** 프로젝트.
   * [MCP 실습 — RDS MySQL 연결](mcp-rds-mysql.md)
 * [Persona & Output Style](persona.md)
 * [Claude.md](practice/claude-md.md)
+
+## 에이전트 팀 & 워크플로우
+
+* [Agent Team — 에이전트 팀](agent-team.md)
 * [OpenClaw](openclaw-agent/README.md)
+* [OpenClaw 에이전트 심화](openclaw-agent-deep.md)
+* [에이전트 워크플로우 실전](agent-workflow-practice.md)
 ```
 
 ## 루트 페이지 파일
