@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="dsc" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000018"/></filter>
+    <marker id="ac1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#6366f1"/></marker>
+    <marker id="ac2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#f59e0b"/></marker>
+  </defs>
+  <rect width="600" height="220" rx="16" fill="#fafafa"/>
+
+  <!-- Claude Code -->
+  <rect x="20" y="30" width="220" height="160" rx="14" fill="#6366f1" filter="url(#dsc)"/>
+  <text x="55" y="60" style="font-size:16px; fill:#fff; font-weight:700">Claude Code</text>
+  <text x="50" y="80" style="font-size:11px; fill:#c7d2fe">Development Specialist</text>
+  <rect x="40" y="95" width="85" height="24" rx="5" fill="#4f46e5"/>
+  <text x="48" y="112" style="font-size:10px; fill:#e0e7ff">Code / Refactor</text>
+  <rect x="135" y="95" width="85" height="24" rx="5" fill="#4f46e5"/>
+  <text x="143" y="112" style="font-size:10px; fill:#e0e7ff">Test / Debug</text>
+  <rect x="40" y="128" width="85" height="24" rx="5" fill="#4f46e5"/>
+  <text x="48" y="145" style="font-size:10px; fill:#e0e7ff">Git Workflow</text>
+  <rect x="135" y="128" width="85" height="24" rx="5" fill="#4f46e5"/>
+  <text x="143" y="145" style="font-size:10px; fill:#e0e7ff">PR Review</text>
+
+  <!-- Bi-directional arrows -->
+  <line x1="240" y1="100" x2="360" y2="100" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ac1)"/>
+  <line x1="360" y1="120" x2="240" y2="120" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#ac2r)"/>
+  <defs>
+    <marker id="ac2r" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="8 0,0 3,8 6" fill="#f59e0b"/></marker>
+  </defs>
+  <text x="264" y="92" style="font-size:9px; fill:#6366f1">trigger task</text>
+  <text x="264" y="138" style="font-size:9px; fill:#f59e0b">return results</text>
+
+  <!-- OpenClaw -->
+  <rect x="360" y="30" width="220" height="160" rx="14" fill="#f59e0b" filter="url(#dsc)"/>
+  <text x="405" y="60" style="font-size:16px; fill:#1a1a2e; font-weight:700">OpenClaw</text>
+  <text x="390" y="80" style="font-size:11px; fill:#78350f">Multi-channel Automation</text>
+  <rect x="380" y="95" width="85" height="24" rx="5" fill="#d97706"/>
+  <text x="388" y="112" style="font-size:10px; fill:#fef3c7">Telegram</text>
+  <rect x="475" y="95" width="85" height="24" rx="5" fill="#d97706"/>
+  <text x="498" y="112" style="font-size:10px; fill:#fef3c7">Slack</text>
+  <rect x="380" y="128" width="85" height="24" rx="5" fill="#d97706"/>
+  <text x="388" y="145" style="font-size:10px; fill:#fef3c7">Notification</text>
+  <rect x="475" y="128" width="85" height="24" rx="5" fill="#d97706"/>
+  <text x="483" y="145" style="font-size:10px; fill:#fef3c7">Cron / Hook</text>
+
+  <!-- Scenario strip -->
+  <rect x="20" y="198" width="560" height="18" rx="4" fill="#f1f5f9"/>
+  <text x="90" y="212" style="font-size:10px; fill:#64748b">Slack: "@openclaw review PR #142" -> OpenClaw calls Claude Code -> Result posted to thread</text>
+</svg>
