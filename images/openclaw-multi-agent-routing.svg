@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="dsb" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000018"/></filter>
+    <marker id="ab" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#6366f1"/></marker>
+  </defs>
+  <rect width="640" height="200" rx="14" fill="#fafafa"/>
+
+  <!-- Channels -->
+  <rect x="20" y="16" width="130" height="38" rx="8" fill="#0088cc" filter="url(#dsb)"/>
+  <text x="30" y="40" style="font-size:11px; fill:#fff; font-weight:600">Telegram DM</text>
+
+  <rect x="20" y="66" width="130" height="38" rx="8" fill="#4A154B" filter="url(#dsb)"/>
+  <text x="30" y="90" style="font-size:11px; fill:#fff; font-weight:600">Slack #devops</text>
+
+  <rect x="20" y="116" width="130" height="38" rx="8" fill="#5865F2" filter="url(#dsb)"/>
+  <text x="30" y="140" style="font-size:11px; fill:#fff; font-weight:600">Discord Server</text>
+
+  <rect x="20" y="152" width="130" height="38" rx="8" fill="#25D366" filter="url(#dsb)"/>
+  <text x="30" y="176" style="font-size:12px; fill:#fff; font-weight:600">WhatsApp Group</text>
+
+  <!-- Arrows -->
+  <line x1="150" y1="35" x2="250" y2="35" stroke="#6366f1" stroke-width="1.5" marker-end="url(#ab)"/>
+  <line x1="150" y1="85" x2="250" y2="85" stroke="#6366f1" stroke-width="1.5" marker-end="url(#ab)"/>
+  <line x1="150" y1="135" x2="250" y2="135" stroke="#6366f1" stroke-width="1.5" marker-end="url(#ab)"/>
+  <line x1="150" y1="171" x2="250" y2="171" stroke="#6366f1" stroke-width="1.5" marker-end="url(#ab)"/>
+
+  <!-- Gateway routing -->
+  <rect x="250" y="68" width="80" height="100" rx="10" fill="#1e1b4b" filter="url(#dsb)"/>
+  <text x="256" y="108" style="font-size:10px; fill:#c7d2fe; font-weight:600" transform="rotate(90 290 108)">ROUTER</text>
+
+  <!-- Arrows to agents -->
+  <line x1="330" y1="85" x2="400" y2="35" stroke="#10b981" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="330" y1="105" x2="400" y2="85" stroke="#ec4899" stroke-width="2" marker-end="url(#ap)"/>
+  <line x1="330" y1="130" x2="400" y2="135" stroke="#f59e0b" stroke-width="2" marker-end="url(#ay)"/>
+  <line x1="330" y1="155" x2="400" y2="171" stroke="#3b82f6" stroke-width="2" marker-end="url(#abl)"/>
+  <defs>
+    <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#10b981"/></marker>
+    <marker id="ap" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#ec4899"/></marker>
+    <marker id="ay" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#f59e0b"/></marker>
+    <marker id="abl" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#3b82f6"/></marker>
+  </defs>
+
+  <!-- Agents -->
+  <rect x="400" y="14" width="220" height="42" rx="8" fill="#10b981" filter="url(#dsb)"/>
+  <text x="415" y="34" style="font-size:12px; fill:#fff; font-weight:600">Personal Assistant</text>
+  <text x="415" y="48" style="font-size:9px; fill:#d1fae5">SOUL: personal-assistant.md</text>
+
+  <rect x="400" y="66" width="220" height="42" rx="8" fill="#ec4899" filter="url(#dsb)"/>
+  <text x="415" y="86" style="font-size:12px; fill:#fff; font-weight:600">DevOps Agent</text>
+  <text x="415" y="100" style="font-size:9px; fill:#fce7f3">SOUL: devops-bot.md</text>
+
+  <rect x="400" y="118" width="220" height="42" rx="8" fill="#f59e0b" filter="url(#dsb)"/>
+  <text x="415" y="138" style="font-size:12px; fill:#1a1a2e; font-weight:600">Community Mod</text>
+  <text x="415" y="152" style="font-size:9px; fill:#92400e">SOUL: community-mod.md</text>
+
+  <rect x="400" y="152" width="220" height="42" rx="8" fill="#3b82f6" filter="url(#dsb)"/>
+  <text x="415" y="172" style="font-size:12px; fill:#fff; font-weight:600">Scheduler Agent</text>
+  <text x="415" y="186" style="font-size:9px; fill:#dbeafe">SOUL: scheduler.md</text>
+</svg>

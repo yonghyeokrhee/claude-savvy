@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 260" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="ds2" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000018"/></filter>
+  </defs>
+  <rect width="380" height="260" rx="14" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+
+  <!-- Shared State -->
+  <ellipse cx="190" cy="130" rx="80" ry="35" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="146" y="135" style="font-size:12px; fill:#92400e; font-weight:600">Shared State</text>
+
+  <!-- Agents in circle -->
+  <circle cx="90" cy="55" r="28" fill="#f59e0b" filter="url(#ds2)"/>
+  <text x="82" y="60" style="font-size:14px; fill:#fff; font-weight:700">A1</text>
+
+  <circle cx="290" cy="55" r="28" fill="#f59e0b" filter="url(#ds2)"/>
+  <text x="282" y="60" style="font-size:14px; fill:#fff; font-weight:700">A2</text>
+
+  <circle cx="50" cy="185" r="28" fill="#f59e0b" filter="url(#ds2)"/>
+  <text x="42" y="190" style="font-size:14px; fill:#fff; font-weight:700">A3</text>
+
+  <circle cx="330" cy="185" r="28" fill="#f59e0b" filter="url(#ds2)"/>
+  <text x="322" y="190" style="font-size:14px; fill:#fff; font-weight:700">A4</text>
+
+  <circle cx="130" cy="220" r="28" fill="#f59e0b" filter="url(#ds2)"/>
+  <text x="122" y="225" style="font-size:14px; fill:#fff; font-weight:700">A5</text>
+
+  <circle cx="250" cy="220" r="28" fill="#f59e0b" filter="url(#ds2)"/>
+  <text x="242" y="225" style="font-size:14px; fill:#fff; font-weight:700">A6</text>
+
+  <!-- Lines to shared state -->
+  <line x1="108" y1="78" x2="145" y2="105" stroke="#fbbf24" stroke-width="1.5"/>
+  <line x1="272" y1="78" x2="235" y2="105" stroke="#fbbf24" stroke-width="1.5"/>
+  <line x1="70" y1="168" x2="130" y2="140" stroke="#fbbf24" stroke-width="1.5"/>
+  <line x1="310" y1="168" x2="250" y2="140" stroke="#fbbf24" stroke-width="1.5"/>
+  <line x1="140" y1="198" x2="160" y2="160" stroke="#fbbf24" stroke-width="1.5"/>
+  <line x1="240" y1="198" x2="220" y2="160" stroke="#fbbf24" stroke-width="1.5"/>
+
+  <!-- Peer connections -->
+  <line x1="118" y1="55" x2="262" y2="55" stroke="#d97706" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="78" y1="185" x2="302" y2="185" stroke="#d97706" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="158" y1="220" x2="222" y2="220" stroke="#d97706" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <text x="80" y="252" style="font-size:11px; fill:#888">Decentralized, emergent coordination (OpenAI SDK)</text>
+</svg>

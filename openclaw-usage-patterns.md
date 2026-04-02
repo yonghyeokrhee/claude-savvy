@@ -57,6 +57,28 @@ OpenClaw의 설정은 `~/.openclaw/openclaw.json` 하나로 관리됩니다. 이
 
 ### 구성도
 
+```
+┌─────────────────────────────────────────────────────┐
+│  Node: 맥북 (또는 $5 VPS)                            │
+│                                                      │
+│  ┌─────────────────────────────────────────────┐    │
+│  │  Gateway  ws://127.0.0.1:18789              │    │
+│  │                                              │    │
+│  │  Channel: Telegram ──→ Binding ──→ Agent    │    │
+│  │  (1개 봇)              (기본)       "main"   │    │
+│  │                                              │    │
+│  │  Agent "main"                                │    │
+│  │  ├── Model: claude-sonnet-4-6               │    │
+│  │  ├── SOUL.md (개인 비서 성격)                │    │
+│  │  ├── HEARTBEAT.md (30분마다 점검)            │    │
+│  │  └── Skills: gmail, calendar, weather       │    │
+│  │                                              │    │
+│  │  Sessions:                                   │    │
+│  │  └── agent:main:telegram (단일 세션)         │    │
+│  └─────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────┘
+```
+
 ![패턴 1: 개인 비서형 구성도](images/pattern1-personal-assistant.svg)
 
 ### 설정
@@ -168,6 +190,38 @@ cron:weekly-review               ← 격리 세션 (매주 일요일)
 > Slack과 Telegram을 분리해서 사용. 팀 채널에서는 DevOps 작업을, 개인 채팅에서는 알림을 받는 구조.
 
 ### 구성도
+
+```
+┌──────────────────────────────────────────────────────────┐
+│  Node: VPS (Ubuntu, 2GB+ RAM)                            │
+│                                                           │
+│  ┌───────────────────────────────────────────────────┐   │
+│  │  Gateway                                           │   │
+│  │                                                    │   │
+│  │  Channels:                                         │   │
+│  │  ├── Slack (#devops, #alerts) ──┐                  │   │
+│  │  └── Telegram (개인) ───────────┤                  │   │
+│  │                                  ↓                  │   │
+│  │  Bindings:                                         │   │
+│  │  ├── slack:#devops     → Agent "devops"            │   │
+│  │  ├── slack:#alerts     → Agent "devops"            │   │
+│  │  └── telegram:개인      → Agent "devops" (기본)    │   │
+│  │                                                    │   │
+│  │  Agent "devops"                                    │   │
+│  │  ├── Model: claude-sonnet-4-6                      │   │
+│  │  ├── SOUL.md (DevOps 엔지니어)                     │   │
+│  │  ├── Skills: github, exec, docker, node-monitor    │   │
+│  │  └── Tools: shell, browser, file I/O               │   │
+│  │                                                    │   │
+│  │  Sessions:                                         │   │
+│  │  ├── agent:devops:slack:#devops       (팀 대화)    │   │
+│  │  ├── agent:devops:slack:#devops:thread:T123 (스레드)│   │
+│  │  ├── agent:devops:slack:#alerts       (알림 채널)   │   │
+│  │  ├── agent:devops:telegram:USER_ID    (개인 대화)   │   │
+│  │  └── cron:* (격리 세션들)                           │   │
+│  └───────────────────────────────────────────────────┘   │
+└──────────────────────────────────────────────────────────┘
+```
 
 ![패턴 2: DevOps형 구성도](images/pattern2-devops.svg)
 
@@ -312,6 +366,40 @@ Slack에서 특히 중요한 것이 **스레드 세션 분리**입니다:
 
 ### 구성도
 
+```
+┌──────────────────────────────────────────────────────────┐
+│  Node: VPS (4GB+ RAM, Ubuntu)                            │
+│                                                           │
+│  ┌───────────────────────────────────────────────────┐   │
+│  │  Gateway                                           │   │
+│  │                                                    │   │
+│  │  Channel: Telegram (1개 봇)                        │   │
+│  │                                                    │   │
+│  │  Bindings:                                         │   │
+│  │  ├── telegram (기본)         → Agent "milo" (전략) │   │
+│  │  ├── telegram:group:Dev      → Agent "bob"  (개발) │   │
+│  │  ├── telegram:group:Marketing→ Agent "angela"(마케)│   │
+│  │  └── telegram:group:Biz      → Agent "josh" (비즈) │   │
+│  │                                                    │   │
+│  │  ┌──────────────────────────────────────────┐     │   │
+│  │  │ Agent "milo" (Strategy Lead)              │     │   │
+│  │  │ Model: claude-opus-4-6                    │     │   │
+│  │  │ SOUL: 전략·기획·조율                       │     │   │
+│  │  │ 다른 에이전트에게 태스크 위임              │     │   │
+│  │  └──────────────────────────────────────────┘     │   │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐        │   │
+│  │  │"bob"     │  │"angela"  │  │"josh"    │        │   │
+│  │  │Dev Agent │  │Marketing │  │Biz Agent │        │   │
+│  │  │Model:    │  │Model:    │  │Model:    │        │   │
+│  │  │Sonnet 4.6│  │Sonnet 4.6│  │Sonnet 4.6│        │   │
+│  │  │          │  │          │  │          │        │   │
+│  │  │코딩·배포  │  │콘텐츠·SNS│  │재무·분석  │        │   │
+│  │  │아키텍처  │  │리서치    │  │고객 응대  │        │   │
+│  │  └──────────┘  └──────────┘  └──────────┘        │   │
+│  └───────────────────────────────────────────────────┘   │
+└──────────────────────────────────────────────────────────┘
+```
+
 ![패턴 3: 1인 창업자 멀티에이전트형 구성도](images/pattern3-solo-founder.svg)
 
 ### 설정
@@ -370,6 +458,16 @@ Slack에서 특히 중요한 것이 **스레드 세션 분리**입니다:
 핵심 포인트: **전략 에이전트(milo)만 Opus**, 나머지는 Sonnet으로 비용을 절약합니다.
 
 ### 모델 계층화 전략
+
+```
+┌─────────────────────────────────────────┐
+│  Opus 4.6  — 전략 판단, 복잡한 의사결정  │  ← milo (Strategy Lead)
+├─────────────────────────────────────────┤
+│  Sonnet 4.6 — 실무 작업, 코딩, 분석     │  ← bob, angela, josh
+├─────────────────────────────────────────┤
+│  Haiku 4.5  — 단순 분류, 요약, 라우팅   │  ← 크론잡 중 단순 작업
+└─────────────────────────────────────────┘
+```
 
 ![모델 계층화 전략](images/model-tiering-strategy.svg)
 
@@ -498,6 +596,38 @@ cron:customer-feedback       (josh)
 
 ### 구성도
 
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Node: 사내 서버 또는 클라우드 (8GB+ RAM)                      │
+│                                                              │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │  Gateway                                              │   │
+│  │                                                       │   │
+│  │  Channels:                                            │   │
+│  │  ├── Slack (Socket Mode, Workspace: MyCompany)        │   │
+│  │  └── Telegram (관리자 전용)                            │   │
+│  │                                                       │   │
+│  │  Bindings:                                            │   │
+│  │  ├── slack:#support     → Agent "cs"                  │   │
+│  │  ├── slack:#engineering → Agent "eng"                 │   │
+│  │  ├── slack:#sales       → Agent "sales"               │   │
+│  │  ├── slack:#general     → Agent "general"             │   │
+│  │  └── telegram:ADMIN_ID  → Agent "admin"               │   │
+│  │                                                       │   │
+│  │  ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐        │   │
+│  │  │"cs"    │ │"eng"   │ │"sales" │ │"admin" │        │   │
+│  │  │CS Agent│ │Eng Bot │ │Sales   │ │Admin   │        │   │
+│  │  │        │ │        │ │Agent   │ │Agent   │        │   │
+│  │  │Sonnet  │ │Sonnet  │ │Sonnet  │ │Opus    │        │   │
+│  │  │        │ │        │ │        │ │        │        │   │
+│  │  │고객응대 │ │코드리뷰│ │리드분석│ │전체관리│        │   │
+│  │  │FAQ     │ │배포    │ │파이프  │ │모니터링│        │   │
+│  │  │에스컬  │ │장애대응│ │라인    │ │설정변경│        │   │
+│  │  └────────┘ └────────┘ └────────┘ └────────┘        │   │
+│  └──────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────┘
+```
+
 ![패턴 4: 팀 협업형 구성도](images/pattern4-team-collab.svg)
 
 ### 설정
@@ -573,7 +703,13 @@ cron:customer-feedback       (josh)
 
 ### 모델 계층화
 
-패턴 4에서도 [패턴 3의 모델 계층화 전략](#모델-계층화-전략)과 동일한 원칙을 따릅니다. Admin에 Opus, 실무 에이전트(CS, Eng, Sales)에 Sonnet, `#general`에 Haiku를 배정합니다.
+패턴 4에서도 [패턴 3의 모델 계층화 전략](#모델-계층화-전략)과 동일한 원칙을 따릅니다:
+
+```
+Opus    → admin (관리자 전용, 복잡한 판단)
+Sonnet  → cs, eng, sales (실무 에이전트)
+Haiku   → general (#general 채널, 단순 질답)
+```
 
 `#general`에 Haiku를 쓰면 "점심 뭐 먹지?" 같은 가벼운 질문에 비용을 낭비하지 않습니다.
 

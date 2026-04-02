@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="ds3" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000018"/></filter>
+    <marker id="a3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#10b981"/></marker>
+  </defs>
+  <rect width="480" height="250" rx="14" fill="#f0fdf4" stroke="#10b981" stroke-width="1.5"/>
+
+  <!-- CTO -->
+  <rect x="180" y="18" width="120" height="44" rx="10" fill="#059669" filter="url(#ds3)"/>
+  <text x="198" y="45" style="font-size:14px; fill:#fff; font-weight:700">CTO Agent</text>
+
+  <!-- Leads -->
+  <rect x="60" y="100" width="140" height="40" rx="8" fill="#10b981" filter="url(#ds3)"/>
+  <text x="78" y="125" style="font-size:13px; fill:#fff; font-weight:600">Frontend Lead</text>
+
+  <rect x="280" y="100" width="140" height="40" rx="8" fill="#10b981" filter="url(#ds3)"/>
+  <text x="300" y="125" style="font-size:13px; fill:#fff; font-weight:600">Backend Lead</text>
+
+  <!-- Arrows L1 -->
+  <line x1="215" y1="62" x2="140" y2="98" stroke="#10b981" stroke-width="2" marker-end="url(#a3)"/>
+  <line x1="265" y1="62" x2="340" y2="98" stroke="#10b981" stroke-width="2" marker-end="url(#a3)"/>
+
+  <!-- Workers -->
+  <rect x="20" y="178" width="80" height="36" rx="8" fill="#6ee7b7" filter="url(#ds3)"/>
+  <text x="30" y="200" style="font-size:12px; fill:#064e3b; font-weight:600">UI Agent</text>
+
+  <rect x="120" y="178" width="90" height="36" rx="8" fill="#6ee7b7" filter="url(#ds3)"/>
+  <text x="127" y="200" style="font-size:12px; fill:#064e3b; font-weight:600">Test Agent</text>
+
+  <rect x="270" y="178" width="85" height="36" rx="8" fill="#6ee7b7" filter="url(#ds3)"/>
+  <text x="277" y="200" style="font-size:12px; fill:#064e3b; font-weight:600">API Agent</text>
+
+  <rect x="375" y="178" width="85" height="36" rx="8" fill="#6ee7b7" filter="url(#ds3)"/>
+  <text x="382" y="200" style="font-size:12px; fill:#064e3b; font-weight:600">DB Agent</text>
+
+  <!-- Arrows L2 -->
+  <line x1="95" y1="140" x2="60" y2="176" stroke="#10b981" stroke-width="1.5" marker-end="url(#a3)"/>
+  <line x1="165" y1="140" x2="165" y2="176" stroke="#10b981" stroke-width="1.5" marker-end="url(#a3)"/>
+  <line x1="315" y1="140" x2="310" y2="176" stroke="#10b981" stroke-width="1.5" marker-end="url(#a3)"/>
+  <line x1="385" y1="140" x2="410" y2="176" stroke="#10b981" stroke-width="1.5" marker-end="url(#a3)"/>
+
+  <text x="100" y="238" style="font-size:11px; fill:#888">Tree-structured delegation for large-scale projects</text>
+</svg>

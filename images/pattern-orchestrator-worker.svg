@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="ds1" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000018"/></filter>
+    <marker id="a1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#6366f1"/></marker>
+  </defs>
+  <rect width="440" height="260" rx="14" fill="#f0f4ff" stroke="#6366f1" stroke-width="1.5"/>
+
+  <!-- User -->
+  <rect x="160" y="14" width="120" height="32" rx="16" fill="#e0e7ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="176" y="35" style="font-size:12px; fill:#3730a3; font-weight:600">User Request</text>
+
+  <line x1="220" y1="46" x2="220" y2="68" stroke="#6366f1" stroke-width="1.5" marker-end="url(#a1)"/>
+
+  <!-- Orchestrator -->
+  <rect x="120" y="70" width="200" height="55" rx="12" fill="#6366f1" filter="url(#ds1)"/>
+  <text x="157" y="96" style="font-size:15px; fill:#fff; font-weight:700">Orchestrator</text>
+  <text x="146" y="114" style="font-size:10px; fill:#c7d2fe">decompose + aggregate results</text>
+
+  <!-- Arrows -->
+  <line x1="160" y1="125" x2="80" y2="170" stroke="#6366f1" stroke-width="2" marker-end="url(#a1)"/>
+  <line x1="220" y1="125" x2="220" y2="170" stroke="#6366f1" stroke-width="2" marker-end="url(#a1)"/>
+  <line x1="280" y1="125" x2="360" y2="170" stroke="#6366f1" stroke-width="2" marker-end="url(#a1)"/>
+
+  <!-- Workers -->
+  <rect x="40" y="172" width="80" height="44" rx="10" fill="#818cf8" filter="url(#ds1)"/>
+  <text x="58" y="199" style="font-size:14px; fill:#fff; font-weight:600">W1</text>
+  <rect x="180" y="172" width="80" height="44" rx="10" fill="#818cf8" filter="url(#ds1)"/>
+  <text x="198" y="199" style="font-size:14px; fill:#fff; font-weight:600">W2</text>
+  <rect x="320" y="172" width="80" height="44" rx="10" fill="#818cf8" filter="url(#ds1)"/>
+  <text x="338" y="199" style="font-size:14px; fill:#fff; font-weight:600">W3</text>
+
+  <text x="50" y="236" style="font-size:10px; fill:#6366f1">independent</text>
+  <text x="190" y="236" style="font-size:10px; fill:#6366f1">independent</text>
+  <text x="330" y="236" style="font-size:10px; fill:#6366f1">independent</text>
+
+  <text x="130" y="252" style="font-size:11px; fill:#888">Most widely used in production (Claude Sub-Agent)</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="ds5" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000018"/></filter>
+  </defs>
+  <rect width="360" height="240" rx="14" fill="#faf5ff" stroke="#9333ea" stroke-width="1.5"/>
+
+  <!-- All connections first (behind nodes) -->
+  <!-- Row 1 connections -->
+  <line x1="105" y1="58" x2="180" y2="58" stroke="#c084fc" stroke-width="1.5"/>
+  <line x1="195" y1="58" x2="260" y2="58" stroke="#c084fc" stroke-width="1.5"/>
+  <!-- Row 2 connections -->
+  <line x1="105" y1="158" x2="180" y2="158" stroke="#c084fc" stroke-width="1.5"/>
+  <line x1="195" y1="158" x2="260" y2="158" stroke="#c084fc" stroke-width="1.5"/>
+  <!-- Verticals -->
+  <line x1="80" y1="80" x2="80" y2="138" stroke="#c084fc" stroke-width="1.5"/>
+  <line x1="180" y1="80" x2="180" y2="138" stroke="#c084fc" stroke-width="1.5"/>
+  <line x1="280" y1="80" x2="280" y2="138" stroke="#c084fc" stroke-width="1.5"/>
+  <!-- Diagonals -->
+  <line x1="100" y1="76" x2="164" y2="140" stroke="#c084fc" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="260" y1="76" x2="196" y2="140" stroke="#c084fc" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="100" y1="142" x2="164" y2="76" stroke="#c084fc" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="260" y1="142" x2="196" y2="76" stroke="#c084fc" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- Nodes -->
+  <circle cx="80" cy="58" r="24" fill="#9333ea" filter="url(#ds5)"/>
+  <text x="72" y="63" style="font-size:13px; fill:#fff; font-weight:700">A1</text>
+
+  <circle cx="180" cy="58" r="24" fill="#9333ea" filter="url(#ds5)"/>
+  <text x="172" y="63" style="font-size:13px; fill:#fff; font-weight:700">A2</text>
+
+  <circle cx="280" cy="58" r="24" fill="#9333ea" filter="url(#ds5)"/>
+  <text x="272" y="63" style="font-size:13px; fill:#fff; font-weight:700">A3</text>
+
+  <circle cx="80" cy="158" r="24" fill="#9333ea" filter="url(#ds5)"/>
+  <text x="72" y="163" style="font-size:13px; fill:#fff; font-weight:700">A4</text>
+
+  <circle cx="180" cy="158" r="24" fill="#9333ea" filter="url(#ds5)"/>
+  <text x="172" y="163" style="font-size:13px; fill:#fff; font-weight:700">A5</text>
+
+  <circle cx="280" cy="158" r="24" fill="#9333ea" filter="url(#ds5)"/>
+  <text x="272" y="163" style="font-size:13px; fill:#fff; font-weight:700">A6</text>
+
+  <text x="60" y="216" style="font-size:11px; fill:#888">Direct P2P messaging, every node connected equally</text>
+</svg>
