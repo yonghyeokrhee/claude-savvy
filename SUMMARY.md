@@ -2,6 +2,7 @@
 
 * [Claude Code 소개](introduction.md)
 * [시작하기](getting-started.md)
+* [심화 명령 & 팀 설정](advanced-commands.md)
 * [핵심 개념](core-concepts.md)
 * [팁 & 모범 사례](best-practices.md)
 

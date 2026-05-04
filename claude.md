@@ -1,7 +1,7 @@
 # GitBook 프로젝트 — Claude 컨텍스트
 
 > 이 파일은 SUMMARY.md 또는 .md 파일 변경 시 자동으로 갱신됩니다.
-> 마지막 갱신: 2026-05-04 17:27:43
+> 마지막 갱신: 2026-05-04 17:36:33
 
 ## 프로젝트 개요
 
@@ -24,6 +24,7 @@ GitHub 연동 GitBook 기반 **Claude Code 한글 강의 교재** 프로젝트.
 
 * [Claude Code 소개](introduction.md)
 * [시작하기](getting-started.md)
+* [심화 명령 & 팀 설정](advanced-commands.md)
 * [핵심 개념](core-concepts.md)
 * [팁 & 모범 사례](best-practices.md)
 
