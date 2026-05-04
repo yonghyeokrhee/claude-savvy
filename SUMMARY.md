@@ -22,6 +22,7 @@
   * [MCP 실습 — Notion 연결](practice/mcp.md)
   * [MCP 실습 — Obsidian 연결](practice/mcp-obsidian.md)
   * [MCP 실습 — RDS MySQL 연결](mcp-rds-mysql.md)
+  * [MCP 실습 — Linear → Notion 동기화](practice/mcp-linear-notion-sync.md)
 * [Persona & Output Style](persona.md)
 * [Claude.md](practice/claude-md.md)
 
