@@ -11,6 +11,7 @@
   * [대화로 Skill 만들기](skills-vibe.md)
   * [Skill 직접 만들기](skills-practice.md)
   * [고급 Skill — 외부 시스템 연동](skills-advanced.md)
+  * [흥미로운 Skill 만들기 — `/daily-brief` (2026)](skills-modern-example.md)
 * [Sub-Agent](sub-agent.md)
   * [Sub-Agent 실습](practice/sub-agent.md)
   * [Sub-Agent + Skill 활용](practice/sub-agent-skill.md)
