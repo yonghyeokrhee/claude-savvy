@@ -7,17 +7,7 @@ Mac/Linux와 달리 Windows에서는 **PATH 설정**에서 막히는 경우가 �
 
 ## 1. 사전 준비
 
-### 1-1. Node.js 설치 (LTS 권장)
-
-```powershell
-# 설치 확인
-node -v
-npm -v
-```
-
-`node -v`가 동작하지 않으면 https://nodejs.org 에서 LTS 버전(18 이상)을 설치하세요.
-
-### 1-2. PowerShell 버전 확인
+### PowerShell 버전 확인
 
 ```powershell
 $PSVersionTable.PSVersion
@@ -25,14 +15,22 @@ $PSVersionTable.PSVersion
 
 PowerShell 5.1 또는 7.x 모두 가능합니다.
 
+> Claude Code 네이티브 설치는 Node.js / npm을 요구하지 않습니다. 별도 런타임 설치 없이 진행 가능합니다.
+
 ---
 
-## 2. Claude Code 설치
+## 2. Claude Code 설치 (네이티브 설치 스크립트)
 
 PowerShell에서:
 
 ```powershell
-npm install -g @anthropic-ai/claude-code
+irm https://claude.ai/install.ps1 | iex
+```
+
+설치 스크립트가 `claude.exe`를 다음 경로에 배치합니다:
+
+```
+C:\Users\<사용자명>\.local\bin\claude.exe
 ```
 
 설치 직후 확인:
@@ -46,21 +44,23 @@ claude --version
 
 ---
 
-## 3. PATH 환경 변수에 npm 전역 경로 추가하기
+## 3. PATH 환경 변수에 `.local\bin` 경로 추가하기
 
-`npm install -g`로 설치된 명령은 다음 경로에 들어갑니다:
+설치 스크립트가 PATH 등록까지 자동으로 처리하지 못한 경우, 직접 등록해야 합니다. 추가할 경로:
 
 ```
-C:\Users\<사용자명>\AppData\Roaming\npm
+C:\Users\<사용자명>\.local\bin
 ```
 
-이 경로가 PATH에 없으면 PowerShell이 `claude.exe`를 찾지 못합니다. 정확한 위치는 PowerShell에서 확인할 수 있습니다:
+`<사용자명>` 자리에는 본인 Windows 계정명을 넣습니다. PowerShell에서 다음으로 확인 가능:
 
 ```powershell
-npm config get prefix
+echo $env:USERNAME
+# 또는 실제 파일 존재 확인
+Test-Path "$env:USERPROFILE\.local\bin\claude.exe"
 ```
 
-출력된 경로(보통 `...\npm`)를 복사해 두세요. 이제 4단계로 그 경로를 시스템에 등록합니다.
+`True`가 반환되면 파일은 정상 설치된 것이고, PATH만 추가하면 됩니다.
 
 ---
 
@@ -93,17 +93,21 @@ npm config get prefix
 
 ---
 
-### 단계 4 — npm 경로 추가
+### 단계 4 — `.local\bin` 경로 추가
 
-새로운 빈 줄에 `npm config get prefix`로 확인한 경로를 붙여넣습니다. 일반적으로:
+새로운 빈 줄에 Claude Code가 설치된 경로를 붙여넣습니다:
 
 ```
-C:\Users\<사용자명>\AppData\Roaming\npm
+C:\Users\<사용자명>\.local\bin
 ```
+
+예: 사용자명이 `86192`라면 `C:\Users\86192\.local\bin`.
 
 입력 후 **확인**을 차례로 눌러 모든 창을 닫습니다.
 
-![npm 경로 추가](images/windows-path-add.png)
+![.local/bin 경로 추가](images/windows-path-add.png)
+
+> 위 스크린샷의 첫 줄(`C:\Users\86192\.local\bin`)이 방금 추가한 항목입니다.
 
 ---
 
@@ -171,8 +175,8 @@ Select login method:
 |---|---|---|
 | `claude : 용어가 인식되지 않습니다` | PATH 미등록 | 3장 단계 1~4 |
 | PATH 추가했는데 여전히 인식 안 됨 | PowerShell 재시작 안 함 | 창을 모두 닫고 새 창 열기 |
-| `npm : 용어가 인식되지 않습니다` | Node.js 미설치 | 1-1 단계 |
-| `EACCES` 권한 오류 | 시스템 변수에 잘못 등록 | 사용자 변수 Path만 수정 |
+| `Test-Path` 결과 `False` | 설치 스크립트 실패 | 2장 설치 명령 재실행 |
+| 권한 오류로 스크립트 차단 | 실행 정책 제한 | `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` 후 재시도 |
 | 로그인 화면이 안 뜸 | 이미 로그인됨 | `claude /logout` 후 재실행 |
 
 ---
@@ -182,10 +186,10 @@ Select login method:
 GUI 대신 PowerShell 1줄로 PATH를 추가할 수도 있습니다(같은 결과).
 
 ```powershell
-$npmPath = "$env:APPDATA\npm"
+$claudePath = "$env:USERPROFILE\.local\bin"
 [Environment]::SetEnvironmentVariable(
     "Path",
-    [Environment]::GetEnvironmentVariable("Path", "User") + ";$npmPath",
+    [Environment]::GetEnvironmentVariable("Path", "User") + ";$claudePath",
     "User"
 )
 ```
@@ -196,8 +200,8 @@ $npmPath = "$env:APPDATA\npm"
 
 ## 정리
 
-1. `npm install -g @anthropic-ai/claude-code`
-2. `claude --version`이 안 되면 → 사용자 Path에 `%APPDATA%\npm` 추가
+1. `irm https://claude.ai/install.ps1 | iex` — 네이티브 설치 스크립트 실행
+2. `claude --version`이 안 되면 → 사용자 Path에 `%USERPROFILE%\.local\bin` 추가
 3. **PowerShell 창을 닫고 새로 열기** (가장 자주 빠뜨리는 단계)
 4. `claude` 실행 → 구독 로그인
 
