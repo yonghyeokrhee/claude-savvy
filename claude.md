@@ -1,7 +1,7 @@
 # GitBook 프로젝트 — Claude 컨텍스트
 
 > 이 파일은 SUMMARY.md 또는 .md 파일 변경 시 자동으로 갱신됩니다.
-> 마지막 갱신: 2026-05-04 17:36:33
+> 마지막 갱신: 2026-05-06 23:19:22
 
 ## 프로젝트 개요
 
@@ -24,6 +24,7 @@ GitHub 연동 GitBook 기반 **Claude Code 한글 강의 교재** 프로젝트.
 
 * [Claude Code 소개](introduction.md)
 * [시작하기](getting-started.md)
+* [Windows 설치 가이드 (PowerShell)](install-windows.md)
 * [심화 명령 & 팀 설정](advanced-commands.md)
 * [핵심 개념](core-concepts.md)
 * [팁 & 모범 사례](best-practices.md)
@@ -35,6 +36,7 @@ GitHub 연동 GitBook 기반 **Claude Code 한글 강의 교재** 프로젝트.
   * [Skill 직접 만들기](skills-practice.md)
   * [고급 Skill — 외부 시스템 연동](skills-advanced.md)
   * [실전 Skill — PDF → 발표 덱](skills-pdf-to-deck.md)
+  * [신규 지식 검색 Skill — /claude-news](claude-news-skill.md)
 * [Sub-Agent](sub-agent.md)
   * [Sub-Agent 실습](practice/sub-agent.md)
   * [Sub-Agent + Skill 활용](practice/sub-agent-skill.md)
