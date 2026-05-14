@@ -3,3 +3,15 @@
 
 # RDS 연결 정보 (실제 자격증명)
 practice/config/rds.env
+
+# macOS 메타파일
+.DS_Store
+
+# Office 임시 락 파일
+~$*
+
+# 강의자료 원본 및 실습 산출물
+*.docx
+*.pptx
+practice/*.pdf
+practice/deck.json
