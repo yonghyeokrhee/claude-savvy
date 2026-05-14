@@ -1,0 +1,96 @@
+{
+  "title": "Attention Is All You Need",
+  "subtitle": "Vaswani et al., 2017 (NIPS) — Transformer 아키텍처 소개",
+  "slides": [
+    {
+      "title": "Why This Matters",
+      "bullets": [
+        "RNN/LSTM은 순차 처리 → 병렬화 불가, 긴 시퀀스에 취약",
+        "장거리 의존성 학습이 어렵고 학습 비용이 막대함",
+        "번역·언어 모델링의 근본적 병목을 해결해야 함"
+      ],
+      "note": "2017년 당시 최고 성능 번역 모델은 모두 RNN 기반이었습니다. 이 논문은 RNN을 완전히 제거하는 도전적 아이디어를 제시합니다."
+    },
+    {
+      "title": "Background — 기존 방식의 한계",
+      "bullets": [
+        "CNN 기반(ByteNet, ConvS2S): 거리 커질수록 연산량 증가",
+        "Attention은 RNN 보조 수단으로만 쓰였음",
+        "순차 의존성이 학습 시간·메모리 비용을 폭증시킴"
+      ],
+      "note": "기존 모델들은 두 임의 위치 간 경로 길이가 O(n) 또는 O(log n)이었습니다. Transformer는 이를 O(1) 상수로 줄입니다."
+    },
+    {
+      "title": "Key Idea — Attention만으로 충분하다",
+      "bullets": [
+        "RNN·CNN 없이 Self-Attention만으로 인코더-디코더 구현",
+        "모든 위치 쌍을 동시에 직접 연결 → O(1) 경로",
+        "완전 병렬 학습 → 학습 시간 대폭 단축"
+      ],
+      "note": "핵심 수식: Attention(Q,K,V) = softmax(QKᵀ/√dk)V. Query·Key의 내적을 정규화 후 softmax로 Value를 가중합산합니다."
+    },
+    {
+      "title": "Method ① — Scaled Dot-Product Attention",
+      "bullets": [
+        "Query·Key 내적 후 √dk로 스케일링 → 기울기 소실 방지",
+        "Softmax로 가중치 계산 후 Value 가중합산",
+        "행렬 연산으로 전체 시퀀스를 한 번에 처리"
+      ],
+      "note": "dk가 클 때 내적값이 커져 softmax 기울기가 0에 수렴하는 문제를 √dk 나눗셈으로 해결합니다."
+    },
+    {
+      "title": "Method ② — Multi-Head Attention",
+      "bullets": [
+        "h=8개 헤드가 서로 다른 표현 공간에서 병렬 Attention 수행",
+        "각 헤드: dk=dv=64 (dmodel 512 / 8)",
+        "결과를 Concat → 선형 변환으로 최종 출력"
+      ],
+      "note": "단일 헤드는 평균값으로 정보가 희석됩니다. 8개 헤드는 각자 문법·의미·지시어 해석 등 다른 역할을 학습합니다."
+    },
+    {
+      "title": "Method ③ — Encoder-Decoder & Positional Encoding",
+      "bullets": [
+        "Encoder: N=6층, 각 층에 Self-Attention + FFN + 잔차연결",
+        "Decoder: Encoder 출력에 Cross-Attention 추가 (3번째 서브레이어)",
+        "순서 정보: sin/cos 위치 인코딩으로 위치 주입"
+      ],
+      "note": "Positional Encoding = sin(pos/10000^(2i/d))으로 위치를 임베딩에 더합니다. 학습된 임베딩과 성능 차이 없음(Table 3 Row E)."
+    },
+    {
+      "title": "Results — 압도적 성능 & 효율",
+      "bullets": [
+        "EN→DE: BLEU 28.4 (+2.0 vs. 최고 앙상블) — 3.5일 학습",
+        "EN→FR: BLEU 41.8, 이전 SOTA 학습비용의 1/4 이하",
+        "영어 구문분석 F1 92.7 (semi-supervised, 특별 튜닝 없이)"
+      ],
+      "note": "Transformer(big)은 FLOPs 2.3×10¹⁹으로 ConvS2S Ensemble(7.7×10¹⁹)보다 3배 저렴하면서 성능은 훨씬 높습니다."
+    },
+    {
+      "title": "Limitations — 아직 남은 과제",
+      "bullets": [
+        "Self-Attention: 시퀀스 길이 n에 O(n²) 메모리 — 이미지·오디오에 비실용적",
+        "장거리 제한 Attention(restricted)은 경로 길이 증가 가능성",
+        "이미지·오디오·비디오 등 타 모달리티 적용은 미래 연구 과제"
+      ],
+      "note": "저자들도 Conclusion에서 'local restricted attention for large inputs'를 미래 연구로 명시합니다. 이후 Longformer·BigBird로 이어집니다."
+    },
+    {
+      "title": "Takeaways — 가져갈 3가지",
+      "bullets": [
+        "1️⃣ Recurrence 없이 Attention만으로 SOTA 달성 가능",
+        "2️⃣ 병렬화로 학습 비용·시간을 수십 배 절감",
+        "3️⃣ Transformer는 번역을 넘어 NLP 전체의 기반 아키텍처가 됨"
+      ],
+      "note": "이 논문은 BERT, GPT, T5 등 현대 LLM 모두의 직접적 조상입니다. '모든 시퀀스 문제 = Transformer'라는 패러다임을 정립했습니다."
+    },
+    {
+      "title": "References",
+      "bullets": [
+        "논문 원문: arxiv.org/abs/1706.03762 (Vaswani et al., 2017)",
+        "공식 코드: github.com/tensorflow/tensor2tensor",
+        "추천 후속: BERT(2018), GPT-2(2019), Vision Transformer(2020)"
+      ],
+      "note": "tensor2tensor는 현재 deprecated이며 후속 프레임워크 Trax로 이어졌습니다."
+    }
+  ]
+}

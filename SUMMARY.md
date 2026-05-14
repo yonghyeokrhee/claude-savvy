@@ -19,6 +19,7 @@
   * [Sub-Agent 실습](practice/sub-agent.md)
   * [Sub-Agent + Skill 활용](practice/sub-agent-skill.md)
   * [Sub-Agent 직접 만들기](practice/sub-agent-create.md)
+  * [Skill 확장 — /claude-news → /claude-news-subagent](practice/claude-news-subagent.md)
 * [Workflow](workflow.md)
   * [Human-in-the-Loop Workflow](workflow-human-in-loop.md)
   * [Workflow 실습](practice/workflow.md)
