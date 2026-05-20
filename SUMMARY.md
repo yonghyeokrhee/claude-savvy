@@ -28,6 +28,7 @@
   * [MCP 실습 — Obsidian 연결](practice/mcp-obsidian.md)
   * [MCP 실습 — RDS MySQL 연결](mcp-rds-mysql.md)
   * [MCP 실습 — Linear → Notion 동기화](practice/mcp-linear-notion-sync.md)
+  * [MCP 실습 — 직접 Playwright MCP Client 만들기](practice/mcp-playwright-client.md)
 * [Persona & Output Style](persona.md)
 * [Claude.md](practice/claude-md.md)
 
