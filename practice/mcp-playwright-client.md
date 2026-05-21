@@ -289,4 +289,4 @@ uv run playwright-mcp-client "네이버로 이동해서 화면 캡처해줘"
 - Playwright MCP: [github.com/microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)
 - MCP Client 개념·개발 가이드: [modelcontextprotocol.io/docs/develop/build-client](https://modelcontextprotocol.io/docs/develop/build-client)
 
-> 참조: FastCampus AI Agent 바이브코딩 강의 — *Part 2. Agent 개념과 아키텍처 > MCP Client 사용하기 / 바이브코딩으로 MCP AI 에이전트 만들기* ([goobong.gitbook.io/fastcampus](https://goobong.gitbook.io/fastcampus), [GitHub](https://github.com/Koomook/fastcampus-ai-agent-vibecoding))
+> 참조: FastCampus AI Agent 바이브코딩 강의 — *Part 2. Agent 개념과 아키텍처 > 바이브코딩으로 MCP AI 에이전트 만들기 > Clip 1. MCP Client 구현을 위한 PRD 프롬프트 만들기* ([GitBook](https://goobong.gitbook.io/fastcampus/part-2.-agent/chapter4_-_mcp_ai_-_/clip1_mcp_client_-_-_prd_-_), [GitHub](https://github.com/Koomook/fastcampus-ai-agent-vibecoding))
