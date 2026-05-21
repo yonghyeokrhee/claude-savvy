@@ -1,24 +1,26 @@
 # MCP 실습 — 직접 Playwright MCP를 사용하는 Client 만들기
 
 지금까지의 실습은 **Claude Code(=이미 만들어진 MCP Client)**에 서버를 붙여 쓰는 쪽이었습니다.
-이번에는 시선을 반대로 돌립니다. **MCP Client를 직접 코드로 만들어** Microsoft의 **Playwright MCP 서버**에 연결하고, 자연어로 브라우저를 자동화하는 작은 AI 에이전트를 만듭니다.
+이번에는 시선을 반대로 돌려 **MCP Client를 직접** 만들고 Microsoft의 **Playwright MCP 서버**에 연결합니다.
 
-> "Claude Code는 내부에서 MCP를 어떻게 쓰는 걸까?"가 궁금했다면, 이 실습이 그 답입니다. Client를 한 번 만들어 보면 MCP의 동작 원리가 손에 잡힙니다.
+단, 코드를 한 줄씩 타이핑하지 않습니다. **요구사항(PRD)을 먼저 쓰게 하고, 구현은 Claude에게 맡기는 "바이브코딩"** 방식으로 만듭니다.
+
+> 이 실습의 목표는 완성된 코드를 외우는 게 아니라, **"MCP SDK로 Client를 만들어 줘"라고 Claude에게 잘 요청하는 프롬프트**를 익히는 것입니다.
 
 ---
 
-## MCP Client란?
+## MCP Client란? (개념만)
 
 **MCP Client = MCP 프로토콜을 구현한 AI 에이전트**입니다.
 Claude Code, Cursor, VS Code Copilot처럼 "MCP 서버를 불러 쓰는 쪽"이 전부 MCP Client입니다. 우리가 이번에 만드는 것도 바로 그 자리입니다.
 
-Client가 하는 핵심 역할은 다섯 가지입니다.
+Client가 하는 일은 결국 다음 흐름입니다.
 
-1. **연결 관리** — MCP 서버 프로세스를 띄우고 세션을 유지
-2. **프로토콜 통신** — JSON-RPC 2.0 기반 요청/응답 처리
-3. **Tool 탐색** — 서버가 제공하는 도구 목록(`list_tools`) 조회
-4. **Tool 실행** — 도구 호출(`call_tool`)과 결과 수신
-5. **LLM 연결** — 받은 도구 목록을 LLM에 넘겨, LLM이 고른 도구를 대신 실행
+1. MCP 서버에 연결하고 세션을 초기화한다
+2. 서버가 제공하는 **도구 목록을 조회**한다
+3. 사용자 입력을 LLM(Claude)에 전달한다
+4. LLM이 고른 도구를 **대신 호출**하고, 결과를 다시 LLM에 넘긴다
+5. LLM이 최종 답을 낼 때까지 4를 반복한다
 
 > Server(지난 RDS 실습)는 "능력을 제공"하고, Client(이번 실습)는 "그 능력을 LLM과 연결해 실행"합니다. 둘이 만나야 MCP가 완성됩니다.
 
@@ -27,7 +29,7 @@ Client가 하는 핵심 역할은 다섯 가지입니다.
 ## 무엇을 만드나 — Playwright MCP Client
 
 - **서버**: `@playwright/mcp` — 브라우저를 띄우고 페이지를 조작하는 공식 Playwright MCP 서버 (Node.js `npx`로 실행, **stdio** 통신)
-- **클라이언트**: 우리가 만들 Python CLI 에이전트 — Claude API로 자연어를 이해하고, Playwright MCP의 도구를 호출
+- **클라이언트**: 우리가 Claude에게 만들게 할 Python CLI 에이전트 — Claude API로 자연어를 이해하고 Playwright MCP의 도구를 호출
 
 ```
 사용자: "네이버로 이동해서 화면 캡처해줘"
@@ -36,7 +38,7 @@ Client가 하는 핵심 역할은 다섯 가지입니다.
    ↓
 Claude            ── "browser_navigate, browser_take_screenshot 써야겠다" (tool_use)
    ↓
-[Client]          ── Playwright MCP 서버의 도구를 실제 호출 (call_tool)
+[Client]          ── Playwright MCP 서버의 도구를 실제 호출
    ↓
 Playwright MCP    ── 브라우저 구동 → 결과 반환
    ↓
@@ -52,33 +54,14 @@ Playwright MCP    ── 브라우저 구동 → 결과 반환
 | `browser_take_screenshot` | 화면 이미지 캡처 |
 | `browser_click` | 요소 클릭 |
 | `browser_type` | 입력창에 텍스트 입력 |
-| `browser_wait_for` | 특정 텍스트/시간 대기 |
 
-> Playwright MCP는 픽셀 스크린샷보다 **접근성 트리 스냅샷(`browser_snapshot`)**을 우선합니다. 비전 모델 없이도 LLM이 페이지 구조를 읽고 클릭할 요소를 고를 수 있습니다.
-
----
-
-## 전체 흐름
-
-```
-1단계: 프로젝트 셋업 (uv, .env)
-    ↓
-2단계: config.py — 설정 로드
-    ↓
-3단계: client.py — MCP 클라이언트 (서버 연결 · list_tools · call_tool)
-    ↓
-4단계: agent.py — Claude 에이전트 (도구 변환 + tool-use 루프)
-    ↓
-5단계: __main__.py — CLI (단일 명령 / 대화형)
-    ↓
-6단계: 실행 — 자연어로 브라우저 자동화
-```
+> Playwright MCP는 픽셀 스크린샷보다 **접근성 트리 스냅샷(`browser_snapshot`)**을 우선합니다. 비전 모델 없이도 LLM이 페이지 구조를 읽고 조작할 수 있습니다.
 
 ---
 
 ## Step 0. 사전 준비 — 처음이라면 여기부터
 
-이 실습은 **Python**(우리가 만들 Client 코드)과 **Node.js**(Playwright MCP 서버)를 함께 씁니다.
+이 실습은 **Python**(우리가 만들 Client)과 **Node.js**(Playwright MCP 서버)를 함께 씁니다.
 아래 4가지를 먼저 갖추고, 각 **확인 명령**으로 점검하세요. 하나라도 빠지면 실습 도중 막힙니다.
 
 | 준비물 | 왜 필요한가 | 확인 명령 |
@@ -101,8 +84,6 @@ python3 --version    # Python 3.10.x 이상이면 OK
 - uv를 먼저 깔았다면 `uv python install 3.12` 로도 받을 수 있습니다.
 
 ### 2) uv — Python 패키지 매니저
-
-`pip`보다 빠르고 가상환경·실행까지 한 번에 처리합니다.
 
 ```bash
 # macOS / Linux
@@ -132,7 +113,6 @@ npx --version
 
 - **macOS**: `brew install node`
 - **Windows**: [nodejs.org](https://nodejs.org) 의 **LTS** 버전 설치
-- 여러 버전을 관리하려면 nvm 사용
 
 ### 4) Anthropic API Key 발급
 
@@ -141,50 +121,7 @@ npx --version
 3. **API Keys → Create Key** 로 키를 생성합니다 (`sk-ant-...`).
 4. 키 전체는 **생성 직후 한 번만** 보입니다. 안전한 곳에 복사해 두세요.
 
-> ⚠️ API 키는 비밀번호입니다. 코드·스크린샷·Git 저장소에 노출하지 마세요. 아래처럼 `.env`에만 두고 `.gitignore`로 제외합니다.
-
-### 5) 프로젝트 생성 & 의존성 설치
-
-```bash
-mkdir playwright-mcp-client && cd playwright-mcp-client
-uv init
-uv add mcp anthropic python-dotenv
-```
-
-### 6) 환경변수 파일 `.env`
-
-프로젝트 루트에 `.env`를 만들고 발급받은 키를 넣습니다.
-
-```bash
-ANTHROPIC_API_KEY=sk-ant-...
-PLAYWRIGHT_MCP_SERVER_PATH=npx
-PLAYWRIGHT_MCP_SERVER_ARGS=@playwright/mcp@latest
-```
-
-키가 새지 않도록 `.gitignore`에 추가합니다.
-
-```bash
-echo ".env" >> .gitignore
-echo "output/" >> .gitignore
-```
-
-> 서버 실행 명령을 환경변수로 빼두면(`npx @playwright/mcp@latest`), 나중에 다른 MCP 서버로 바꿔 끼우기 쉽습니다.
-
-### 7) 프로젝트 구조 (최종 모습)
-
-```
-playwright-mcp-client/
-├── pyproject.toml
-├── .env                     # API 키 (Git 커밋 금지)
-├── .gitignore
-├── output/                  # 스크린샷 저장 (자동 생성)
-└── src/playwright_mcp_client/
-    ├── __init__.py
-    ├── __main__.py          # CLI 엔트리포인트
-    ├── client.py            # MCP 클라이언트 (핵심)
-    ├── agent.py             # Claude 에이전트
-    └── config.py            # 설정 관리
-```
+> ⚠️ API 키는 비밀번호입니다. 코드·스크린샷·Git 저장소에 노출하지 마세요. `.env`에만 두고 `.gitignore`로 제외합니다.
 
 ### ✅ 시작 전 체크리스트
 
@@ -192,283 +129,126 @@ playwright-mcp-client/
 - [ ] `uv --version` → 출력됨
 - [ ] `node --version` → v18 이상, `npx --version` → 출력됨
 - [ ] Anthropic 콘솔에 결제/크레딧 등록됨
-- [ ] `.env`에 `ANTHROPIC_API_KEY` 입력됨
-- [ ] `.gitignore`에 `.env` 추가됨
+- [ ] API Key 발급 완료 (곧 `.env`에 입력)
 
-> 첫 실행 때 `npx`가 Playwright 서버와 **Chromium 브라우저(수백 MB)**를 내려받습니다. 네트워크가 되는 환경에서 처음 한 번은 시간이 걸립니다. 미리 받아두려면 `npx playwright install chromium` 을 실행하세요.
-
----
-
-## Step 1. 설정 — `config.py`
-
-`.env`를 읽어 설정 객체로 만듭니다.
-
-```python
-import os
-from dataclasses import dataclass
-from pathlib import Path
-from dotenv import load_dotenv
-
-
-@dataclass
-class Config:
-    anthropic_api_key: str
-    playwright_server_path: str
-    playwright_server_args: str
-    output_dir: Path = Path("./output")
-
-    @classmethod
-    def from_env(cls) -> "Config":
-        load_dotenv()
-        api_key = os.getenv("ANTHROPIC_API_KEY")
-        if not api_key:
-            raise ValueError("ANTHROPIC_API_KEY environment variable is required")
-        return cls(
-            anthropic_api_key=api_key,
-            playwright_server_path=os.getenv("PLAYWRIGHT_MCP_SERVER_PATH", "npx"),
-            playwright_server_args=os.getenv("PLAYWRIGHT_MCP_SERVER_ARGS", "@playwright/mcp@latest"),
-        )
-
-    def ensure_output_dir(self) -> None:
-        self.output_dir.mkdir(parents=True, exist_ok=True)
-```
+> 첫 실행 때 `npx`가 Playwright 서버와 **Chromium 브라우저(수백 MB)**를 내려받습니다. 미리 받아두려면 `npx playwright install chromium` 을 실행하세요.
 
 ---
 
-## Step 2. MCP 클라이언트 — `client.py` (핵심)
+## 바이브코딩으로 만들기 — PRD 먼저, 구현은 Claude에게
 
-이 파일이 **MCP의 심장**입니다. MCP Python SDK의 `stdio_client`로 서버 프로세스를 띄우고, `ClientSession`으로 도구를 조회·호출합니다.
-
-```python
-from typing import Any
-from mcp import ClientSession, StdioServerParameters
-from mcp.client.stdio import stdio_client
-from .config import Config
-
-
-class PlaywrightMCPClient:
-    def __init__(self, config: Config):
-        self.config = config
-        self.session: ClientSession | None = None
-        self._stdio_context = None
-
-    async def connect(self) -> None:
-        # 1) 서버 실행 파라미터 구성 (예: npx @playwright/mcp@latest)
-        server_params = StdioServerParameters(
-            command=self.config.playwright_server_path,
-            args=self.config.playwright_server_args.split(),
-            env=None,
-        )
-        # 2) stdio로 서버 프로세스를 띄우고 읽기/쓰기 스트림 확보
-        self._stdio_context = stdio_client(server_params)
-        read, write = await self._stdio_context.__aenter__()
-        # 3) 세션 생성 후 초기화 핸드셰이크
-        self.session = ClientSession(read, write)
-        await self.session.__aenter__()
-        await self.session.initialize()
-
-    async def list_tools(self) -> list[Any]:
-        if not self.session:
-            raise RuntimeError("Not connected to MCP server")
-        response = await self.session.list_tools()
-        return response.tools
-
-    async def call_tool(self, tool_name: str, arguments: dict[str, Any]) -> Any:
-        if not self.session:
-            raise RuntimeError("Not connected to MCP server")
-        return await self.session.call_tool(tool_name, arguments)
-
-    async def disconnect(self) -> None:
-        if self.session:
-            await self.session.__aexit__(None, None, None)
-        if self._stdio_context:
-            await self._stdio_context.__aexit__(None, None, None)
-
-    async def __aenter__(self) -> "PlaywrightMCPClient":
-        await self.connect()
-        return self
-
-    async def __aexit__(self, *exc) -> None:
-        await self.disconnect()
-```
-
-> **여기가 핵심입니다.** `initialize()`(핸드셰이크) → `list_tools()`(도구 탐색) → `call_tool()`(실행). 이 세 호출이 MCP 프로토콜의 전부입니다. Claude Code도 내부적으로 정확히 이 흐름을 수행합니다.
-
----
-
-## Step 3. Claude 에이전트 — `agent.py`
-
-에이전트는 두 가지를 합니다. ① MCP 도구를 **Anthropic 도구 형식으로 변환**하고, ② Claude가 도구를 다 쓸 때까지 **tool-use 루프**를 돕니다.
-
-```python
-import anthropic
-from anthropic.types import Message, TextBlock, ToolUseBlock
-from .client import PlaywrightMCPClient
-from .config import Config
-
-SYSTEM_PROMPT = """당신은 Playwright MCP 서버를 활용하여 웹 브라우저 자동화를 수행하는 전문가입니다.
-사용자의 요청을 분석하고 적절한 MCP tool을 선택하여 작업을 수행하세요.
-각 단계에서 어떤 tool을 사용했는지 명확히 설명하세요."""
-
-
-class ClaudeAgent:
-    def __init__(self, config: Config, mcp_client: PlaywrightMCPClient):
-        self.config = config
-        self.mcp_client = mcp_client
-        self.client = anthropic.Anthropic(api_key=config.anthropic_api_key)
-        self.tools: list[dict] = []
-
-    async def initialize(self) -> None:
-        # MCP 도구 목록 → Anthropic tools 형식으로 변환
-        mcp_tools = await self.mcp_client.list_tools()
-        self.tools = [
-            {
-                "name": t.name,
-                "description": t.description or "",
-                "input_schema": t.inputSchema,   # MCP의 inputSchema를 그대로 사용
-            }
-            for t in mcp_tools
-        ]
-
-    async def process_request(self, user_message: str) -> str:
-        messages = [{"role": "user", "content": user_message}]
-        response_text = ""
-
-        while True:
-            response: Message = self.client.messages.create(
-                model="claude-sonnet-4-6",        # 현재 사용 가능한 최신 모델로 교체 가능
-                max_tokens=4096,
-                system=SYSTEM_PROMPT,
-                tools=self.tools,
-                messages=messages,
-            )
-
-            # 더 쓸 도구가 없으면 텍스트를 모아 종료
-            if response.stop_reason == "end_turn":
-                for block in response.content:
-                    if isinstance(block, TextBlock):
-                        response_text += block.text
-                break
-
-            # Claude가 도구를 쓰겠다고 하면(tool_use) 실제로 실행
-            if response.stop_reason == "tool_use":
-                messages.append({"role": "assistant", "content": response.content})
-                tool_results = []
-                for block in response.content:
-                    if isinstance(block, ToolUseBlock):
-                        result = await self.mcp_client.call_tool(block.name, block.input)
-                        response_text += f"\n[Tool: {block.name}]\n"
-                        tool_results.append({
-                            "type": "tool_result",
-                            "tool_use_id": block.id,
-                            "content": str(result.content),
-                        })
-                # 도구 실행 결과를 다시 대화에 넣어 루프 계속
-                messages.append({"role": "user", "content": tool_results})
-            else:
-                break
-
-        return response_text.strip()
-```
-
-### tool-use 루프가 핵심 원리입니다
+코드를 직접 쓰는 대신 **무엇을 만들지(PRD)** 를 먼저 정리하고, 그 PRD를 기준으로 Claude가 구현하게 합니다.
+PRD는 사람이 검토하기 쉽고, 구현이 틀어지면 PRD로 돌아가 고치면 됩니다.
 
 ```
-[user 메시지]
-   → Claude 호출 (tools 함께 전달)
-   → stop_reason == "tool_use" ?
-        예 → MCP call_tool 실행 → tool_result를 대화에 추가 → 다시 Claude 호출 (반복)
-        아니오(end_turn) → 최종 텍스트 반환
+1단계: PRD 작성을 요청 (무엇을 만들지)
+    ↓
+2단계: PRD 검토 & 보완 (사람)
+    ↓
+3단계: 구현을 요청 (MCP SDK로 어떻게 만들지)
+    ↓
+4단계: 실행 & 디버깅 (사람이 에러를 다시 Claude에게)
 ```
 
-LLM은 **직접 브라우저를 만지지 않습니다.** "이 도구를 이 인자로 써줘"라고 말할 뿐이고, 실제 실행은 **Client(우리 코드)가 MCP 서버에 위임**합니다. 이 분리가 MCP의 본질입니다.
-
-> MCP의 `inputSchema`가 그대로 Anthropic의 `input_schema`로 들어가는 점에 주목하세요. 도구 정의가 표준화돼 있어 **변환이 거의 복사 수준**입니다 — 표준의 힘입니다.
-
----
-
-## Step 4. CLI — `__main__.py`
-
-단일 명령과 대화형 모드를 제공합니다. 연결 → 에이전트 초기화 → 요청 처리 순서입니다.
-
-```python
-import argparse, asyncio, sys
-from .agent import ClaudeAgent
-from .client import PlaywrightMCPClient
-from .config import Config
-
-
-async def run_single_command(user_input: str) -> None:
-    config = Config.from_env()
-    config.ensure_output_dir()
-    async with PlaywrightMCPClient(config) as mcp_client:   # 연결/종료 자동 관리
-        agent = ClaudeAgent(config, mcp_client)
-        await agent.initialize()                            # 도구 목록 로드
-        print(f"\n> {user_input}\n")
-        print(await agent.process_request(user_input))
-
-
-async def run_interactive() -> None:
-    config = Config.from_env()
-    config.ensure_output_dir()
-    async with PlaywrightMCPClient(config) as mcp_client:
-        agent = ClaudeAgent(config, mcp_client)
-        await agent.initialize()
-        print(f"Connected. Available tools: {len(agent.tools)}")
-        while True:
-            user_input = input("> ").strip()
-            if user_input.lower() in ("exit", "quit"):
-                break
-            print("\n" + await agent.process_request(user_input) + "\n")
-
-
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Playwright MCP Client")
-    parser.add_argument("command", nargs="?", help="실행할 명령 (없으면 대화형)")
-    parser.add_argument("--interactive", "-i", action="store_true")
-    args = parser.parse_args()
-    if args.interactive or args.command is None:
-        asyncio.run(run_interactive())
-    else:
-        asyncio.run(run_single_command(args.command))
-
-
-if __name__ == "__main__":
-    main()
-```
-
-`pyproject.toml`에 실행 스크립트를 등록하면 `uv run`으로 바로 호출됩니다.
-
-```toml
-[project.scripts]
-playwright-mcp-client = "playwright_mcp_client.__main__:main"
-```
-
----
-
-## Step 5. 실행
+작업 폴더에서 Claude Code를 시작합니다.
 
 ```bash
-# 대화형 모드
-uv run playwright-mcp-client
-
-# 단일 명령
-uv run playwright-mcp-client "네이버 메인 페이지로 이동해줘"
+mkdir playwright-mcp-client && cd playwright-mcp-client
+claude
 ```
 
-출력 예시:
+### Step 1 — PRD 작성을 요청하는 프롬프트
 
 ```
-> 네이버 메인 페이지로 이동해줘
+Playwright MCP 서버를 사용하는 "MCP Client"를 만들 거야.
+바로 코딩하지 말고, 먼저 PRD(제품 요구사항 문서)를 PRD.md 로 작성해줘.
 
-[Tool: browser_navigate]
-https://www.naver.com 으로 이동했습니다.
+다음 조건을 반영해:
+- 언어: Python 3.10+, 패키지 관리: uv
+- MCP 통신: 공식 MCP Python SDK(mcp 패키지) 사용
+- 연결 대상: Playwright MCP 서버 (npx @playwright/mcp@latest, stdio 전송)
+- LLM: Anthropic Claude API(anthropic 패키지)로 자연어를 이해해 도구를 선택·실행
+- 인터페이스: CLI — 단일 명령 실행과 대화형 모드 모두 지원
+- 동작 흐름: 서버 연결 → 도구 목록 조회 → 사용자 입력 → Claude가 도구 선택·실행 → 결과 출력
+- 비밀정보: ANTHROPIC_API_KEY 등은 .env 환경변수로 관리
 
-[Tool: browser_take_screenshot]
-스크린샷 저장됨: output/screenshot_20260520_103000.png
+PRD에는 다음 섹션을 포함해줘:
+개요 / 기술 스펙 / 핵심 요구사항 / 실행 흐름 / 프로젝트 구조 /
+환경변수 / 제약사항 / 테스트 범위 / 성공 기준
 ```
 
-> 첫 실행 시 `npx`가 Playwright MCP 서버와 브라우저 런타임을 내려받느라 시간이 걸릴 수 있습니다.
+> 핵심은 **"MCP SDK를 쓰고, Playwright MCP에 stdio로 붙으며, Claude로 도구를 호출한다"**는 의도를 분명히 적는 것입니다. 그래야 Claude가 정확한 PRD를 만듭니다.
+
+### Step 2 — PRD 검토 & 보완
+
+Claude가 PRD 초안을 주면 사람이 읽고 한두 가지만 조정합니다.
+
+```
+PRD를 다음만 보완해줘:
+- 스크린샷은 ./output 폴더에만 저장하도록 제약 추가
+- 외부 라이브러리는 mcp, anthropic, python-dotenv 로 최소화
+- 도구 이름은 서버가 제공하는 browser_* 도구를 그대로 사용한다고 명시
+```
+
+> PRD를 `PRD.md`로 남겨두면, 이후 구현·수정의 **기준 문서**가 됩니다. 결과가 마음에 안 들면 코드가 아니라 PRD를 고치세요.
+
+### Step 3 — 구현을 요청하는 프롬프트
+
+```
+방금 만든 PRD.md 대로 MCP Client를 구현해줘.
+
+구현 시 다음을 지켜:
+- 공식 MCP Python SDK로 stdio 연결을 만들고,
+  "세션 초기화 → 도구 목록 조회(list_tools) → 도구 호출(call_tool)" 흐름을 구현해.
+- MCP 도구 목록을 Anthropic tools 형식으로 변환해 Claude에 전달하고,
+  Claude가 tool_use를 반환하면 실제 도구를 호출한 뒤 결과를 다시 모델에 넘기는 루프를 구현해.
+- uv 프로젝트로 만들고, `uv run` 으로 실행 가능한 CLI 엔트리포인트를 추가해.
+- .env.example 과 간단한 사용법(README)도 함께 만들어줘.
+- 마지막에 실행 방법을 알려줘.
+```
+
+Claude가 `pyproject.toml`, 설정·클라이언트·에이전트·CLI 파일, `.env.example`을 알아서 생성합니다.
+**우리는 코드를 타이핑하지 않고, "무엇을·어떻게"를 지시했을 뿐입니다.**
+
+### Step 4 — 실행 & 디버깅
+
+`.env`에 발급받은 키를 넣고 실행합니다.
+
+```bash
+# .env 작성 (Claude가 만든 .env.example 참고)
+# ANTHROPIC_API_KEY=sk-ant-...
+
+uv run playwright-mcp-client "네이버로 이동해서 화면 캡처해줘"
+```
+
+에러가 나면 메시지를 **그대로 복사해 Claude에게** 붙여 넣고 고쳐 달라고 합니다.
+
+```
+실행했더니 이런 에러가 나:
+<에러 메시지 붙여넣기>
+원인을 찾아 수정해줘.
+```
+
+> 바이브코딩의 핵심은 **사람이 실행·검증하고, 고치는 일은 Claude에게 위임**하는 반복 루프입니다.
+
+---
+
+## Claude가 만든 Client, 무엇을 확인할까 (이해용)
+
+생성된 코드를 한 줄씩 외울 필요는 없지만, **무엇이 핵심인지**는 알아야 검수할 수 있습니다.
+
+1. **MCP 통신 3요소** — 세션 초기화 → 도구 목록 조회 → 도구 호출. 이 셋이 MCP 프로토콜의 전부입니다. Claude Code도 내부에서 정확히 이 일을 합니다.
+2. **tool-use 루프** — 에이전트의 엔진입니다.
+
+```
+[사용자 입력]
+  → Claude 호출 (MCP 도구 목록 함께 전달)
+  → "도구를 쓰겠다(tool_use)" ?
+       예  → 도구 실행 → 결과를 대화에 추가 → 다시 Claude 호출 (반복)
+       아니오(끝) → 최종 답변 출력
+```
+
+핵심: **LLM은 도구를 "고르고", 실제 실행은 Client가 MCP 서버에 위임합니다.** 이 분리가 MCP의 본질입니다. 생성된 코드에서 이 루프가 제대로 들어갔는지만 확인하면 됩니다.
 
 ---
 
@@ -482,26 +262,24 @@ https://www.naver.com 으로 이동했습니다.
 | 첫 실행이 멈춘 듯 느림 | 브라우저 최초 다운로드 | 잠시 대기, 또는 `npx playwright install chromium` 선실행 |
 | `401 authentication_error` | API 키 오타·만료 | 콘솔에서 키 재확인/재발급 |
 | `429 rate_limit` 또는 크레딧 부족 | 결제·크레딧 미등록 | 콘솔 **Billing**에서 크레딧 충전 |
-| `ModuleNotFoundError: mcp` | 의존성 미설치 | `uv add mcp anthropic python-dotenv` |
-| Python 3.9 이하 에러 | 버전 낮음 | 3.10+ 설치, `uv python install 3.12` |
+| 구현이 의도와 다름 | PRD가 모호함 | 코드 말고 **PRD.md를 고치고** 다시 구현 요청 |
 
 ---
 
 ## 핵심 학습 포인트
 
-1. **MCP Client = MCP 프로토콜을 구현한 AI 에이전트**다. 우리가 만든 코드는 Claude Code가 내부에서 하는 일의 축소판이다.
-2. MCP 통신은 결국 **세 단계** — `initialize()` → `list_tools()` → `call_tool()` — 로 압축된다.
-3. **LLM은 도구를 고르고, Client가 실행한다.** `tool_use` → `call_tool` → `tool_result`를 반복하는 **tool-use 루프**가 에이전트의 엔진이다.
-4. 도구 정의가 표준화(`inputSchema`)돼 있어 **MCP → LLM 변환이 거의 복사 수준**이다. 한 번 만든 Client에 어떤 MCP 서버든 갈아 끼울 수 있다.
-5. **Tool 중심으로 생각하라.** 거의 모든 클라이언트가 Tools를 지원하지만 Resources/Prompts/Sampling은 지원이 제각각이다 — 서버를 만들 땐 Tool로 구현하는 게 가장 안전하다.
+1. MCP Client는 직접 타이핑하지 않아도 된다 — **PRD로 명세하고, 구현은 Claude에게 맡긴다(바이브코딩)**.
+2. 좋은 요청의 핵심은 **"MCP SDK 사용 + Playwright MCP에 stdio 연결 + 도구 조회/호출 + tool-use 루프"**를 프롬프트에 분명히 적는 것이다.
+3. **PRD는 기준 문서**다 — 결과가 틀어지면 코드가 아니라 PRD로 돌아가 고친다.
+4. 완성된 Client는 **host(Claude Code)가 내부에서 하는 일의 축소판**이다.
+5. 다른 MCP 서버로 바꾸려면 PRD의 "연결 대상"만 바꿔 다시 요청하면 된다.
 
 ---
 
 ## 더 나아가기
 
-- **서버 교체**: `.env`의 `PLAYWRIGHT_MCP_SERVER_ARGS`만 바꾸면 다른 stdio MCP 서버(예: 지난 실습의 RDS MySQL 서버)에 그대로 붙는다.
-- **여러 서버 동시 연결**: `PlaywrightMCPClient`를 여러 개 띄워 도구 목록을 합치면, 한 에이전트가 브라우저 + DB를 함께 다룬다.
-- **바이브코딩으로 만들기**: 위 구조를 직접 타이핑하는 대신, PRD(요구사항 명세)를 먼저 작성하고 Claude Code에 넘겨 한 번에 생성하게 한다. FastCampus 강의의 `playwright-mcp-client`가 바로 이 방식으로 만들어졌다.
+- **서버 교체**: PRD에서 연결 대상을 다른 stdio MCP 서버(예: 지난 실습의 RDS MySQL 서버)로 바꿔 다시 구현을 요청하면, 같은 구조의 Client가 다른 서버에 붙는다.
+- **여러 서버 동시 연결**: "두 개의 MCP 서버에 동시에 연결해 도구 목록을 합쳐 달라"고 PRD에 적으면, 한 에이전트가 브라우저 + DB를 함께 다룬다.
 
 ---
 
@@ -509,6 +287,6 @@ https://www.naver.com 으로 이동했습니다.
 
 - MCP Python SDK: [github.com/modelcontextprotocol/python-sdk](https://github.com/modelcontextprotocol/python-sdk)
 - Playwright MCP: [github.com/microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)
-- MCP Client 개념·개발 가이드: [modelcontextprotocol.io/docs/develop/build-client](https://modelcontextprotocol.io/docs/develop/build-client), [클라이언트 목록](https://modelcontextprotocol.io/clients)
+- MCP Client 개념·개발 가이드: [modelcontextprotocol.io/docs/develop/build-client](https://modelcontextprotocol.io/docs/develop/build-client)
 
 > 참조: FastCampus AI Agent 바이브코딩 강의 — *Part 2. Agent 개념과 아키텍처 > MCP Client 사용하기 / 바이브코딩으로 MCP AI 에이전트 만들기* ([goobong.gitbook.io/fastcampus](https://goobong.gitbook.io/fastcampus), [GitHub](https://github.com/Koomook/fastcampus-ai-agent-vibecoding))
